@@ -1,0 +1,13 @@
+site_name: Mkdocs for Intelligent Textbooks
+repo_url: https://github.com/IrvingGSea/i-book-v1.git
+
+nav:
+  - Home: index.md
+  - List of Chapters:
+    - Intro: chapters/index.md
+    - Chapter 1: chapters/chapter-1.md
+    - Chapter 2: chapters/chapter-2.md
+    - Chapter 3: chapters/chapter-3.md
+
+theme:
+  name: material
