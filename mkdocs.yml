@@ -11,3 +11,20 @@ nav:
 
 theme:
   name: material
+
+plugins:
+  - search
+  - glightbox
+  - git-revision-date
+  - awesome-pages
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.emoji
+  - pymdownx.arithmatex
+
+
