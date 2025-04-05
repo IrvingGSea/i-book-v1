@@ -9,6 +9,11 @@ nav:
     - Chapter 1: chapters/chapter-1.md
     - Chapter 2: chapters/chapter-2.md
     - Chapter 3: chapters/chapter-3.md
+    - Chapter 4: chapters/chapter-4.md
+    - Chapter 5: chapters/chapter-5.md
+    - Chapter 6: chapters/chapter-6.md
+    - Chapter 7: chapters/chapter-7.md
+    - Chapter 8: chapters/chapter-8.md
   - Tutorial: #add everything below
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
@@ -32,7 +37,10 @@ nav:
   - Contact: contact.md
 
 theme:
-  name: material
+  name: material 
+  analytics: # analytics should be moved if theme is custom or not material
+    provider: google
+    property: G-8GFPXHN0M6
 
 plugins:
   - search
