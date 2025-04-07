@@ -4,6 +4,15 @@
 
 A **microcontroller** is a compact, self-contained computer system built onto a single integrated circuit. It includes a **CPU (central processing unit)**, **memory**, and **peripherals**, making it well-suited for controlling embedded systems and real-world devices.
 
+### Microcontroller Block Diagram
+
+This diagram shows the typical internal structure of a microcontroller. The CPU core is supported by built-in memory and several peripheral modules such as timers, communication interfaces, and analog components.
+
+<p align="center">
+  <img src="../../assets/images/mcu-block-diagram.png" width="500px">
+</p>
+
+
 Unlike general-purpose computers, microcontrollers are designed for **specific tasks**, such as reading sensor data, driving motors, or communicating with other digital components. They are commonly used in systems that need low power, high reliability, and consistent timing.
 
 ### Key Characteristics:
