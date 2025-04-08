@@ -445,11 +445,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pic24fj64ga002-highlights-from-the-datasheet" class="md-nav__link">
+  <a href="#pic24fj64ga002-architecture-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      PIC24FJ64GA002 Highlights (from the Datasheet)
+      PIC24FJ64GA002 Architecture Overview
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="PIC24FJ64GA002 Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-components-of-the-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components of the Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harvard-vs-von-neumann" class="md-nav__link">
+    <span class="md-ellipsis">
+      Harvard vs. Von Neumann
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-centric-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Register-Centric Design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1281,11 +1314,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pic24fj64ga002-highlights-from-the-datasheet" class="md-nav__link">
+  <a href="#pic24fj64ga002-architecture-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      PIC24FJ64GA002 Highlights (from the Datasheet)
+      PIC24FJ64GA002 Architecture Overview
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="PIC24FJ64GA002 Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-components-of-the-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components of the Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harvard-vs-von-neumann" class="md-nav__link">
+    <span class="md-ellipsis">
+      Harvard vs. Von Neumann
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-centric-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Register-Centric Design
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1380,7 +1446,7 @@
 </tr>
 <tr>
 <td>I/O Pins</td>
-<td>24</td>
+<td>24 I/O capable pins (in a 28 package pin)</td>
 </tr>
 <tr>
 <td>Timers</td>
@@ -1410,20 +1476,86 @@
 </table>
 <p>This microcontroller provides the right level of abstraction for learning low-level control, hardware interfacing, and system timing — without overwhelming new developers.</p>
 <p>📎 For full details, refer to the official <a href="https://www.microchip.com/en-us/product/PIC24FJ64GA002">PIC24FJ64GA002 Datasheet</a>.</p>
-<h2 id="pic24fj64ga002-highlights-from-the-datasheet">PIC24FJ64GA002 Highlights (from the Datasheet)<a class="headerlink" href="#pic24fj64ga002-highlights-from-the-datasheet" title="Permanent link">&para;</a></h2>
-<p>Here are some quick specs to keep in mind (we’ll go deeper in later chapters):</p>
-<ul>
-<li><strong>CPU</strong>: 16-bit modified Harvard architecture</li>
-<li><strong>Program memory</strong>: 64KB Flash</li>
-<li><strong>Data memory</strong>: 8KB RAM</li>
-<li><strong>I/O Pins</strong>: 24</li>
-<li><strong>Timers</strong>: Up to five 16-bit timers</li>
-<li><strong>Interrupts</strong>: Prioritized interrupt controller</li>
-<li><strong>Peripherals</strong>: UART, SPI, I2C, ADC (10-bit, 13 channels)</li>
-<li><strong>Oscillator</strong>: Internal and external options, up to 32 MHz</li>
-<li><strong>Packages</strong>: Available in PDIP, QFN, SOIC formats</li>
-</ul>
-<p>📎 For full technical reference, see the <a href="https://www.microchip.com/en-us/product/PIC24FJ64GA002">PIC24FJ64GA002 Datasheet (Microchip)</a></p>
+<h2 id="pic24fj64ga002-architecture-overview">PIC24FJ64GA002 Architecture Overview<a class="headerlink" href="#pic24fj64ga002-architecture-overview" title="Permanent link">&para;</a></h2>
+<p>The <strong>PIC24FJ64GA002</strong> is based on a <strong>16-bit modified Harvard architecture</strong>. This means that it has <strong>separate memory spaces</strong> for instructions and data, which allows for more efficient fetching and execution of instructions.</p>
+<p>Unlike traditional Harvard designs, the PIC24 allows for flexible memory operations — instructions can access data memory, and certain instructions (like table reads/writes) can access program memory.</p>
+<hr />
+<h3 id="core-components-of-the-architecture">Core Components of the Architecture<a class="headerlink" href="#core-components-of-the-architecture" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CPU</strong></td>
+<td>16-bit core with a 2-stage pipeline (fetch/execute)</td>
+</tr>
+<tr>
+<td><strong>Flash Memory</strong></td>
+<td>64 KB of non-volatile memory for storing program instructions</td>
+</tr>
+<tr>
+<td><strong>RAM</strong></td>
+<td>8 KB of data memory for variables and temporary storage</td>
+</tr>
+<tr>
+<td><strong>Registers</strong></td>
+<td>16 working registers (W0–W15), used for all operations</td>
+</tr>
+<tr>
+<td><strong>Stack</strong></td>
+<td>Software-managed via dedicated stack pointer (no hardware push/pop instructions)</td>
+</tr>
+<tr>
+<td><strong>Peripherals</strong></td>
+<td>Timers, UART, SPI, I2C, ADC, output compare, input capture, etc.</td>
+</tr>
+<tr>
+<td><strong>Interrupts</strong></td>
+<td>Vectored interrupt system with multiple priority levels</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="harvard-vs-von-neumann">Harvard vs. Von Neumann<a class="headerlink" href="#harvard-vs-von-neumann" title="Permanent link">&para;</a></h3>
+<p>Most desktop computers use the <strong>Von Neumann architecture</strong>, where code and data share the same memory space. In contrast, the <strong>Harvard model</strong> separates them:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Harvard Architecture</th>
+<th>Von Neumann</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Instruction Memory</td>
+<td>✅ Separate</td>
+<td>❌ Shared</td>
+</tr>
+<tr>
+<td>Data Memory</td>
+<td>✅ Separate</td>
+<td>✅ Shared</td>
+</tr>
+<tr>
+<td>Performance</td>
+<td>✅ Faster (no bus conflict)</td>
+<td>❌ Slower</td>
+</tr>
+</tbody>
+</table>
+<p>The PIC24's modified Harvard design enables <strong>faster and more efficient</strong> execution for embedded systems.</p>
+<hr />
+<h3 id="register-centric-design">Register-Centric Design<a class="headerlink" href="#register-centric-design" title="Permanent link">&para;</a></h3>
+<p>Most operations on the PIC24 use the 16 working registers (W0 to W15). These are:
+- Used as operands in arithmetic, logic, and data movement instructions
+- Referenced directly in assembly code
+- Some registers have special purposes (e.g., W15 is often used as the stack pointer)</p>
+<p>We'll explore register usage and memory addressing in more detail in the next chapter.</p>
 <hr />
 
 
