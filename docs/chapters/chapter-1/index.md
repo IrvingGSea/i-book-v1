@@ -67,7 +67,7 @@ The PIC24FJ64GA002 is widely used in academic and industry settings due to its:
 | CPU Architecture     | 16-bit modified Harvard architecture       |
 | Flash Memory         | 64 KB                                      |
 | RAM                  | 8 KB                                       |
-| I/O Pins             | 24                                         |
+| I/O Pins             | 24 I/O capable pins (in a 28 package pin)  |
 | Timers               | Up to five 16-bit timers                   |
 | Communication        | UART, SPI, I2C                             |
 | ADC                  | 10-bit resolution, up to 13 input channels |
@@ -79,22 +79,51 @@ This microcontroller provides the right level of abstraction for learning low-le
 
 📎 For full details, refer to the official [PIC24FJ64GA002 Datasheet](https://www.microchip.com/en-us/product/PIC24FJ64GA002).
 
+## PIC24FJ64GA002 Architecture Overview
 
-## PIC24FJ64GA002 Highlights (from the Datasheet)
+The **PIC24FJ64GA002** is based on a **16-bit modified Harvard architecture**. This means that it has **separate memory spaces** for instructions and data, which allows for more efficient fetching and execution of instructions.
 
-Here are some quick specs to keep in mind (we’ll go deeper in later chapters):
+Unlike traditional Harvard designs, the PIC24 allows for flexible memory operations — instructions can access data memory, and certain instructions (like table reads/writes) can access program memory.
 
-- **CPU**: 16-bit modified Harvard architecture
-- **Program memory**: 64KB Flash
-- **Data memory**: 8KB RAM
-- **I/O Pins**: 24
-- **Timers**: Up to five 16-bit timers
-- **Interrupts**: Prioritized interrupt controller
-- **Peripherals**: UART, SPI, I2C, ADC (10-bit, 13 channels)
-- **Oscillator**: Internal and external options, up to 32 MHz
-- **Packages**: Available in PDIP, QFN, SOIC formats
+---
 
-📎 For full technical reference, see the [PIC24FJ64GA002 Datasheet (Microchip)](https://www.microchip.com/en-us/product/PIC24FJ64GA002)
+### Core Components of the Architecture
+
+| Component         | Description |
+|------------------|-------------|
+| **CPU**          | 16-bit core with a 2-stage pipeline (fetch/execute) |
+| **Flash Memory** | 64 KB of non-volatile memory for storing program instructions |
+| **RAM**          | 8 KB of data memory for variables and temporary storage |
+| **Registers**    | 16 working registers (W0–W15), used for all operations |
+| **Stack**        | Software-managed via dedicated stack pointer (no hardware push/pop instructions) |
+| **Peripherals**  | Timers, UART, SPI, I2C, ADC, output compare, input capture, etc. |
+| **Interrupts**   | Vectored interrupt system with multiple priority levels |
+
+---
+
+### Harvard vs. Von Neumann
+
+Most desktop computers use the **Von Neumann architecture**, where code and data share the same memory space. In contrast, the **Harvard model** separates them:
+
+| Feature            | Harvard Architecture | Von Neumann |
+|--------------------|----------------------|-------------|
+| Instruction Memory | ✅ Separate           | ❌ Shared   |
+| Data Memory        | ✅ Separate           | ✅ Shared   |
+| Performance        | ✅ Faster (no bus conflict) | ❌ Slower |
+
+The PIC24's modified Harvard design enables **faster and more efficient** execution for embedded systems.
+
+---
+
+### Register-Centric Design
+
+Most operations on the PIC24 use the 16 working registers (W0 to W15). These are:
+- Used as operands in arithmetic, logic, and data movement instructions
+- Referenced directly in assembly code
+- Some registers have special purposes (e.g., W15 is often used as the stack pointer)
+
+We'll explore register usage and memory addressing in more detail in the next chapter.
+
 
 ---
 
