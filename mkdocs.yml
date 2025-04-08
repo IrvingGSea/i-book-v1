@@ -6,14 +6,14 @@ nav:
   - About: about.md #add to actual folder
   - List of Chapters:
     - Intro: chapters/index.md
-    - Chapter 1: chapters/chapter-1.md
-    - Chapter 2: chapters/chapter-2.md
-    - Chapter 3: chapters/chapter-3.md
-    - Chapter 4: chapters/chapter-4.md
-    - Chapter 5: chapters/chapter-5.md
-    - Chapter 6: chapters/chapter-6.md
-    - Chapter 7: chapters/chapter-7.md
-    - Chapter 8: chapters/chapter-8.md
+    - Chapter 1: chapters/chapter-1/index.md
+    - Chapter 2: chapters/chapter-2/index.md
+    - Chapter 3: chapters/chapter-3/index.md
+    - Chapter 4: chapters/chapter-4/index.md
+    - Chapter 5: chapters/chapter-5/index.md
+    - Chapter 6: chapters/chapter-6/index.md
+    - Chapter 7: chapters/chapter-7/index.md
+    - Chapter 8: chapters/chapter-8/index.md
   - Tutorial: #add everything below
     - Introduction: tutorial/index.md
     - Getting Started: tutorial/getting-started.md
