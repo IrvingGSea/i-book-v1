@@ -1509,21 +1509,23 @@
 - How to perform arithmetic and logical operations</p>
 <h2 id="basic-instruction-structure-syntax">Basic Instruction Structure &amp; Syntax<a class="headerlink" href="#basic-instruction-structure-syntax" title="Permanent link">&para;</a></h2>
 <p>Each PIC24 assembly instruction follows a simple, consistent structure:</p>
-<p>```asm
-OPCODE  OPERAND1, OPERAND2</p>
-<p>Where:
+<p><div class="highlight"><pre><span></span><code><span class="nf">OPCODE</span><span class="w">  </span><span class="no">OPERAND1</span><span class="p">,</span><span class="w"> </span><span class="no">OPERAND2</span>
+</code></pre></div>
+Where:
 - OPCODE is the operation to perform (e.g. MOV, ADD, SUB, etc.)
 - OPERAND1 is the source operand (what's being used for the operation)
 - OPERAND2 is the destination operand (where the result is stored)</p>
 <p>Example: Moving Data Between Registers
-    MOV     W1, W0      ; Copy contents of W1 into W0
-    MOV     #10, W2     ; Load the literal value 10 into W2</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">MOV</span><span class="w">     </span><span class="no">W1</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">      </span><span class="c1">; Copy contents of W1 into W0</span>
+<span class="w">    </span><span class="nf">MOV</span><span class="w">     </span><span class="mi">#10</span><span class="p">,</span><span class="w"> </span><span class="no">W2</span><span class="w">     </span><span class="c1">; Load the literal value 10 into W2</span>
+</code></pre></div></p>
 <p>In the previous example: 
 - MOV W1, W0 takes the contents of W1 and stores it in W0
 - MOVE #10, W2 loads the immdeiate value 10 into W2</p>
 <p>Use semicolons (;) for comments in the PIC24 assembly:
-    CLR     W3          ; Clear W3 (set to zero)
-    ADD     W1, W2      ; Add W1 to W2 (result stored in W2)</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">CLR</span><span class="w">     </span><span class="no">W3</span><span class="w">          </span><span class="c1">; Clear W3 (set to zero)</span>
+<span class="w">    </span><span class="nf">ADD</span><span class="w">     </span><span class="no">W1</span><span class="p">,</span><span class="w"> </span><span class="no">W2</span><span class="w">      </span><span class="c1">; Add W1 to W2 (result stored in W2)</span>
+</code></pre></div></p>
 <h3 id="working-registers-w0w15">Working Registers (W0–W15)<a class="headerlink" href="#working-registers-w0w15" title="Permanent link">&para;</a></h3>
 <p>PIC24 has 16 general-purpose working registers used for arithmetic, data movement, memory access, and stack operations.</p>
 <table>
@@ -1593,32 +1595,37 @@ OPCODE  OPERAND1, OPERAND2</p>
 <hr />
 <h3 id="1-immediate-addressing">1. Immediate Addressing<a class="headerlink" href="#1-immediate-addressing" title="Permanent link">&para;</a></h3>
 <p>Loads a constant (literal) value directly into a register.</p>
-<p>```asm
-MOV     #25, W0     ; #25 is a literal constant.
-                    ; Common for setting values or initializing data.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="mi">#25</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">     </span><span class="c1">; #25 is a literal constant.</span>
+<span class="w">                    </span><span class="c1">; Common for setting values or initializing data.</span>
+</code></pre></div>
 <h3 id="2-register-direct">2. Register Direct<a class="headerlink" href="#2-register-direct" title="Permanent link">&para;</a></h3>
 <p>Uses a working register directly as the source or desination.</p>
-<p>MOV     W1, W2      ; Copy contents of W1 into W2.
-                    ; Fastest and simplest form.
-                    ; All operations using Wn (W0–W15) fall under this mode.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="no">W1</span><span class="p">,</span><span class="w"> </span><span class="no">W2</span><span class="w">      </span><span class="c1">; Copy contents of W1 into W2.</span>
+<span class="w">                    </span><span class="c1">; Fastest and simplest form.</span>
+<span class="w">                    </span><span class="c1">; All operations using Wn (W0–W15) fall under this mode.</span>
+</code></pre></div>
 <h3 id="3-register-indirect">3. Register Indirect<a class="headerlink" href="#3-register-indirect" title="Permanent link">&para;</a></h3>
 <p>Uses a register as a pointer to data in memory</p>
-<p>MOV     [W5], W0    ; Move value from address pointed to by W5 into W0.
-                    ; W5 contains the address, not the value itself.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="p">[</span><span class="no">W5</span><span class="p">],</span><span class="w"> </span><span class="no">W0</span><span class="w">    </span><span class="c1">; Move value from address pointed to by W5 into W0.</span>
+<span class="w">                    </span><span class="c1">; W5 contains the address, not the value itself.</span>
+</code></pre></div>
 <h3 id="4-indirect-with-post-increment">4. Indirect with Post-Increment<a class="headerlink" href="#4-indirect-with-post-increment" title="Permanent link">&para;</a></h3>
 <p>Automatically increments the pointer after the operation</p>
-<p>MOV     [W6++], W1  ; Move from memory pointed to by W6 into W1.
-                    ; Then W6 = W6 + 2.
-                    ; Useful for reading data from arrays (word-aligned).</p>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="p">[</span><span class="no">W6</span><span class="err">++</span><span class="p">],</span><span class="w"> </span><span class="no">W1</span><span class="w">  </span><span class="c1">; Move from memory pointed to by W6 into W1.</span>
+<span class="w">                    </span><span class="c1">; Then W6 = W6 + 2.</span>
+<span class="w">                    </span><span class="c1">; Useful for reading data from arrays (word-aligned).</span>
+</code></pre></div>
 <h3 id="5-indirect-with-pre-increment">5. Indirect with Pre-Increment<a class="headerlink" href="#5-indirect-with-pre-increment" title="Permanent link">&para;</a></h3>
 <p>Decrements the pointer before accessing the memory</p>
-<p>MOV     [--W6], W1  ; W6 = W6 - 2, then move from new address into W1.
-                    ; Useful when reading a stack or traversing backward.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="p">[--</span><span class="no">W6</span><span class="p">],</span><span class="w"> </span><span class="no">W1</span><span class="w">  </span><span class="c1">; W6 = W6 - 2, then move from new address into W1.</span>
+<span class="w">                    </span><span class="c1">; Useful when reading a stack or traversing backward.</span>
+</code></pre></div>
 <h3 id="6-literalwn">6. Literal+Wn<a class="headerlink" href="#6-literalwn" title="Permanent link">&para;</a></h3>
 <p>Adds a literal offset to a base register</p>
-<p>MOV     [W8 + 4], W0   ; Move from address (W8 + 4) into W0.
-                       ; Often used for structure fields or array access.
-                       ; Literal must be word-aligned (multiple of 2).</p>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="p">[</span><span class="no">W8</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w"> </span><span class="no">W0</span><span class="w">   </span><span class="c1">; Move from address (W8 + 4) into W0.</span>
+<span class="w">                       </span><span class="c1">; Often used for structure fields or array access.</span>
+<span class="w">                       </span><span class="c1">; Literal must be word-aligned (multiple of 2).</span>
+</code></pre></div>
 <h2 id="chapter-summary">Chapter Summary<a class="headerlink" href="#chapter-summary" title="Permanent link">&para;</a></h2>
 <p>In this chapter, we explored the fundamentals of PIC24 assembly language and how to work directly with the CPU's registers and memory.</p>
 <h3 id="what-you-learned">What You Learned:<a class="headerlink" href="#what-you-learned" title="Permanent link">&para;</a></h3>
