@@ -530,7 +530,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Chapter Summary">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-check-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-Check Quiz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practice Prompt">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1434,7 +1452,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Chapter Summary">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-check-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-Check Quiz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practice Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Practice Prompt">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1521,7 +1557,7 @@ Where:
 </code></pre></div></p>
 <p>In the previous example: 
 - MOV W1, W0 takes the contents of W1 and stores it in W0
-- MOVE #10, W2 loads the immdeiate value 10 into W2</p>
+- MOV #10, W2 loads the immdeiate value 10 into W2</p>
 <p>Use semicolons (;) for comments in the PIC24 assembly:
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">CLR</span><span class="w">     </span><span class="no">W3</span><span class="w">          </span><span class="c1">; Clear W3 (set to zero)</span>
 <span class="w">    </span><span class="nf">ADD</span><span class="w">     </span><span class="no">W1</span><span class="p">,</span><span class="w"> </span><span class="no">W2</span><span class="w">      </span><span class="c1">; Add W1 to W2 (result stored in W2)</span>
@@ -1628,6 +1664,55 @@ Where:
 </code></pre></div>
 <h2 id="chapter-summary">Chapter Summary<a class="headerlink" href="#chapter-summary" title="Permanent link">&para;</a></h2>
 <p>In this chapter, we explored the fundamentals of PIC24 assembly language and how to work directly with the CPU's registers and memory.</p>
+<h2 id="self-check-quiz">Self-Check Quiz<a class="headerlink" href="#self-check-quiz" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>Which addressing mode is used in the following instruction?</summary>
+<p><div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="mi">#42</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span>
+</code></pre></div>
+- A. Register Direct
+- B. Register Indirect
+- C. Immediate
+- D. Indirect with Post-Increment</p>
+<p><strong>Answer:</strong> C. Immediate<br />
+The <code>#42</code> indicates an immediate (literal) value is being loaded into a register.</p>
+</details>
+<details class="question">
+<summary>What is the result of this instruction?</summary>
+<p><div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="no">W2</span><span class="p">,</span><span class="w"> </span><span class="no">W1</span>
+</code></pre></div>
+- A. W2 becomes equal to W1<br />
+- B. W1 becomes equal to W2<br />
+- C. W2 and W1 are cleared<br />
+- D. Nothing happens</p>
+<p><strong>Answer:</strong> B. W1 becomes equal to W2<br />
+The contents of W2 are copied into W1.</p>
+</details>
+<hr />
+<p>What is the correct instruction to load the literal value <code>25</code> into register <code>W5</code>?</p>
+<details class="question" open="open">
+<summary>Choose one</summary>
+<ul>
+<li>A. <code>MOV W5, #25</code></li>
+<li>B. <code>MOV [W5], 25</code></li>
+<li>C. <code>MOV #25, W5</code></li>
+<li>D. <code>LOAD 25 → W5</code></li>
+</ul>
+<p><strong>Answer:</strong> C. <code>MOV #25, W5</code></p>
+</details>
+<h2 id="practice-prompt">Practice Prompt<a class="headerlink" href="#practice-prompt" title="Permanent link">&para;</a></h2>
+<p>Write a short PIC24 assembly program that:
+- Loads the values 5 and 10 into two registers
+- Adds them together
+- Stores the result in <code>W2</code></p>
+<p>Try it yourself before revealing the solution!</p>
+<details class="example">
+<summary>Show Solution</summary>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="mi">#10</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">      </span><span class="c1">; Load 10 into W0</span>
+<span class="nf">MOV</span><span class="w">     </span><span class="mi">#5</span><span class="p">,</span><span class="w"> </span><span class="no">W1</span><span class="w">       </span><span class="c1">; Load 5 into W1</span>
+<span class="nf">ADD</span><span class="w">     </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="no">W1</span><span class="w">       </span><span class="c1">; Add W0 to W1 → W1 = 15</span>
+<span class="nf">MOV</span><span class="w">     </span><span class="no">W1</span><span class="p">,</span><span class="w"> </span><span class="no">W2</span><span class="w">       </span><span class="c1">; Store the result in W2</span>
+</code></pre></div>
+</details>
 <h3 id="what-you-learned">What You Learned:<a class="headerlink" href="#what-you-learned" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The basic <strong>syntax</strong> of PIC24 assembly instructions</li>
