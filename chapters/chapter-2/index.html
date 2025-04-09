@@ -45,6 +45,8 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
     
+      <link rel="stylesheet" href="../../css/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -536,6 +538,15 @@
   <a href="#self-check-quiz" class="md-nav__link">
     <span class="md-ellipsis">
       Self-Check Quiz
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-check-quiz-styled-with-uppercase-letters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-Check Quiz (Styled with Uppercase Letters)
     </span>
   </a>
   
@@ -1464,6 +1475,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#self-check-quiz-styled-with-uppercase-letters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Self-Check Quiz (Styled with Uppercase Letters)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#practice-prompt" class="md-nav__link">
     <span class="md-ellipsis">
       Practice Prompt
@@ -1693,14 +1713,15 @@ The <code>#42</code> indicates an immediate (literal) value is being loaded into
 The contents of <code>W2</code> are copied into <code>W1</code>.</p>
 </details>
 <hr />
-<details class="question" open="open">
-<summary>What is the correct instruction to load the literal value <code>25</code> into register <code>W5</code>?</summary>
-<ul>
-<li>A. <code>MOV W5, #25</code>  </li>
-<li>B. <code>MOV [W5], 25</code>  </li>
-<li>C. <code>MOV #25, W5</code>  </li>
-<li>D. <code>LOAD 25 → W5</code></li>
-</ul>
+<h2 id="self-check-quiz-styled-with-uppercase-letters">Self-Check Quiz (Styled with Uppercase Letters)<a class="headerlink" href="#self-check-quiz-styled-with-uppercase-letters" title="Permanent link">&para;</a></h2>
+<details class="question">
+<summary>Which instruction correctly loads literal 25 into W5?</summary>
+<p><div class="upper-alpha" markdown>
+1. <code>MOV W5, #25</code><br />
+2. <code>MOV [W5], 25</code><br />
+3. <code>MOV #25, W5</code><br />
+4. <code>LOAD 25 → W5</code>
+</div></p>
 <p><strong>Answer:</strong> C. <code>MOV #25, W5</code></p>
 </details>
 <details class="question">
