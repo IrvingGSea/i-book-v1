@@ -66,5 +66,6 @@ extra_javascript:
 
 extra_css:
   - assets/stylesheets/custom.css
+  - css/extra.css
 
 

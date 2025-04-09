@@ -182,14 +182,19 @@ In this chapter, we explored the fundamentals of PIC24 assembly language and how
 
 ---
 
-???+ question "What is the correct instruction to load the literal value `25` into register `W5`?"
+## Self-Check Quiz (Styled with Uppercase Letters)
 
-    - A. `MOV W5, #25`  
-    - B. `MOV [W5], 25`  
-    - C. `MOV #25, W5`  
-    - D. `LOAD 25 → W5`
+??? question "Which instruction correctly loads literal 25 into W5?"
+
+    <div class="upper-alpha" markdown>
+    1. `MOV W5, #25`  
+    2. `MOV [W5], 25`  
+    3. `MOV #25, W5`  
+    4. `LOAD 25 → W5`
+    </div>
 
     **Answer:** C. `MOV #25, W5`
+
 
 ??? question "Which instruction correctly loads literal 10 into W0?"
 
