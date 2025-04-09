@@ -31,23 +31,27 @@ Each PIC24 assembly instruction follows a simple, consistent structure:
 
 ```asm
 OPCODE  OPERAND1, OPERAND2
-
+```
 Where:
 - OPCODE is the operation to perform (e.g. MOV, ADD, SUB, etc.)
 - OPERAND1 is the source operand (what's being used for the operation)
 - OPERAND2 is the destination operand (where the result is stored)
 
 Example: Moving Data Between Registers
+```asm
     MOV     W1, W0      ; Copy contents of W1 into W0
     MOV     #10, W2     ; Load the literal value 10 into W2
+```
 
 In the previous example: 
 - MOV W1, W0 takes the contents of W1 and stores it in W0
 - MOVE #10, W2 loads the immdeiate value 10 into W2
 
 Use semicolons (;) for comments in the PIC24 assembly:
+```asm
     CLR     W3          ; Clear W3 (set to zero)
     ADD     W1, W2      ; Add W1 to W2 (result stored in W2)
+```
 
 ### Working Registers (W0–W15)
 
@@ -87,52 +91,58 @@ Loads a constant (literal) value directly into a register.
 ```asm
 MOV     #25, W0     ; #25 is a literal constant.
                     ; Common for setting values or initializing data.
-
+```
 
 ### 2. Register Direct 
 
 Uses a working register directly as the source or desination.
 
+```asm
 MOV     W1, W2      ; Copy contents of W1 into W2.
                     ; Fastest and simplest form.
                     ; All operations using Wn (W0–W15) fall under this mode.
-
+```
 
 
 ### 3. Register Indirect
 
 Uses a register as a pointer to data in memory
 
+```asm
 MOV     [W5], W0    ; Move value from address pointed to by W5 into W0.
                     ; W5 contains the address, not the value itself.
-
+```
 
 ### 4. Indirect with Post-Increment
 
 Automatically increments the pointer after the operation
 
+```asm
 MOV     [W6++], W1  ; Move from memory pointed to by W6 into W1.
                     ; Then W6 = W6 + 2.
                     ; Useful for reading data from arrays (word-aligned).
-
+```
 
 
 ### 5. Indirect with Pre-Increment
 
 Decrements the pointer before accessing the memory
 
+```asm
 MOV     [--W6], W1  ; W6 = W6 - 2, then move from new address into W1.
                     ; Useful when reading a stack or traversing backward.
-
+```
 
 
 ### 6. Literal+Wn
 
 Adds a literal offset to a base register
 
+```asm
 MOV     [W8 + 4], W0   ; Move from address (W8 + 4) into W0.
                        ; Often used for structure fields or array access.
                        ; Literal must be word-aligned (multiple of 2).
+```
 
 ## Chapter Summary
 
