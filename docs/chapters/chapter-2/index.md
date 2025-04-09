@@ -187,15 +187,16 @@ In this chapter, we explored the fundamentals of PIC24 assembly language and how
 ??? question "Which instruction correctly loads literal 25 into W5?"
 
     <div class="upper-alpha" markdown>
-    
-    1. MOV W5, #25  
-    2. MOV [W5], 25  
-    3. MOV #25, W5  
-    4. LOAD 25 → W5
-
+      <ol>
+        <li>MOV W5, #25</li>
+        <li>MOV [W5], 25</li>
+        <li>MOV #25, W5</li>
+        <li>LOAD 25 → W5</li>
+      </ol>
     </div>
 
     **Answer:** C. MOV #25, W5
+
 
 
 ??? question "Which instruction correctly loads literal 10 into W0?"
@@ -258,3 +259,11 @@ In Chapter 3, we'll explore:
 - How the **stack** works for passing data and preserving state
 
 You'll learn to set up and tear down stack frames manually — a crucial skill for writing low-level code that’s reliable and efficient.
+
+<div class="upper-alpha" markdown>
+<ol>
+  <li>Alpha</li>
+  <li>Bravo</li>
+  <li>Charlie</li>
+</ol>
+</div>
