@@ -1,4 +1,4 @@
-/* quiz-version: v2 */
+/* Force uppercase A, B, C, D... for quiz options */
 .upper-alpha ol {
   list-style-type: upper-alpha !important;
 }
