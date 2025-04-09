@@ -187,13 +187,15 @@ In this chapter, we explored the fundamentals of PIC24 assembly language and how
 ??? question "Which instruction correctly loads literal 25 into W5?"
 
     <div class="upper-alpha" markdown>
-    1. `MOV W5, #25`  
-    2. `MOV [W5], 25`  
-    3. `MOV #25, W5`  
-    4. `LOAD 25 → W5`
+    
+    1. MOV W5, #25  
+    2. MOV [W5], 25  
+    3. MOV #25, W5  
+    4. LOAD 25 → W5
+
     </div>
 
-    **Answer:** C. `MOV #25, W5`
+    **Answer:** C. MOV #25, W5
 
 
 ??? question "Which instruction correctly loads literal 10 into W0?"
