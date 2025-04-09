@@ -1667,43 +1667,49 @@ Where:
 <h2 id="self-check-quiz">Self-Check Quiz<a class="headerlink" href="#self-check-quiz" title="Permanent link">&para;</a></h2>
 <details class="question">
 <summary>Which addressing mode is used in the following instruction?</summary>
-<p><div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="mi">#42</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="mi">#42</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span>
 </code></pre></div>
-- A. Register Direct
-- B. Register Indirect
-- C. Immediate
-- D. Indirect with Post-Increment</p>
+<ul>
+<li>A. Register Direct  </li>
+<li>B. Register Indirect  </li>
+<li>C. Immediate  </li>
+<li>D. Indirect with Post-Increment</li>
+</ul>
 <p><strong>Answer:</strong> C. Immediate<br />
 The <code>#42</code> indicates an immediate (literal) value is being loaded into a register.</p>
 </details>
+<hr />
 <details class="question">
 <summary>What is the result of this instruction?</summary>
-<p><div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="no">W2</span><span class="p">,</span><span class="w"> </span><span class="no">W1</span>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="no">W2</span><span class="p">,</span><span class="w"> </span><span class="no">W1</span>
 </code></pre></div>
-- A. W2 becomes equal to W1<br />
-- B. W1 becomes equal to W2<br />
-- C. W2 and W1 are cleared<br />
-- D. Nothing happens</p>
+<ul>
+<li>A. W2 becomes equal to W1  </li>
+<li>B. W1 becomes equal to W2  </li>
+<li>C. W2 and W1 are cleared  </li>
+<li>D. Nothing happens</li>
+</ul>
 <p><strong>Answer:</strong> B. W1 becomes equal to W2<br />
-The contents of W2 are copied into W1.</p>
+The contents of <code>W2</code> are copied into <code>W1</code>.</p>
 </details>
 <hr />
-<p>What is the correct instruction to load the literal value <code>25</code> into register <code>W5</code>?</p>
 <details class="question" open="open">
-<summary>Choose one</summary>
+<summary>What is the correct instruction to load the literal value <code>25</code> into register <code>W5</code>?</summary>
 <ul>
-<li>A. <code>MOV W5, #25</code></li>
-<li>B. <code>MOV [W5], 25</code></li>
-<li>C. <code>MOV #25, W5</code></li>
+<li>A. <code>MOV W5, #25</code>  </li>
+<li>B. <code>MOV [W5], 25</code>  </li>
+<li>C. <code>MOV #25, W5</code>  </li>
 <li>D. <code>LOAD 25 → W5</code></li>
 </ul>
 <p><strong>Answer:</strong> C. <code>MOV #25, W5</code></p>
 </details>
 <h2 id="practice-prompt">Practice Prompt<a class="headerlink" href="#practice-prompt" title="Permanent link">&para;</a></h2>
-<p>Write a short PIC24 assembly program that:
-- Loads the values 5 and 10 into two registers
-- Adds them together
-- Stores the result in <code>W2</code></p>
+<p>Write a short PIC24 assembly program that:</p>
+<ul>
+<li>Loads the values 5 and 10 into two registers  </li>
+<li>Adds them together  </li>
+<li>Stores the result in <code>W2</code></li>
+</ul>
 <p>Try it yourself before revealing the solution!</p>
 <details class="example">
 <summary>Show Solution</summary>

@@ -151,7 +151,7 @@ In this chapter, we explored the fundamentals of PIC24 assembly language and how
 ## Self-Check Quiz
 
 ??? question "Which addressing mode is used in the following instruction?"
-
+    
     ```asm
     MOV     #42, W0
     ```
@@ -190,6 +190,19 @@ In this chapter, we explored the fundamentals of PIC24 assembly language and how
     - D. `LOAD 25 → W5`
 
     **Answer:** C. `MOV #25, W5`
+
+??? question "Which instruction correctly loads literal 10 into W0?"
+
+    ```asm
+    ??? example "Show Options"
+        <div class="upper-alpha" markdown>
+        1. `MOV W0, #10`  
+        2. `MOV #10, W0`  
+        3. `LOAD 10 → W0`  
+        4. `MOV #W0, 10`  
+        </div>
+
+    **Answer:** B. `MOV #10, W0`
 
 
 ## Practice Prompt
