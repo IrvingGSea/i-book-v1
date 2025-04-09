@@ -45,7 +45,7 @@ Example: Moving Data Between Registers
 
 In the previous example: 
 - MOV W1, W0 takes the contents of W1 and stores it in W0
-- MOVE #10, W2 loads the immdeiate value 10 into W2
+- MOV #10, W2 loads the immdeiate value 10 into W2
 
 Use semicolons (;) for comments in the PIC24 assembly:
 ```asm
@@ -147,6 +147,62 @@ MOV     [W8 + 4], W0   ; Move from address (W8 + 4) into W0.
 ## Chapter Summary
 
 In this chapter, we explored the fundamentals of PIC24 assembly language and how to work directly with the CPU's registers and memory.
+
+## Self-Check Quiz
+
+??? question "Which addressing mode is used in the following instruction?"
+    ```asm
+    MOV     #42, W0
+    ```
+    - A. Register Direct
+    - B. Register Indirect
+    - C. Immediate
+    - D. Indirect with Post-Increment
+
+    **Answer:** C. Immediate  
+    The `#42` indicates an immediate (literal) value is being loaded into a register.
+
+??? question "What is the result of this instruction?"
+    ```asm
+    MOV     W2, W1
+    ```
+    - A. W2 becomes equal to W1  
+    - B. W1 becomes equal to W2  
+    - C. W2 and W1 are cleared  
+    - D. Nothing happens
+
+    **Answer:** B. W1 becomes equal to W2  
+    The contents of W2 are copied into W1.
+
+---
+
+What is the correct instruction to load the literal value `25` into register `W5`?
+
+???+ question "Choose one"
+    - A. `MOV W5, #25`
+    - B. `MOV [W5], 25`
+    - C. `MOV #25, W5`
+    - D. `LOAD 25 → W5`
+
+    **Answer:** C. `MOV #25, W5`
+
+## Practice Prompt
+
+Write a short PIC24 assembly program that:
+- Loads the values 5 and 10 into two registers
+- Adds them together
+- Stores the result in `W2`
+
+Try it yourself before revealing the solution!
+
+??? example "Show Solution"
+    ```asm
+    MOV     #10, W0      ; Load 10 into W0
+    MOV     #5, W1       ; Load 5 into W1
+    ADD     W0, W1       ; Add W0 to W1 → W1 = 15
+    MOV     W1, W2       ; Store the result in W2
+    ```
+
 
 ### What You Learned:
 - The basic **syntax** of PIC24 assembly instructions
