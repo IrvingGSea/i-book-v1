@@ -1,4 +1,4 @@
+/* quiz-version: v2 */
 .upper-alpha ol {
-    list-style-type: upper-alpha;
-  }
-  
+  list-style-type: upper-alpha !important;
+}
