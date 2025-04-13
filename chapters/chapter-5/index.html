@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-my-mkdocs-site" class="md-skip">
+        <a href="#chapter-5-external-interrupts" class="md-skip">
           Skip to content
         </a>
       
@@ -427,6 +427,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter 5
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -437,6 +449,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-external-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      📟 What Are External Interrupts?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-pins-and-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Key Pins and Registers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Key Pins and Registers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Registers:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-triggered-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Edge-Triggered Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-int0-button-interrupt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Example: INT0 Button Interrupt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Code:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1098,6 +1207,92 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-external-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      📟 What Are External Interrupts?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-pins-and-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Key Pins and Registers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Key Pins and Registers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#important-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Registers:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-triggered-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Edge-Triggered Behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-int0-button-interrupt" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Example: INT0 Button Interrupt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup Code:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1115,8 +1310,101 @@
   
 
 
-<h1 id="welcome-to-my-mkdocs-site">Welcome to My MkDocs Site<a class="headerlink" href="#welcome-to-my-mkdocs-site" title="Permanent link">&para;</a></h1>
-<h1 id="chapter-5">Chapter 5<a class="headerlink" href="#chapter-5" title="Permanent link">&para;</a></h1>
+<h1 id="chapter-5-external-interrupts">Chapter 5: External Interrupts<a class="headerlink" href="#chapter-5-external-interrupts" title="Permanent link">&para;</a></h1>
+<h2 id="what-are-external-interrupts">📟 What Are External Interrupts?<a class="headerlink" href="#what-are-external-interrupts" title="Permanent link">&para;</a></h2>
+<p>External interrupts allow the microcontroller to <strong>respond immediately to changes on input pins</strong> — such as buttons, sensors, or other devices triggering a logic change.</p>
+<p>They are incredibly useful for handling <strong>real-time user input</strong> or reacting to asynchronous events.</p>
+<hr />
+<h2 id="key-pins-and-registers">📌 Key Pins and Registers<a class="headerlink" href="#key-pins-and-registers" title="Permanent link">&para;</a></h2>
+<p>PIC24 devices support multiple external interrupts using special pins:</p>
+<table>
+<thead>
+<tr>
+<th>Interrupt</th>
+<th>Pin</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INT0</td>
+<td>Usually RB7</td>
+<td>Edge-triggered, non-maskable</td>
+</tr>
+<tr>
+<td>INT1</td>
+<td>Configurable</td>
+<td>Edge-triggered, maskable</td>
+</tr>
+<tr>
+<td>INT2</td>
+<td>Configurable</td>
+<td>Edge-triggered, maskable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="important-registers">Important Registers:<a class="headerlink" href="#important-registers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Register / Bit</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INTxIF</code> (IFSx)</td>
+<td>Interrupt Flag — set when the event occurs</td>
+</tr>
+<tr>
+<td><code>INTxIE</code> (IECx)</td>
+<td>Interrupt Enable — must be set to 1</td>
+</tr>
+<tr>
+<td><code>INTxEP</code></td>
+<td>Edge polarity (1 = falling, 0 = rising)</td>
+</tr>
+<tr>
+<td><code>RPINR0</code>, <code>RPINR1</code>, …</td>
+<td>Remappable pins for INT1, INT2 (if supported)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="edge-triggered-behavior">🧠 Edge-Triggered Behavior<a class="headerlink" href="#edge-triggered-behavior" title="Permanent link">&para;</a></h2>
+<p>You can configure external interrupts to trigger on:</p>
+<ul>
+<li><strong>Rising edge</strong>: logic level 0 → 1 (e.g., button press)</li>
+<li><strong>Falling edge</strong>: logic level 1 → 0 (e.g., button release)</li>
+</ul>
+<p>This is controlled by the <code>INTxEP</code> bit.</p>
+<hr />
+<h2 id="example-int0-button-interrupt">⚡ Example: INT0 Button Interrupt<a class="headerlink" href="#example-int0-button-interrupt" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">__attribute__</span><span class="p">((</span><span class="n">interrupt</span><span class="p">,</span><span class="w"> </span><span class="n">no_auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_INT0Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">INT0IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">     </span><span class="c1">// Clear interrupt flag</span>
+<span class="w">    </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">     </span><span class="c1">// Toggle an LED</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="setup-code">Setup Code:<a class="headerlink" href="#setup-code" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">TRISBbits</span><span class="p">.</span><span class="n">TRISB7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">     </span><span class="c1">// Set RB7 (INT0) as input</span>
+<span class="n">INTCON2bits</span><span class="p">.</span><span class="n">INT0EP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">   </span><span class="c1">// Trigger on falling edge</span>
+<span class="n">IFS0bits</span><span class="p">.</span><span class="n">INT0IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">      </span><span class="c1">// Clear flag</span>
+<span class="n">IEC0bits</span><span class="p">.</span><span class="n">INT0IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">      </span><span class="c1">// Enable INT0 interrupt</span>
+</code></pre></div>
+<h2 id="best-practices">🧩 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Always <strong>clear the interrupt flag</strong> (<code>INTxIF</code>) at the start or end of the ISR  </li>
+<li>Use <strong>pull-up/down resistors</strong> to prevent floating inputs  </li>
+<li>Debounce mechanical inputs (like buttons) in software or hardware  </li>
+<li>Keep the ISR <strong>short and efficient</strong></li>
+</ul>
+<h2 id="use-cases">🧠 Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Button presses  </li>
+<li>Motion detectors  </li>
+<li>Limit switches in robotics  </li>
+<li>External sensor signals</li>
+</ul>
 
 
 
@@ -1137,7 +1425,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-07
+    2025-04-13
   </span>
 
     
