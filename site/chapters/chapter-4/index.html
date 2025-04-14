@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-my-mkdocs-site" class="md-skip">
+        <a href="#chapter-4-timers-and-interrupts" class="md-skip">
           Skip to content
         </a>
       
@@ -405,6 +405,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter 4
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -415,6 +427,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-timers" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏱️ What Are Timers?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ What Are Timers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-timers-in-pic24fj64ga002" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏳ Types of Timers in PIC24FJ64GA002
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timer-setup-example-timer1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Timer Setup Example (Timer1)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Notes on Interrupts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Notes on Interrupts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1098,6 +1195,80 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-timers" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏱️ What Are Timers?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ What Are Timers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-timers-in-pic24fj64ga002" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏳ Types of Timers in PIC24FJ64GA002
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timer-setup-example-timer1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Timer Setup Example (Timer1)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes-on-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Notes on Interrupts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧩 Notes on Interrupts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1115,8 +1286,104 @@
   
 
 
-<h1 id="welcome-to-my-mkdocs-site">Welcome to My MkDocs Site<a class="headerlink" href="#welcome-to-my-mkdocs-site" title="Permanent link">&para;</a></h1>
-<h1 id="chapter-4">Chapter 4<a class="headerlink" href="#chapter-4" title="Permanent link">&para;</a></h1>
+<h1 id="chapter-4-timers-and-interrupts">Chapter 4: Timers and Interrupts<a class="headerlink" href="#chapter-4-timers-and-interrupts" title="Permanent link">&para;</a></h1>
+<h2 id="what-are-timers">⏱️ What Are Timers?<a class="headerlink" href="#what-are-timers" title="Permanent link">&para;</a></h2>
+<p>Timers are hardware modules in the PIC24 used for precise time measurement and periodic events. They’re essential for:</p>
+<ul>
+<li>Creating delays</li>
+<li>Measuring time between events</li>
+<li>Triggering code execution at regular intervals</li>
+</ul>
+<h3 id="key-features">Key Features:<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Independent of CPU instructions</li>
+<li>Can be configured with different <strong>prescalers</strong> for flexible timing</li>
+<li>Often used to trigger <strong>interrupts</strong></li>
+</ul>
+<hr />
+<h2 id="types-of-timers-in-pic24fj64ga002">⏳ Types of Timers in PIC24FJ64GA002<a class="headerlink" href="#types-of-timers-in-pic24fj64ga002" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Timer</th>
+<th>Width</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TMR1</td>
+<td>16-bit</td>
+<td>Can generate interrupts</td>
+</tr>
+<tr>
+<td>TMR2</td>
+<td>16-bit</td>
+<td>Often used with Output Compare</td>
+</tr>
+<tr>
+<td>TMR3</td>
+<td>16-bit</td>
+<td>Can combine with TMR2 (32-bit mode)</td>
+</tr>
+<tr>
+<td>TMR4/5</td>
+<td>16-bit</td>
+<td>Used for PWM or advanced timing</td>
+</tr>
+</tbody>
+</table>
+<p>Each timer can be configured using special function registers (SFRs), such as:</p>
+<ul>
+<li><code>T1CON</code> – Timer1 Control Register  </li>
+<li><code>PR1</code> – Period register (defines when an interrupt should fire)  </li>
+<li><code>TMR1</code> – Current timer value  </li>
+</ul>
+<hr />
+<h2 id="timer-setup-example-timer1">⚙️ Timer Setup Example (Timer1)<a class="headerlink" href="#timer-setup-example-timer1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setupTimer1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">T1CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8030</span><span class="p">;</span><span class="w">   </span><span class="c1">// Enable Timer1, prescaler 1:256</span>
+<span class="w">    </span><span class="n">PR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15625</span><span class="p">;</span><span class="w">      </span><span class="c1">// Period register for 0.5s delay (assuming 8MHz clock)</span>
+<span class="w">    </span><span class="n">TMR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">         </span><span class="c1">// Reset timer</span>
+<span class="w">    </span><span class="n">IEC0bits</span><span class="p">.</span><span class="n">T1IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Enable Timer1 interrupt</span>
+<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">T1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Clear interrupt flag</span>
+<span class="p">}</span>
+
+<span class="cp">## What Are Interrupts?</span>
+<span class="n">Interrupts</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">special</span><span class="w"> </span><span class="n">mechanisms</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">let</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">microcontroller</span><span class="w"> </span><span class="n">respond</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">events</span><span class="p">(</span><span class="n">like</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">timer</span><span class="w"> </span><span class="n">expiring</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">ping</span><span class="w"> </span><span class="n">changing</span><span class="p">)</span><span class="w"> </span><span class="n">asynchronously</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">without</span><span class="w"> </span><span class="n">constantly</span><span class="w"> </span><span class="n">checking</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">them</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">code</span><span class="p">.</span>
+
+<span class="cp">### Common Interrupt Sources includes: </span>
+<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Timers</span>
+<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">External</span><span class="w"> </span><span class="n">pins</span><span class="p">(</span><span class="n">buttons</span><span class="p">)</span>
+<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Communication</span><span class="p">(</span><span class="n">UART</span><span class="p">,</span><span class="w"> </span><span class="n">SPI</span><span class="p">,</span><span class="w"> </span><span class="n">I2C</span><span class="p">)</span>
+<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ADC</span><span class="w"> </span><span class="n">conversions</span>
+
+<span class="cp">## 🧠 How Interrupts Work</span>
+
+<span class="mf">1.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">interrupt</span><span class="w"> </span><span class="o">**</span><span class="n">event</span><span class="o">**</span><span class="w"> </span><span class="n">occurs</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="n">Timer1</span><span class="w"> </span><span class="n">hits</span><span class="w"> </span><span class="n">PR1</span><span class="p">)</span><span class="w">  </span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">CPU</span><span class="w"> </span><span class="o">**</span><span class="n">pauses</span><span class="o">**</span><span class="w"> </span><span class="n">normal</span><span class="w"> </span><span class="n">execution</span><span class="w">  </span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Jumps</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">special</span><span class="w"> </span><span class="n">function</span><span class="o">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">**</span><span class="n">Interrupt</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="n">Routine</span><span class="w"> </span><span class="p">(</span><span class="n">ISR</span><span class="p">)</span><span class="o">**</span><span class="w">  </span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">After</span><span class="w"> </span><span class="n">ISR</span><span class="w"> </span><span class="n">finishes</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">execution</span><span class="w"> </span><span class="n">resumes</span><span class="o">**</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="n">off</span>
+
+
+<span class="cp">### Example: Timer1 Interrupt Handler </span>
+<span class="err">```</span><span class="n">c</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">__attribute__</span><span class="p">((</span><span class="n">interrupt</span><span class="p">,</span><span class="w"> </span><span class="n">no_auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_T1Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">T1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Clear interrupt flag</span>
+<span class="w">    </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Toggle LED on RB0</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="notes-on-interrupts">🧩 Notes on Interrupts<a class="headerlink" href="#notes-on-interrupts" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Always <strong>clear the interrupt flag</strong> first inside the ISR!  </li>
+<li>Use the correct <strong>ISR name</strong> (e.g., <code>_T1Interrupt</code> for Timer1)  </li>
+<li>Keep ISRs <strong>short and fast</strong>  </li>
+<li>Use <code>__attribute__((interrupt))</code> to declare an ISR in C</li>
+</ul>
+<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
+<p>Timers allow precise time-based operations
+Interrupts let you react to events without polling
+Together, they enable efficient embedded systems</p>
 
 
 
@@ -1137,7 +1404,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-07
+    2025-04-13
   </span>
 
     

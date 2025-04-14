@@ -1,6 +1,6 @@
 # Chapter 1: Introduction to Microcontrollers & PIC24FJ64GA002
 
-## What is a Microcontroller?
+## Section 1: What is a Microcontroller?
 
 A **microcontroller** is a compact, self-contained computer system built onto a single integrated circuit. It includes a **CPU (central processing unit)**, **memory**, and **peripherals**, making it well-suited for controlling embedded systems and real-world devices.
 
