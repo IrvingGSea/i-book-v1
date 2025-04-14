@@ -1,6 +1,6 @@
 # Chapter 2: Assembly & Addressing Modes
 
-## Why Learn Assembly?
+## Section 1: Why Learn Assembly?
 
 Modern embedded systems are often programmed in high-level languages like C, but understanding **assembly language** is crucial for writing efficient, low-level code and truly mastering how a microcontroller works.
 
@@ -25,214 +25,308 @@ In this chapter, we’ll explore:
 - The different **addressing modes** (immediate, direct, indirect)
 - How to perform arithmetic and logical operations
 
-## Basic Instruction Structure & Syntax
+## Section 2: Basic Instruction Structure & Syntax
 
-Each PIC24 assembly instruction follows a simple, consistent structure:
+Assembly instructions for the PIC24 follow a clear, consistent pattern:
 
 ```asm
 OPCODE  OPERAND1, OPERAND2
 ```
+
 Where:
-- OPCODE is the operation to perform (e.g. MOV, ADD, SUB, etc.)
-- OPERAND1 is the source operand (what's being used for the operation)
-- OPERAND2 is the destination operand (where the result is stored)
 
-Example: Moving Data Between Registers
-```asm
-    MOV     W1, W0      ; Copy contents of W1 into W0
-    MOV     #10, W2     ; Load the literal value 10 into W2
-```
-
-In the previous example: 
-- MOV W1, W0 takes the contents of W1 and stores it in W0
-- MOV #10, W2 loads the immdeiate value 10 into W2
-
-Use semicolons (;) for comments in the PIC24 assembly:
-```asm
-    CLR     W3          ; Clear W3 (set to zero)
-    ADD     W1, W2      ; Add W1 to W2 (result stored in W2)
-```
-
-### Working Registers (W0–W15)
-
-PIC24 has 16 general-purpose working registers used for arithmetic, data movement, memory access, and stack operations.
-
-| Register | Purpose                        | Notes                             |
-|----------|--------------------------------|-----------------------------------|
-| W0–W13   | General-purpose registers      | Used for operations, temporary storage |
-| W14      | Frame Pointer (FP)             | Typically points to current stack frame |
-| W15      | Stack Pointer (SP)             | Automatically updated on function calls |
-
-
-### Common PIC24 Assembly Instructions
-
-| Instruction | Description |
-|-------------|-------------|
-| `MOV`       | Move data between registers or from an immediate value |
-| `ADD`       | Add two registers or a register and a literal |
-| `SUB`       | Subtract one register from another |
-| `CLR`       | Clear a register (set it to 0) |
-| `INC` / `DEC` | Increment / Decrement a register |
-| `CP`        | Compare two values (affects flags; used with branches) |
-
-
-## Addressing Modes in PIC24
-
-Addressing modes define how data is accessed in an instruction. The PIC24 supports several flexible addressing modes, giving you control over where data comes from and how it's used.
-
-Here are the most common addressing modes:
+- **OPCODE**: The operation to perform (e.g., `MOV`, `ADD`, `SUB`)
+- **OPERAND1**: The **source** (where the data comes from)
+- **OPERAND2**: The **destination** (where the result is stored)
 
 ---
 
-### 1. Immediate Addressing
-
-Loads a constant (literal) value directly into a register.
+### 📋 Example: Moving Data
 
 ```asm
-MOV     #25, W0     ; #25 is a literal constant.
-                    ; Common for setting values or initializing data.
+MOV     W1, W0      ; Copy contents of W1 into W0
+MOV     #10, W2     ; Load the literal value 10 into W2
 ```
 
-### 2. Register Direct 
+- In `MOV W1, W0`, the value in `W1` is **copied into** `W0`
+- In `MOV #10, W2`, the literal value 10 is **loaded into** `W2`
 
-Uses a working register directly as the source or desination.
+---
+
+### 💬 Commenting Your Code
+
+Use **semicolons** (`;`) to add inline comments:
 
 ```asm
-MOV     W1, W2      ; Copy contents of W1 into W2.
-                    ; Fastest and simplest form.
-                    ; All operations using Wn (W0–W15) fall under this mode.
+CLR     W3          ; Clear register W3
+ADD     W1, W2      ; Add W1 to W2 (result stored in W2)
 ```
 
+> 🧠 In PIC24 assembly, instructions often **modify the second operand** — the destination — directly.
 
-### 3. Register Indirect
+## Section 3: Working Registers (W0–W15)
 
-Uses a register as a pointer to data in memory
+The PIC24 has **16 general-purpose working registers**, labeled `W0` through `W15`.
+
+These are used in most instructions for arithmetic, logic, data movement, and memory access.
+
+---
+
+### 🧠 What Are Working Registers?
+
+Working registers are **fast-access memory locations** inside the CPU. They're used to:
+
+- Perform calculations (`ADD`, `SUB`, `MUL`)
+- Pass function arguments
+- Store temporary values
+- Hold addresses for memory access
+
+---
+
+### 📋 Common Usage
+
+| Register | Role                  | Notes                                |
+|----------|------------------------|----------------------------------------|
+| W0–W13   | General-purpose         | Can be used freely                    |
+| W14      | Frame Pointer (FP)      | Often used for accessing stack frames |
+| W15      | Stack Pointer (SP)      | Always points to the top of the stack |
+
+---
+
+> 📦 Unlike high-level variables, working registers are **not named** — you must track their purpose as you code.
+
+---
+
+### 💡 Example
 
 ```asm
-MOV     [W5], W0    ; Move value from address pointed to by W5 into W0.
-                    ; W5 contains the address, not the value itself.
+MOV     #42, W1       ; Load literal 42 into W1
+MOV     #8,  W2       ; Load literal 8 into W2
+ADD     W1, W2        ; W2 = W1 + W2 → result in W2
 ```
 
-### 4. Indirect with Post-Increment
+W1 and W2 now contain temporary values and the result of an operation — all without using main memory.
 
-Automatically increments the pointer after the operation
+
+
+## Section 4: Addressing Modes in PIC24
+
+Addressing modes define **how operands are accessed** in an instruction. PIC24 supports multiple flexible modes that give you precise control over data retrieval.
+
+---
+
+### 1. 📌 Immediate Addressing
+
+Use a **literal constant** directly in the instruction.
 
 ```asm
-MOV     [W6++], W1  ; Move from memory pointed to by W6 into W1.
-                    ; Then W6 = W6 + 2.
-                    ; Useful for reading data from arrays (word-aligned).
+MOV     #25, W0      ; Load the value 25 into W0
 ```
 
+> `#25` is a literal constant. Useful for setting values or initializing registers.
 
-### 5. Indirect with Pre-Increment
+---
 
-Decrements the pointer before accessing the memory
+### 2. 📦 Register Direct
+
+Use the value stored in a working register.
 
 ```asm
-MOV     [--W6], W1  ; W6 = W6 - 2, then move from new address into W1.
-                    ; Useful when reading a stack or traversing backward.
+MOV     W1, W2       ; Copy contents of W1 into W2
 ```
 
+> Fastest mode — all operations using `Wn` fall under this category.
 
-### 6. Literal+Wn
+---
 
-Adds a literal offset to a base register
+### 3. 🧭 Register Indirect
+
+Treat the contents of a register as a **pointer** to a memory address.
 
 ```asm
-MOV     [W8 + 4], W0   ; Move from address (W8 + 4) into W0.
-                       ; Often used for structure fields or array access.
-                       ; Literal must be word-aligned (multiple of 2).
+MOV     [W5], W0     ; Move value from memory pointed to by W5 into W0
 ```
 
-## Chapter Summary
+> W5 holds the **address**, not the value. This accesses memory indirectly.
 
-In this chapter, we explored the fundamentals of PIC24 assembly language and how to work directly with the CPU's registers and memory.
+---
+
+### 4. ➕ Indirect with Post-Increment
+
+Automatically increments the pointer **after** the access.
+
+```asm
+MOV     [W6++], W1   ; W1 = *W6, then W6 = W6 + 2
+```
+
+> Ideal for traversing arrays. Increments by 2 bytes (since PIC24 uses 16-bit words).
+
+---
+
+### 5. ➖ Indirect with Pre-Decrement
+
+Decrements the pointer **before** the access.
+
+```asm
+MOV     [--W6], W1   ; W6 = W6 - 2, then move from new address into W1
+```
+
+> Common when accessing stack values in reverse order.
+
+---
+
+### 6. 🧮 Literal Offset + Register (Indexed)
+
+Adds a literal offset to a base register.
+
+```asm
+MOV     [W8 + 4], W0   ; Move from address (W8 + 4) into W0
+```
+
+> Useful for arrays and structs.  
+> ⚠️ Offset must be word-aligned (multiple of 2).
+
+---
+
+> 📚 Understanding addressing modes is essential for writing flexible and efficient assembly code.
+
+## Section 5: Writing Clean, Readable Assembly
+
+Writing assembly that works is good. Writing assembly that others (and future you) can understand? Even better.
+
+Here are a few **best practices** for clean and maintainable PIC24 assembly:
+
+---
+
+### 📛 Use Labels Effectively
+
+Labels are like **named bookmarks** in your code. They make loops and branches much easier to follow.
+
+```asm
+Loop:
+    DEC     W0, W0
+    CP      W0, #0
+    BNE     Loop     ; Branch if W0 ≠ 0
+```
+
+> Always place labels on their own line for clarity.
+
+---
+
+### 💬 Comment Generously
+
+Every line of code should **communicate intent**, not just function.
+
+```asm
+MOV     #10, W1      ; Load loop count
+MOV     #0,  W2      ; Clear sum accumulator
+```
+
+> Write your comments for beginners — not just experts.
+
+---
+
+### 🧱 Align Instructions
+
+Neatly aligned code is **easier to scan** and debug.
+
+```asm
+MOV     #3,  W0
+ADD     W1,  W0
+CP      W0,  #5
+```
+
+> Consistent spacing makes your code look professional and polished.
+
+---
+
+### ⏸️ Use `NOP` for Debugging
+
+```asm
+NOP                 ; No operation – useful for breakpoints
+```
+
+> NOPs help pause execution at specific lines during simulation or hardware debugging.
+
+---
+
+Clean code isn’t about cleverness — it’s about clarity. Good formatting makes bugs easier to catch and logic easier to follow.
 
 
+## Section 6: Summary and Instruction Cheat Sheet
 
-## Self-Check Quiz (Styled with Uppercase Letters)
+By now, you’ve seen how assembly gives you **precise, low-level control** over your microcontroller.
 
-??? question "Which instruction correctly loads literal 25 into W5?"
+---
+
+### 🔑 Key Takeaways
+
+- PIC24 instructions follow the format: `OPCODE OPERAND1, OPERAND2`
+- `W0–W15` are working registers used for calculations and memory access
+- Addressing modes allow you to work with constants, registers, and memory
+- Good formatting and comments make your code readable and debuggable
+
+---
+
+### 🧾 Common PIC24 Assembly Instructions
+
+| Instruction | Description                             |
+|-------------|-----------------------------------------|
+| `MOV`       | Move data between registers or from a literal |
+| `ADD`       | Add two values                          |
+| `SUB`       | Subtract one value from another         |
+| `CLR`       | Clear a register (set to 0)             |
+| `INC`/`DEC` | Increment or decrement a register       |
+| `CP`        | Compare values (used with conditional branches) |
+
+---
+
+### 🧮 Working Register Reference
+
+| Register | Purpose                    |
+|----------|----------------------------|
+| `W0–W13` | General-purpose registers   |
+| `W14`    | Frame pointer (optional)    |
+| `W15`    | Stack pointer (must not modify manually) |
+
+> 🔍 Understanding these fundamentals will help you as we begin writing actual control logic, loops, and subroutines in the next chapter.
+
+### 🧠 Quiz: Assembly Fundamentals
+
+What does the following instruction do?
+
+```asm
+MOV     W2, W1
+```
 
 <div class="upper-alpha" markdown>
-  <ol>
-    <li>MOV W5, #25</li>
-    <li>MOV [W5], 25</li>
-    <li>MOV #25, W5</li>
-    <li>LOAD 25 → W5</li>
-  </ol>
+1. W2 becomes equal to W1  
+2. W1 becomes equal to W2  
+3. W2 and W1 are cleared  
+4. Nothing happens  
 </div>
 
-**Answer:** C. `MOV #25, W5`
+??? question "Show Answer"
+    The correct answer is **B**.
 
+    `MOV W2, W1` takes the contents of `W2` and copies them into `W1`.  
+    The original value in `W1` is overwritten.
 
+---
 
+### ✍️ Prompt Practice
 
-??? question "Which instruction correctly loads literal 10 into W0?"
+Write a short assembly routine that:
+- Loads the values 5 and 10 into two registers
+- Adds them together
+- Stores the result in a third register
 
+Try to write it yourself first, then reveal the answer below.
+
+??? example "Click to show solution"
     ```asm
-    ??? example "Show Options"
-        <div class="upper-alpha" markdown>
-        1. `MOV W0, #10`  
-        2. `MOV #10, W0`  
-        3. `LOAD 10 → W0`  
-        4. `MOV #W0, 10`  
-        </div>
-
-    **Answer:** B. `MOV #10, W0`
-
-
-## Practice Prompt
-
-Write a short PIC24 assembly program that:
-
-- Loads the values 5 and 10 into two registers  
-- Adds them together  
-- Stores the result in `W2`
-
-Try it yourself before revealing the solution!
-
-??? example "Show Solution"
-
-    ```asm
-    MOV     #10, W0      ; Load 10 into W0
-    MOV     #5, W1       ; Load 5 into W1
-    ADD     W0, W1       ; Add W0 to W1 → W1 = 15
-    MOV     W1, W2       ; Store the result in W2
+    MOV     #5,  W0      ; Load 5 into W0
+    MOV     #10, W1      ; Load 10 into W1
+    ADD     W0,  W1      ; W1 = W0 + W1 → result in W1
+    MOV     W1,  W2      ; Copy result into W2
     ```
-
-
-
-### What You Learned:
-- The basic **syntax** of PIC24 assembly instructions
-- The role of **working registers** (`W0–W15`)
-- How to use the **MOV**, `ADD`, `SUB`, and `CLR` instructions
-- The key **addressing modes**:
-  - Immediate
-  - Register direct
-  - Indirect with pre/post increment
-  - Literal offset + register
-
-### Why It Matters:
-- Assembly gives you **precise control** over hardware
-- It's the foundation for understanding how **C code interacts with hardware**
-- You’ll need these concepts when working with the **stack**, **interrupts**, and **I/O peripherals**
-
----
-
-## Up Next: Stack, Call, and Function Frames
-
-In Chapter 3, we'll explore:
-- How the PIC24 manages **function calls**
-- The use of `W14` as the **frame pointer**
-- How the **stack** works for passing data and preserving state
-
-You'll learn to set up and tear down stack frames manually — a crucial skill for writing low-level code that’s reliable and efficient.
-
-<div class="upper-alpha" markdown>
-<ol>
-  <li>Alpha</li>
-  <li>Bravo</li>
-  <li>Charlie</li>
-</ol>
-</div>

@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-4-timers-and-interrupts" class="md-skip">
+        <a href="#chapter-4-stack-and-subroutine-calls" class="md-skip">
           Skip to content
         </a>
       
@@ -444,19 +444,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-are-timers" class="md-nav__link">
+  <a href="#section-1-what-is-a-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      ⏱️ What Are Timers?
+      Section 1: What is a Stack?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⏱️ What Are Timers?">
+    <nav class="md-nav" aria-label="Section 1: What is a Stack?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#real-world-analogy" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features:
+      🔁 Real-World Analogy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-we-need-a-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Why Do We Need a Stack?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Key Operations
     </span>
   </a>
   
@@ -468,37 +486,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-of-timers-in-pic24fj64ga002" class="md-nav__link">
+  <a href="#section-2-the-call-stack-in-assembly" class="md-nav__link">
     <span class="md-ellipsis">
-      ⏳ Types of Timers in PIC24FJ64GA002
+      Section 2: The Call Stack in Assembly
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#timer-setup-example-timer1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ Timer Setup Example (Timer1)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes-on-interrupts" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧩 Notes on Interrupts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧩 Notes on Interrupts">
+    <nav class="md-nav" aria-label="Section 2: The Call Stack in Assembly">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#what-happens-during-a-call" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      🔹 What Happens During a CALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack-behavior-during-function-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack Behavior During Function Calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-dont-have-to-push-return-address-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      You Don't Have to Push Return Address Yourself
     </span>
   </a>
   
@@ -506,6 +524,213 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-stack-pointers-in-the-pic24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Stack Pointers in the PIC24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Stack Pointers in the PIC24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#w15-the-stack-pointer-sp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 W15 — The Stack Pointer (SP)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 W15 — The Stack Pointer (SP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-manual-pushpop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Manual Push/Pop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w14-the-frame-pointer-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 W14 — The Frame Pointer (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-stack-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Summary of Stack Registers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-writing-and-tracing-a-subroutine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Writing and Tracing a Subroutine
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Writing and Tracing a Subroutine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-main-program-calls-the-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Step 1: Main Program Calls the Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-define-the-subroutine" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Step 2: Define the Subroutine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-stack-looks-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 What the Stack Looks Like
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-visualizing-the-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Visualizing the Stack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Visualizing the Stack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-stack-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 How the Stack Grows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-two-nested-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Example: Two Nested Calls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Example: Two Nested Calls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack Behavior:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-summary-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 6: Summary and Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 6: Summary and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices-for-subroutines" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Best Practices for Subroutines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz-stack-and-subroutines" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: Stack and Subroutines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
   
 </li>
       
@@ -1202,19 +1427,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-are-timers" class="md-nav__link">
+  <a href="#section-1-what-is-a-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      ⏱️ What Are Timers?
+      Section 1: What is a Stack?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="⏱️ What Are Timers?">
+    <nav class="md-nav" aria-label="Section 1: What is a Stack?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#real-world-analogy" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features:
+      🔁 Real-World Analogy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-do-we-need-a-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Why Do We Need a Stack?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Key Operations
     </span>
   </a>
   
@@ -1226,37 +1469,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#types-of-timers-in-pic24fj64ga002" class="md-nav__link">
+  <a href="#section-2-the-call-stack-in-assembly" class="md-nav__link">
     <span class="md-ellipsis">
-      ⏳ Types of Timers in PIC24FJ64GA002
+      Section 2: The Call Stack in Assembly
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#timer-setup-example-timer1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ Timer Setup Example (Timer1)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#notes-on-interrupts" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧩 Notes on Interrupts
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🧩 Notes on Interrupts">
+    <nav class="md-nav" aria-label="Section 2: The Call Stack in Assembly">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#what-happens-during-a-call" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      🔹 What Happens During a CALL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stack-behavior-during-function-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack Behavior During Function Calls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-dont-have-to-push-return-address-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      You Don't Have to Push Return Address Yourself
     </span>
   </a>
   
@@ -1264,6 +1507,213 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-stack-pointers-in-the-pic24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Stack Pointers in the PIC24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Stack Pointers in the PIC24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#w15-the-stack-pointer-sp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 W15 — The Stack Pointer (SP)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 W15 — The Stack Pointer (SP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-manual-pushpop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Manual Push/Pop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#w14-the-frame-pointer-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 W14 — The Frame Pointer (Optional)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-stack-registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Summary of Stack Registers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-writing-and-tracing-a-subroutine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Writing and Tracing a Subroutine
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Writing and Tracing a Subroutine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-main-program-calls-the-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Step 1: Main Program Calls the Function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-define-the-subroutine" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Step 2: Define the Subroutine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-the-stack-looks-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 What the Stack Looks Like
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-visualizing-the-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Visualizing the Stack
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Visualizing the Stack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-stack-grows" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 How the Stack Grows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-two-nested-calls" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧭 Example: Two Nested Calls
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Example: Two Nested Calls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stack-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stack Behavior:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-summary-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 6: Summary and Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 6: Summary and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices-for-subroutines" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Best Practices for Subroutines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz-stack-and-subroutines" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: Stack and Subroutines
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
   
 </li>
       
@@ -1286,104 +1736,294 @@
   
 
 
-<h1 id="chapter-4-timers-and-interrupts">Chapter 4: Timers and Interrupts<a class="headerlink" href="#chapter-4-timers-and-interrupts" title="Permanent link">&para;</a></h1>
-<h2 id="what-are-timers">⏱️ What Are Timers?<a class="headerlink" href="#what-are-timers" title="Permanent link">&para;</a></h2>
-<p>Timers are hardware modules in the PIC24 used for precise time measurement and periodic events. They’re essential for:</p>
-<ul>
-<li>Creating delays</li>
-<li>Measuring time between events</li>
-<li>Triggering code execution at regular intervals</li>
-</ul>
-<h3 id="key-features">Key Features:<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Independent of CPU instructions</li>
-<li>Can be configured with different <strong>prescalers</strong> for flexible timing</li>
-<li>Often used to trigger <strong>interrupts</strong></li>
-</ul>
+<h1 id="chapter-4-stack-and-subroutine-calls">Chapter 4: Stack and Subroutine Calls<a class="headerlink" href="#chapter-4-stack-and-subroutine-calls" title="Permanent link">&para;</a></h1>
+<h2 id="section-1-what-is-a-stack">Section 1: What is a Stack?<a class="headerlink" href="#section-1-what-is-a-stack" title="Permanent link">&para;</a></h2>
+<p>A <strong>stack</strong> is a special kind of data structure that operates on a <strong>Last In, First Out (LIFO)</strong> principle — the last item you place on the stack is the first one to be removed.</p>
+<h3 id="real-world-analogy">🔁 Real-World Analogy<a class="headerlink" href="#real-world-analogy" title="Permanent link">&para;</a></h3>
+<p>Think of a stack of plates in a cafeteria:
+- You <strong>push</strong> a clean plate on top of the pile
+- You <strong>pop</strong> the top plate off when someone takes one
+- You can't grab a plate from the middle — only the top!</p>
+<p>This "top-first" behavior is exactly how the stack works in your microcontroller.</p>
 <hr />
-<h2 id="types-of-timers-in-pic24fj64ga002">⏳ Types of Timers in PIC24FJ64GA002<a class="headerlink" href="#types-of-timers-in-pic24fj64ga002" title="Permanent link">&para;</a></h2>
+<h3 id="why-do-we-need-a-stack">🧱 Why Do We Need a Stack?<a class="headerlink" href="#why-do-we-need-a-stack" title="Permanent link">&para;</a></h3>
+<p>Stacks are used any time the program needs to <strong>pause what it's doing</strong>, remember something, and <strong>come back to it later</strong>.</p>
+<p>In the PIC24, the stack is used to:
+- Store the <strong>return address</strong> when calling a subroutine
+- Temporarily hold <strong>register values</strong> during nested function calls
+- Save <strong>context</strong> during interrupts</p>
+<p>If you didn't have a stack, calling one function from another — or returning from an interrupt — would be extremely difficult (if not impossible) to manage.</p>
+<hr />
+<h3 id="key-operations">🧭 Key Operations<a class="headerlink" href="#key-operations" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Timer</th>
-<th>Width</th>
-<th>Notes</th>
+<th>Term</th>
+<th>Meaning</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>TMR1</td>
-<td>16-bit</td>
-<td>Can generate interrupts</td>
+<td><code>PUSH</code></td>
+<td>Store a value on the top of the stack</td>
 </tr>
 <tr>
-<td>TMR2</td>
-<td>16-bit</td>
-<td>Often used with Output Compare</td>
+<td><code>POP</code></td>
+<td>Remove the top value from the stack</td>
 </tr>
 <tr>
-<td>TMR3</td>
-<td>16-bit</td>
-<td>Can combine with TMR2 (32-bit mode)</td>
+<td><code>CALL</code></td>
+<td>Push return address, jump to subroutine</td>
 </tr>
 <tr>
-<td>TMR4/5</td>
-<td>16-bit</td>
-<td>Used for PWM or advanced timing</td>
+<td><code>RETURN</code></td>
+<td>Pop return address, continue execution</td>
 </tr>
 </tbody>
 </table>
-<p>Each timer can be configured using special function registers (SFRs), such as:</p>
+<p>These operations are handled automatically during function calls — but you can also perform them manually in assembly.</p>
+<hr />
+<p>In the next section, we'll explore <strong>how the PIC24 handles subroutine calls using the stack</strong>, and how to trace exactly what happens when a <code>CALL</code> and <code>RETURN</code> are executed.</p>
+<h2 id="section-2-the-call-stack-in-assembly">Section 2: The Call Stack in Assembly<a class="headerlink" href="#section-2-the-call-stack-in-assembly" title="Permanent link">&para;</a></h2>
+<p>Whenever your program executes a <strong>subroutine call</strong>, the processor must remember <strong>where to return</strong> after the subroutine finishes. To do this, it uses the <strong>stack</strong>.</p>
+<hr />
+<h3 id="what-happens-during-a-call">🔹 What Happens During a <code>CALL</code><a class="headerlink" href="#what-happens-during-a-call" title="Permanent link">&para;</a></h3>
+<p>When you execute a <code>CALL</code> instruction:</p>
+<div class="highlight"><pre><span></span><code><span class="nf">CALL</span><span class="w">    </span><span class="no">MyFunction</span>
+</code></pre></div>
+<p>The pic 24 automatically performs the following:
+  - Pushes the return address onto the stack.
+  - Jumps to the MyFunction label.</p>
+<p>Later when the subroutine finishes, a <code>RETURN</code> instruction:
+  - Pops the return address off the stack
+  - Resumes execution from that address
+<div class="highlight"><pre><span></span><code><span class="nf">RETURN</span>
+</code></pre></div></p>
+<h3 id="stack-behavior-during-function-calls">Stack Behavior During Function Calls<a class="headerlink" href="#stack-behavior-during-function-calls" title="Permanent link">&para;</a></h3>
+<p>Let's walk through a basic example:</p>
+<div class="highlight"><pre><span></span><code><span class="nl">Main:</span>
+<span class="w">    </span><span class="nf">CALL</span><span class="w">    </span><span class="no">DoSomething</span>
+<span class="w">    </span><span class="c1">; Execution resumes here after RETURN</span>
+
+<span class="nl">DoSomething:</span>
+<span class="w">    </span><span class="c1">; Function logic here</span>
+<span class="w">    </span><span class="nf">RETURN</span>
+</code></pre></div>
+<p>What the Stack Looks Like:</p>
+<table>
+<thead>
+<tr>
+<th>Stack Top</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⬆ Growing Downward</td>
+<td></td>
+</tr>
+<tr>
+<td>Address of <code>Main+2</code></td>
+<td>(Return to next line)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="you-dont-have-to-push-return-address-yourself">You Don't Have to Push Return Address Yourself<a class="headerlink" href="#you-dont-have-to-push-return-address-yourself" title="Permanent link">&para;</a></h3>
+<p>The best part? You don't need to manually push/pop the return address — the CALL and RETURN instructions handle it automatically for you. That’s what makes writing subroutines manageable.</p>
+<h2 id="section-3-stack-pointers-in-the-pic24">Section 3: Stack Pointers in the PIC24<a class="headerlink" href="#section-3-stack-pointers-in-the-pic24" title="Permanent link">&para;</a></h2>
+<p>In the PIC24 architecture, the <strong>stack is accessed through special-purpose working registers</strong>. Understanding these is key to tracing subroutine behavior and building your own call structures.</p>
+<hr />
+<h3 id="w15-the-stack-pointer-sp">🔹 W15 — The Stack Pointer (SP)<a class="headerlink" href="#w15-the-stack-pointer-sp" title="Permanent link">&para;</a></h3>
+<p>The register <code>W15</code> is automatically used by the processor as the <strong>stack pointer</strong>. It always points to the <strong>top of the stack</strong> in memory.</p>
 <ul>
-<li><code>T1CON</code> – Timer1 Control Register  </li>
-<li><code>PR1</code> – Period register (defines when an interrupt should fire)  </li>
-<li><code>TMR1</code> – Current timer value  </li>
+<li>When you <strong>push</strong> data, it stores the value at <code>[W15]</code> and increments (post-increment)</li>
+<li>When you <strong>pop</strong> data, it decrements first and then reads from <code>[W15]</code> (pre-decrement)</li>
+</ul>
+<h4 id="example-manual-pushpop">Example: Manual Push/Pop<a class="headerlink" href="#example-manual-pushpop" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="mi">#0</span><span class="no">x1234</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span>
+<span class="nf">MOV</span><span class="w">     </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">W15</span><span class="err">++</span><span class="p">]</span><span class="w">      </span><span class="c1">; Push W0 onto stack</span>
+
+<span class="nf">MOV</span><span class="w">     </span><span class="p">[--</span><span class="no">W15</span><span class="p">],</span><span class="w"> </span><span class="no">W1</span><span class="w">      </span><span class="c1">; Pop from stack into W1</span>
+</code></pre></div>
+You usually don’t need to manipulate W15 directly unless you're saving/restoring temporary values in custom subroutines.</p>
+<h3 id="w14-the-frame-pointer-optional">🔹 W14 — The Frame Pointer (Optional)<a class="headerlink" href="#w14-the-frame-pointer-optional" title="Permanent link">&para;</a></h3>
+<p>By convention, <code>W14</code> is often used as a <strong>frame pointer</strong>, especially in higher-level language support (like C). It can be useful when:</p>
+<ul>
+<li>Managing <strong>local variables</strong> relative to a base offset  </li>
+<li>Navigating function <strong>call frames</strong> more easily in complex call chains  </li>
+</ul>
+<blockquote>
+<p>📝 Note: The frame pointer is <strong>not required</strong> for basic assembly subroutines, but it can help with stack-traceability in deeper projects.</p>
+</blockquote>
+<h3 id="summary-of-stack-registers">📊 Summary of Stack Registers<a class="headerlink" href="#summary-of-stack-registers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Register</th>
+<th>Role</th>
+<th>Usage Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>W15</code></td>
+<td>Stack Pointer (SP)</td>
+<td><code>MOV W0, [W15++]</code></td>
+</tr>
+<tr>
+<td><code>W14</code></td>
+<td>Frame Pointer (FP)</td>
+<td>User-defined (optional)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="section-4-writing-and-tracing-a-subroutine">Section 4: Writing and Tracing a Subroutine<a class="headerlink" href="#section-4-writing-and-tracing-a-subroutine" title="Permanent link">&para;</a></h2>
+<p>Let’s bring everything together and write a real subroutine that uses the call stack.</p>
+<p>We’ll build a function that <strong>doubles a value passed in <code>W0</code></strong>, and returns the result <strong>in <code>W0</code></strong> — a simple example, but one that shows how function calls work under the hood.</p>
+<hr />
+<h3 id="step-1-main-program-calls-the-function">🔹 Step 1: Main Program Calls the Function<a class="headerlink" href="#step-1-main-program-calls-the-function" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">MOV</span><span class="w">     </span><span class="mi">#7</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">          </span><span class="c1">; Load 7 into W0</span>
+<span class="w">    </span><span class="nf">CALL</span><span class="w">    </span><span class="no">DoubleValue</span><span class="w">     </span><span class="c1">; Call subroutine to double W0</span>
+<span class="w">    </span><span class="c1">; W0 now contains 14</span>
+</code></pre></div>
+<p>When <code>CALL DoubleValue</code> is executed, the processor:
+ - Pushes the return address onto the stack
+ - Jumps to the label <code>DoubleValue</code></p>
+<h3 id="step-2-define-the-subroutine">🔹 Step 2: Define the Subroutine<a class="headerlink" href="#step-2-define-the-subroutine" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="nl">DoubleValue:</span>
+<span class="w">    </span><span class="nf">ADD</span><span class="w">     </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">      </span><span class="c1">; Double the value in W0</span>
+<span class="w">    </span><span class="nf">RETURN</span><span class="w">                  </span><span class="c1">; Return to the line after the CALL</span>
+</code></pre></div>
+When <code>RETURN</code> executes:
+ - The processor pops the return address from the stack
+ - Execution resumes immediately after the <code>CALL</code></p>
+<h3 id="what-the-stack-looks-like">🧪 What the Stack Looks Like<a class="headerlink" href="#what-the-stack-looks-like" title="Permanent link">&para;</a></h3>
+<p>Before <code>CALL DoubleValue</code>, the stack might look like this:</p>
+<table>
+<thead>
+<tr>
+<th>Stack Top</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>⬆ Growing Downward</td>
+<td></td>
+</tr>
+<tr>
+<td>Address after CALL</td>
+<td>Return address → resume here</td>
+</tr>
+</tbody>
+</table>
+<p>After <code>RETURN</code>, the address is popped off and the stack returns to its previous state.</p>
+<h3 id="notes">✅ Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The value is passed in <code>W0</code>, and the result is returned in <code>W0</code>. This is a <strong>common calling convention</strong> for small assembly routines.  </li>
+<li>For more complex functions, you may also use <code>W1</code>, <code>W2</code>, or the stack itself to pass/return data.</li>
+</ul>
+<h2 id="section-5-visualizing-the-stack">Section 5: Visualizing the Stack<a class="headerlink" href="#section-5-visualizing-the-stack" title="Permanent link">&para;</a></h2>
+<p>Understanding how the stack grows and shrinks is essential for mastering subroutine calls and returns. Even though the processor handles most of the mechanics automatically, being able to <strong>mentally trace</strong> stack behavior will help you debug and write more reliable code.</p>
+<hr />
+<h3 id="how-the-stack-grows">🔹 How the Stack Grows<a class="headerlink" href="#how-the-stack-grows" title="Permanent link">&para;</a></h3>
+<p>The PIC24 stack grows <strong>downward</strong> in memory — that means each time something is pushed, the stack pointer (<code>W15</code>) points to a <strong>lower address</strong>.</p>
+<p>Every time you <code>CALL</code> a function:</p>
+<ul>
+<li>The <strong>return address</strong> is pushed onto the stack</li>
+<li>Any manually saved data (like temporary registers) can also be pushed</li>
+</ul>
+<p>When you <code>RETURN</code>:</p>
+<ul>
+<li>The return address is <strong>popped</strong>, and execution resumes where it left off</li>
+<li>If you saved anything manually, you must also restore it before returning</li>
 </ul>
 <hr />
-<h2 id="timer-setup-example-timer1">⚙️ Timer Setup Example (Timer1)<a class="headerlink" href="#timer-setup-example-timer1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setupTimer1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">T1CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8030</span><span class="p">;</span><span class="w">   </span><span class="c1">// Enable Timer1, prescaler 1:256</span>
-<span class="w">    </span><span class="n">PR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15625</span><span class="p">;</span><span class="w">      </span><span class="c1">// Period register for 0.5s delay (assuming 8MHz clock)</span>
-<span class="w">    </span><span class="n">TMR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">         </span><span class="c1">// Reset timer</span>
-<span class="w">    </span><span class="n">IEC0bits</span><span class="p">.</span><span class="n">T1IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Enable Timer1 interrupt</span>
-<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">T1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Clear interrupt flag</span>
-<span class="p">}</span>
+<h3 id="example-two-nested-calls">🧭 Example: Two Nested Calls<a class="headerlink" href="#example-two-nested-calls" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nl">Main:</span>
+<span class="w">    </span><span class="nf">CALL</span><span class="w">    </span><span class="no">A</span>
 
-<span class="cp">## What Are Interrupts?</span>
-<span class="n">Interrupts</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">special</span><span class="w"> </span><span class="n">mechanisms</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">let</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">microcontroller</span><span class="w"> </span><span class="n">respond</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">events</span><span class="p">(</span><span class="n">like</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">timer</span><span class="w"> </span><span class="n">expiring</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">ping</span><span class="w"> </span><span class="n">changing</span><span class="p">)</span><span class="w"> </span><span class="n">asynchronously</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">without</span><span class="w"> </span><span class="n">constantly</span><span class="w"> </span><span class="n">checking</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">them</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">code</span><span class="p">.</span>
+<span class="nl">A:</span>
+<span class="w">    </span><span class="nf">CALL</span><span class="w">    </span><span class="no">B</span>
+<span class="w">    </span><span class="nf">RETURN</span>
 
-<span class="cp">### Common Interrupt Sources includes: </span>
-<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Timers</span>
-<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">External</span><span class="w"> </span><span class="n">pins</span><span class="p">(</span><span class="n">buttons</span><span class="p">)</span>
-<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Communication</span><span class="p">(</span><span class="n">UART</span><span class="p">,</span><span class="w"> </span><span class="n">SPI</span><span class="p">,</span><span class="w"> </span><span class="n">I2C</span><span class="p">)</span>
-<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ADC</span><span class="w"> </span><span class="n">conversions</span>
-
-<span class="cp">## 🧠 How Interrupts Work</span>
-
-<span class="mf">1.</span><span class="w"> </span><span class="n">An</span><span class="w"> </span><span class="n">interrupt</span><span class="w"> </span><span class="o">**</span><span class="n">event</span><span class="o">**</span><span class="w"> </span><span class="n">occurs</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">g</span><span class="p">.,</span><span class="w"> </span><span class="n">Timer1</span><span class="w"> </span><span class="n">hits</span><span class="w"> </span><span class="n">PR1</span><span class="p">)</span><span class="w">  </span>
-<span class="mf">2.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">CPU</span><span class="w"> </span><span class="o">**</span><span class="n">pauses</span><span class="o">**</span><span class="w"> </span><span class="n">normal</span><span class="w"> </span><span class="n">execution</span><span class="w">  </span>
-<span class="mf">3.</span><span class="w"> </span><span class="n">Jumps</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">special</span><span class="w"> </span><span class="n">function</span><span class="o">:</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">**</span><span class="n">Interrupt</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="n">Routine</span><span class="w"> </span><span class="p">(</span><span class="n">ISR</span><span class="p">)</span><span class="o">**</span><span class="w">  </span>
-<span class="mf">4.</span><span class="w"> </span><span class="n">After</span><span class="w"> </span><span class="n">ISR</span><span class="w"> </span><span class="n">finishes</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">execution</span><span class="w"> </span><span class="n">resumes</span><span class="o">**</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="n">off</span>
-
-
-<span class="cp">### Example: Timer1 Interrupt Handler </span>
-<span class="err">```</span><span class="n">c</span>
-<span class="kt">void</span><span class="w"> </span><span class="n">__attribute__</span><span class="p">((</span><span class="n">interrupt</span><span class="p">,</span><span class="w"> </span><span class="n">no_auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_T1Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">T1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Clear interrupt flag</span>
-<span class="w">    </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Toggle LED on RB0</span>
-<span class="p">}</span>
+<span class="nl">B:</span>
+<span class="w">    </span><span class="nf">RETURN</span>
 </code></pre></div>
-<h2 id="notes-on-interrupts">🧩 Notes on Interrupts<a class="headerlink" href="#notes-on-interrupts" title="Permanent link">&para;</a></h2>
+<h4 id="stack-behavior">Stack Behavior:<a class="headerlink" href="#stack-behavior" title="Permanent link">&para;</a></h4>
+<ol>
+<li><code>CALL A</code> → pushes return address for <code>Main</code></li>
+<li>Inside <code>A</code>, <code>CALL B</code> → pushes return address for <code>A</code></li>
+<li><code>RETURN</code> from <code>B</code> → pops to <code>A</code></li>
+<li><code>RETURN</code> from <code>A</code> → pops to <code>Main</code></li>
+</ol>
+<h2 id="section-6-summary-and-best-practices">Section 6: Summary and Best Practices<a class="headerlink" href="#section-6-summary-and-best-practices" title="Permanent link">&para;</a></h2>
+<p>Now that you’ve seen how the stack works and how subroutines are built in PIC24 assembly, here’s what you should remember going forward:</p>
+<hr />
+<h3 id="key-takeaways">🧠 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Always <strong>clear the interrupt flag</strong> first inside the ISR!  </li>
-<li>Use the correct <strong>ISR name</strong> (e.g., <code>_T1Interrupt</code> for Timer1)  </li>
-<li>Keep ISRs <strong>short and fast</strong>  </li>
-<li>Use <code>__attribute__((interrupt))</code> to declare an ISR in C</li>
+<li>The <strong>stack</strong> stores return addresses (and optionally local data) when calling subroutines.</li>
+<li><code>CALL</code> and <code>RETURN</code> handle <strong>stack push/pop automatically</strong> for return addresses.</li>
+<li><code>W15</code> is the <strong>stack pointer (SP)</strong> — it tracks the top of the stack and grows downward.</li>
+<li><code>W14</code> is commonly used as a <strong>frame pointer (FP)</strong> — useful for structured call frames or C-style stack frames.</li>
+<li>You can manually push/pop data using <code>[W15++]</code> and <code>[--W15]</code>.</li>
 </ul>
-<h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
-<p>Timers allow precise time-based operations
-Interrupts let you react to events without polling
-Together, they enable efficient embedded systems</p>
+<hr />
+<h3 id="best-practices-for-subroutines">✅ Best Practices for Subroutines<a class="headerlink" href="#best-practices-for-subroutines" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✔️ Use <strong><code>W0</code></strong> to pass parameters and return values in small subroutines.</li>
+<li>✔️ Use <strong><code>CALL</code>/<code>RETURN</code></strong> for clean function separation.</li>
+<li>✔️ If you manually push registers (e.g. <code>W1</code>, <code>W2</code>), <strong>always restore them</strong> before returning.</li>
+<li>❌ Avoid modifying <code>W15</code> directly — use auto-increment/decrement instead.</li>
+<li>✔️ Keep subroutines small and modular when possible.</li>
+<li>✔️ Comment your subroutine entry and exit points — especially when multiple calls are nested.</li>
+</ul>
+<hr />
+<p>In the next chapter, we’ll expand your control over time with <strong>hardware timers</strong> and learn how to build precise time-based behavior in your programs using <strong>interrupts</strong>.</p>
+<h2 id="quiz-stack-and-subroutines">🧠 Quiz: Stack and Subroutines<a class="headerlink" href="#quiz-stack-and-subroutines" title="Permanent link">&para;</a></h2>
+<p>What happens to the stack when the following code is executed?</p>
+<p>```asm
+    CALL    Func1
+    ; do something
+    CALL    Func2
+    ; done</p>
+<p>Func1:
+    RETURN</p>
+<p>Func2:
+    RETURN</p>
+<div class="upper-alpha">
+<ol>
+<li>The stack is unchanged — calls don’t affect it  </li>
+<li>Two values are pushed to the stack and never removed  </li>
+<li>One return address is pushed and overwritten  </li>
+<li>Two return addresses are pushed, then popped in reverse order  </li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>D</strong>.</p>
+<p>When <code>CALL Func1</code> is executed, the return address is pushed onto the stack.<br />
+After <code>Func1</code> returns, the address is popped.<br />
+The same happens with <code>Func2</code>.</p>
+<p>So, two return addresses are pushed and popped in reverse order — <strong>just like a stack (LIFO)</strong>.</p>
+</details>
+<h2 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h2>
+<p>Write a subroutine called <code>AddTen</code> that takes a number in <code>W0</code>, adds 10 to it, and returns the result (also in <code>W0</code>).<br />
+Your main program should call <code>AddTen</code> with an initial value of <code>5</code>, and store the result in <code>W1</code>.</p>
+<p>Try writing it yourself before checking the solution!</p>
+<details class="example">
+<summary>Click to show solution</summary>
+<p>```asm
+; Main Program
+MOV     #5, W0           ; Load value into W0
+CALL    AddTen           ; Call subroutine
+MOV     W0, W1           ; Store result in W1</p>
+<p>; Subroutine</p>
+</details>
+<p>AddTen:
+    ADD     W0, #10, W0      ; Add 10 to the value in W0
+    RETURN
+    ```</p>
 
 
 
@@ -1404,7 +2044,7 @@ Together, they enable efficient embedded systems</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-13
+    2025-04-14
   </span>
 
     

@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-8-analog-to-digital-conversion-adc" class="md-skip">
+        <a href="#chapter-8-communication-peripherals" class="md-skip">
           Skip to content
         </a>
       
@@ -532,54 +532,309 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-adc" class="md-nav__link">
+  <a href="#section-1-why-communication-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Is ADC?
+      Section 1: Why Communication Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1: Why Communication Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serial-vs-parallel-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Serial vs Parallel Communication
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-adc-works" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-use-uart-spi-and-i2c" class="md-nav__link">
     <span class="md-ellipsis">
-      🔍 How ADC Works
+      📦 Why We Use UART, SPI, and I2C
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-registers" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#tradeoffs-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Key Registers
+      ⚠️ Tradeoffs &amp; Limitations
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example-read-analog-voltage-on-an0" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚡ Example: Read Analog Voltage on AN0
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#section-2-uart-universal-asynchronous-receivertransmitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 2: UART (Universal Asynchronous Receiver/Transmitter)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: UART (Universal Asynchronous Receiver/Transmitter)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uart-frame-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 UART Frame Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-uart-on-the-pic24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuring UART on the PIC24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Typical Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quiz-uart-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: UART Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-spi-serial-peripheral-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: SPI (Serial Peripheral Interface)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: SPI (Serial Peripheral Interface)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spi-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 SPI Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-spi-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 How SPI Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-spi-on-pic24-as-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuring SPI on PIC24 (as Master)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Use Cases
+      🧪 Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quiz-spi-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: SPI Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-practice_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-i2c-inter-integrated-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: I2C (Inter-Integrated Circuit)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: I2C (Inter-Integrated Circuit)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i2c-addressing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 I2C Addressing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-use-cases_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Typical Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-example-reading-a-byte-from-a-slave-pseudo-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ I2C Example: Reading a Byte from a Slave (Pseudo-code)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quiz-i2c-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: I2C Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-practice_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-adc-analog-to-digital-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: ADC (Analog-to-Digital Converter)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: ADC (Analog-to-Digital Converter)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-adc-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 What Does the ADC Do?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-adc-on-pic24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuring ADC on PIC24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-conversions-10-bit-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Example Conversions (10-bit ADC)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-summary-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 6: Summary and Use Cases
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
+  <a href="#quiz-understanding-adc" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩 Tips
+      🧠 Quiz: Understanding ADC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-practice_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
     </span>
   </a>
   
@@ -1190,54 +1445,309 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-adc" class="md-nav__link">
+  <a href="#section-1-why-communication-matters" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Is ADC?
+      Section 1: Why Communication Matters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1: Why Communication Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serial-vs-parallel-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Serial vs Parallel Communication
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#how-adc-works" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-use-uart-spi-and-i2c" class="md-nav__link">
     <span class="md-ellipsis">
-      🔍 How ADC Works
+      📦 Why We Use UART, SPI, and I2C
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-registers" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#tradeoffs-limitations" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Key Registers
+      ⚠️ Tradeoffs &amp; Limitations
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example-read-analog-voltage-on-an0" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚡ Example: Read Analog Voltage on AN0
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#section-2-uart-universal-asynchronous-receivertransmitter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 2: UART (Universal Asynchronous Receiver/Transmitter)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: UART (Universal Asynchronous Receiver/Transmitter)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uart-frame-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 UART Frame Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-uart-on-the-pic24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuring UART on the PIC24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Typical Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quiz-uart-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: UART Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-spi-serial-peripheral-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: SPI (Serial Peripheral Interface)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: SPI (Serial Peripheral Interface)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spi-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 SPI Signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-spi-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 How SPI Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-spi-on-pic24-as-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuring SPI on PIC24 (as Master)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#use-cases" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Use Cases
+      🧪 Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quiz-spi-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: SPI Basics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-practice_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-i2c-inter-integrated-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: I2C (Inter-Integrated Circuit)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: I2C (Inter-Integrated Circuit)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i2c-addressing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 I2C Addressing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-use-cases_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Typical Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-example-reading-a-byte-from-a-slave-pseudo-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ I2C Example: Reading a Byte from a Slave (Pseudo-code)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quiz-i2c-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: I2C Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-practice_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-adc-analog-to-digital-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: ADC (Analog-to-Digital Converter)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: ADC (Analog-to-Digital Converter)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-does-the-adc-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 What Does the ADC Do?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-adc-on-pic24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Configuring ADC on PIC24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-conversions-10-bit-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Example Conversions (10-bit ADC)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-summary-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 6: Summary and Use Cases
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
+  <a href="#quiz-understanding-adc" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩 Tips
+      🧠 Quiz: Understanding ADC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-practice_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
     </span>
   </a>
   
@@ -1262,96 +1772,592 @@
   
 
 
-<h1 id="chapter-8-analog-to-digital-conversion-adc">Chapter 8: Analog-to-Digital Conversion (ADC)<a class="headerlink" href="#chapter-8-analog-to-digital-conversion-adc" title="Permanent link">&para;</a></h1>
-<h2 id="what-is-adc">🎯 What Is ADC?<a class="headerlink" href="#what-is-adc" title="Permanent link">&para;</a></h2>
-<p>The <strong>Analog-to-Digital Converter (ADC)</strong> module allows the PIC24 to convert an analog voltage (e.g., from a sensor) into a digital value that your program can work with.</p>
+<h1 id="chapter-8-communication-peripherals">Chapter 8: Communication &amp; Peripherals<a class="headerlink" href="#chapter-8-communication-peripherals" title="Permanent link">&para;</a></h1>
+<h2 id="section-1-why-communication-matters">Section 1: Why Communication Matters<a class="headerlink" href="#section-1-why-communication-matters" title="Permanent link">&para;</a></h2>
+<p>Microcontrollers are powerful, but they rarely operate in isolation. Most embedded systems need to <strong>communicate with other devices</strong>, whether it's a:</p>
 <ul>
-<li>Analog signals: continuous (e.g., 0–3.3V)  </li>
-<li>Digital output: discrete (e.g., 0–1023 for a 10-bit ADC)  </li>
-<li>Converts voltage into a digital number using successive approximation</li>
+<li>Computer (e.g., serial terminal)</li>
+<li>Sensor (e.g., accelerometer, temperature probe)</li>
+<li>Display (e.g., OLED or LCD)</li>
+<li>Another microcontroller or peripheral</li>
 </ul>
+<p>To accomplish this, microcontrollers use a variety of <strong>serial communication protocols</strong> that allow them to send and receive data efficiently.</p>
 <hr />
-<h2 id="how-adc-works">🔍 How ADC Works<a class="headerlink" href="#how-adc-works" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Select an analog input channel (e.g., AN0, AN1, etc.)</li>
-<li>Start the conversion</li>
-<li>Wait for conversion to complete (or use an interrupt)</li>
-<li>Read the result from the <code>ADC1BUF</code> register</li>
-</ol>
-<hr />
-<h2 id="key-registers">⚙️ Key Registers<a class="headerlink" href="#key-registers" title="Permanent link">&para;</a></h2>
+<h3 id="serial-vs-parallel-communication">🧠 Serial vs Parallel Communication<a class="headerlink" href="#serial-vs-parallel-communication" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Register</th>
+<th>Type</th>
 <th>Description</th>
+<th>Example Use</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>AD1CON1</code></td>
-<td>Main ADC control (start/stop, conversion type)</td>
+<td>Parallel</td>
+<td>Multiple bits sent simultaneously (wider)</td>
+<td>Older systems, LCDs</td>
 </tr>
 <tr>
-<td><code>AD1CON2</code></td>
-<td>Input scan, buffer settings</td>
-</tr>
-<tr>
-<td><code>AD1CON3</code></td>
-<td>Sample time, ADC clock</td>
-</tr>
-<tr>
-<td><code>AD1CHS</code></td>
-<td>Selects the input channel</td>
-</tr>
-<tr>
-<td><code>ADC1BUF0</code></td>
-<td>Holds the result of the latest conversion</td>
-</tr>
-<tr>
-<td><code>IFS0bits.AD1IF</code></td>
-<td>ADC interrupt flag</td>
-</tr>
-<tr>
-<td><code>IEC0bits.AD1IE</code></td>
-<td>ADC interrupt enable</td>
+<td>Serial</td>
+<td>Bits sent one at a time over fewer wires</td>
+<td>UART, SPI, I2C</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>🔎 Parallel is faster in theory, but requires many I/O pins and wires. Serial is simpler, more scalable, and dominates in modern designs.</p>
+</blockquote>
 <hr />
-<h2 id="example-read-analog-voltage-on-an0">⚡ Example: Read Analog Voltage on AN0<a class="headerlink" href="#example-read-analog-voltage-on-an0" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setupADC</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">AD1CON1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00E0</span><span class="p">;</span><span class="w">      </span><span class="c1">// Auto-convert after sampling</span>
-<span class="w">    </span><span class="n">AD1CON2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0000</span><span class="p">;</span><span class="w">      </span><span class="c1">// Single channel, single conversion</span>
-<span class="w">    </span><span class="n">AD1CON3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1F3F</span><span class="p">;</span><span class="w">      </span><span class="c1">// Sample time and ADC clock</span>
-<span class="w">    </span><span class="n">AD1CHS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0000</span><span class="p">;</span><span class="w">       </span><span class="c1">// Select AN0 for input</span>
-<span class="w">    </span><span class="n">AD1CSSL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// No scanning</span>
-<span class="w">    </span><span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">ADON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// Turn on ADC</span>
-<span class="p">}</span>
+<h3 id="why-we-use-uart-spi-and-i2c">📦 Why We Use UART, SPI, and I2C<a class="headerlink" href="#why-we-use-uart-spi-and-i2c" title="Permanent link">&para;</a></h3>
+<p>These three protocols are the most common in microcontroller systems:</p>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Wires</th>
+<th>Use Case</th>
+<th>Speed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART</td>
+<td>2</td>
+<td>PC communication, debugging</td>
+<td>Moderate (115200+ bps)</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>4</td>
+<td>High-speed peripherals, sensors</td>
+<td>Fast (MHz+)</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>2</td>
+<td>Multi-device, low-speed communication</td>
+<td>Moderate (~100k–400kHz)</td>
+</tr>
+</tbody>
+</table>
+<p>Each has tradeoffs — some are better for <strong>speed</strong>, some for <strong>simplicity</strong>, and some for connecting <strong>many devices</strong>.</p>
+<hr />
+<h3 id="tradeoffs-limitations">⚠️ Tradeoffs &amp; Limitations<a class="headerlink" href="#tradeoffs-limitations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART</td>
+<td>Only supports <strong>one-to-one</strong> communication, requires matching baud rates</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>Needs <strong>more wires</strong>, no built-in addressing, typically <strong>one master only</strong></td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>Slower than SPI, more complex protocol, can suffer from <strong>bus contention</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚖️ Choosing the right protocol depends on the number of devices, speed requirements, and system complexity.</p>
+</blockquote>
+<hr />
+<p>In the next sections, we'll explore each protocol in detail, how to configure it on the PIC24, and common use cases.</p>
+<h2 id="section-2-uart-universal-asynchronous-receivertransmitter">Section 2: UART (Universal Asynchronous Receiver/Transmitter)<a class="headerlink" href="#section-2-uart-universal-asynchronous-receivertransmitter" title="Permanent link">&para;</a></h2>
+<p><strong>UART</strong> is a simple serial communication protocol that sends and receives data <strong>asynchronously</strong> — meaning it doesn’t need a shared clock between devices.</p>
+<p>Instead, both devices agree on a <strong>baud rate</strong> (bits per second), like <code>9600</code>, <code>38400</code>, or <code>115200</code>, and communicate using two lines:</p>
+<ul>
+<li><strong>TX (transmit)</strong></li>
+<li><strong>RX (receive)</strong></li>
+</ul>
+<hr />
+<h3 id="uart-frame-format">🧠 UART Frame Format<a class="headerlink" href="#uart-frame-format" title="Permanent link">&para;</a></h3>
+<p>Each UART message is made up of:
+- 1 start bit
+- 8 data bits (usually)
+- Optional parity bit
+- 1 stop bit</p>
+<p>So sending <strong>1 byte</strong> over UART actually sends <strong>at least 10 bits</strong>.</p>
+<blockquote>
+<p>⏳ Timing is critical — both devices must use the same baud rate to avoid garbled data.</p>
+</blockquote>
+<hr />
+<h3 id="configuring-uart-on-the-pic24">⚙️ Configuring UART on the PIC24<a class="headerlink" href="#configuring-uart-on-the-pic24" title="Permanent link">&para;</a></h3>
+<p>UART modules are named <code>U1MODE</code>, <code>U1STA</code>, etc. for <strong>UART1</strong>. You’ll also need to map TX/RX pins using PPS.</p>
+<p>Example: Echo received characters using UART1 at 9600 baud.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Configure pins (TX = RP10, RX = RP8)</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xbf</span><span class="p">);</span><span class="w">   </span><span class="c1">// Unlock PPS</span>
+<span class="n">RPOR5bits</span><span class="p">.</span><span class="n">RP10R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">                      </span><span class="c1">// U1TX on RP10</span>
+<span class="n">RPINR18bits</span><span class="p">.</span><span class="n">U1RXR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w">                    </span><span class="c1">// U1RX on RP8</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mh">0x40</span><span class="p">);</span><span class="w">   </span><span class="c1">// Lock PPS</span>
 
-<span class="kt">uint16_t</span><span class="w"> </span><span class="nf">readADC</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">SAMP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">          </span><span class="c1">// Start sampling</span>
-<span class="w">    </span><span class="n">__delay_us</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w">                </span><span class="c1">// Delay for sampling time</span>
-<span class="w">    </span><span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">SAMP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">          </span><span class="c1">// Start conversion</span>
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">DONE</span><span class="p">);</span><span class="w">     </span><span class="c1">// Wait for conversion complete</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ADC1BUF0</span><span class="p">;</span><span class="w">               </span><span class="c1">// Return result</span>
+<span class="c1">// UART1 Settings</span>
+<span class="n">U1MODEbits</span><span class="p">.</span><span class="n">BRGH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                      </span><span class="c1">// Standard speed mode</span>
+<span class="n">U1BRG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">103</span><span class="p">;</span><span class="w">                              </span><span class="c1">// Baud = 9600 (for 16MHz clock)</span>
+<span class="n">U1MODEbits</span><span class="p">.</span><span class="n">UARTEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                    </span><span class="c1">// Enable UART</span>
+<span class="n">U1STAbits</span><span class="p">.</span><span class="n">UTXEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                      </span><span class="c1">// Enable TX</span>
+
+<span class="c1">// Echo loop</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">U1STAbits</span><span class="p">.</span><span class="n">URXDA</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">               </span><span class="c1">// Data available?</span>
+<span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">U1RXREG</span><span class="p">;</span><span class="w">                </span><span class="c1">// Read char</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">U1STAbits</span><span class="p">.</span><span class="n">TRMT</span><span class="p">);</span><span class="w">         </span><span class="c1">// Wait if TX is busy</span>
+<span class="w">        </span><span class="n">U1TXREG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">                     </span><span class="c1">// Echo back</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="use-cases">🧠 Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="typical-use-cases">🧪 Typical Use Cases<a class="headerlink" href="#typical-use-cases" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Read values from analog sensors (e.g., temperature, light, potentiometer)  </li>
-<li>Measure voltages for battery monitoring  </li>
-<li>Sample waveforms or analog signals for processing  </li>
-<li>Use analog inputs as threshold triggers (e.g., above/below reference)</li>
+<li>Serial terminals (via USB-to-UART converters)</li>
+<li>Debugging (print variables over UART)</li>
+<li>Interfacing with GPS, Bluetooth, or WiFi modules</li>
 </ul>
-<h2 id="tips">🧩 Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>🛠️ UART is often your <strong>first line of communication and debugging</strong> when bringing up a new project.</p>
+</blockquote>
+<hr />
+<p>Up next: we’ll cover <strong>SPI</strong>, a faster protocol with full-duplex communication.</p>
+<h3 id="quiz-uart-communication">🧠 Quiz: UART Communication<a class="headerlink" href="#quiz-uart-communication" title="Permanent link">&para;</a></h3>
+<p>Which of the following <strong>must be true</strong> for two devices to successfully communicate over UART?</p>
+<div class="upper-alpha">
+<ol>
+<li>They must share the same clock signal  </li>
+<li>They must have the same pin mappings  </li>
+<li>They must use the same baud rate  </li>
+<li>They must use a master-slave architecture  </li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>.</p>
+<p>UART is asynchronous — there is <strong>no shared clock</strong>.<br />
+However, both devices must be configured to use the <strong>same baud rate</strong>, or else the timing will be mismatched and the data will be corrupted.</p>
+</details>
+<hr />
+<h3 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h3>
+<p>Write code to configure <strong>UART1</strong> to transmit the string <code>"Hello"</code> continuously at <strong>115200 baud</strong>, using TX on <strong>RP9</strong>.</p>
+<details class="example">
+<summary>Click to show solution</summary>
+<div class="highlight"><pre><span></span><code><span class="c1">// PPS Mapping for UART1 TX</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xbf</span><span class="p">);</span><span class="w">   </span><span class="c1">// Unlock PPS</span>
+<span class="n">RPOR4bits</span><span class="p">.</span><span class="n">RP9R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">                       </span><span class="c1">// U1TX on RP9</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mh">0x40</span><span class="p">);</span><span class="w">   </span><span class="c1">// Lock PPS</span>
+
+<span class="c1">// UART1 Settings</span>
+<span class="n">U1MODEbits</span><span class="p">.</span><span class="n">BRGH</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                      </span><span class="c1">// Standard speed</span>
+<span class="n">U1BRG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w">                                </span><span class="c1">// 115200 baud @ 16MHz</span>
+<span class="n">U1MODEbits</span><span class="p">.</span><span class="n">UARTEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                    </span><span class="c1">// Enable UART</span>
+<span class="n">U1STAbits</span><span class="p">.</span><span class="n">UTXEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                      </span><span class="c1">// Enable TX</span>
+
+<span class="c1">// Transmit &quot;Hello&quot; forever</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hello</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">msg</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">U1STAbits</span><span class="p">.</span><span class="n">TRMT</span><span class="p">);</span><span class="w">          </span><span class="c1">// Wait if TX is busy</span>
+<span class="w">        </span><span class="n">U1TXREG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">                     </span><span class="c1">// Delay 1s between messages</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h2 id="section-3-spi-serial-peripheral-interface">Section 3: SPI (Serial Peripheral Interface)<a class="headerlink" href="#section-3-spi-serial-peripheral-interface" title="Permanent link">&para;</a></h2>
+<p><strong>SPI</strong> is a high-speed, full-duplex communication protocol designed for fast data exchange between a <strong>master</strong> and one or more <strong>slaves</strong>.</p>
+<p>Unlike UART, SPI uses a <strong>shared clock line</strong>, which enables tight synchronization between devices.</p>
+<hr />
+<h3 id="spi-signals">🔌 SPI Signals<a class="headerlink" href="#spi-signals" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Name</th>
+<th>Direction (Master → Slave)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCK</td>
+<td>Clock</td>
+<td>⬅ Master provides clock</td>
+</tr>
+<tr>
+<td>MOSI</td>
+<td>Data</td>
+<td>⬅ Master Out, Slave In</td>
+</tr>
+<tr>
+<td>MISO</td>
+<td>Data</td>
+<td>⬅ Master In, Slave Out</td>
+</tr>
+<tr>
+<td>SS</td>
+<td>Select</td>
+<td>⬅ Active LOW (one per slave)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>SPI is faster than UART or I2C and supports <strong>streaming data in both directions at once</strong>.</p>
+</blockquote>
+<hr />
+<h3 id="how-spi-works">🧠 How SPI Works<a class="headerlink" href="#how-spi-works" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Ensure the analog pin is set to <strong>input</strong> (<code>TRISx = 1</code>)  </li>
-<li>Disable the digital output on analog pins (<code>AD1PCFG</code>) if needed  </li>
-<li>Sampling too quickly can reduce accuracy — tune sample time via <code>AD1CON3</code>  </li>
-<li>Use averaging in software to reduce noise in the signal  </li>
-<li>Consider using <strong>interrupts</strong> for more efficient conversions</li>
+<li>The <strong>master</strong> controls the clock (SCK)</li>
+<li>Data is shifted out <strong>bit by bit</strong> on MOSI/MISO</li>
+<li>The <strong>slave select (SS)</strong> line tells which device is active</li>
+<li>Most devices use <strong>8-bit or 16-bit transfers</strong></li>
 </ul>
+<hr />
+<h3 id="configuring-spi-on-pic24-as-master">⚙️ Configuring SPI on PIC24 (as Master)<a class="headerlink" href="#configuring-spi-on-pic24-as-master" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Set up SPI1 in Master mode (8-bit, clock = Fosc/16)</span>
+<span class="n">SPI1CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">MSTEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c1">// Master mode</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">MODE16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">       </span><span class="c1">// 8-bit mode</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">CKE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">          </span><span class="c1">// Clock edge</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">SMP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">          </span><span class="c1">// Input sampled in middle</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">SPRE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b110</span><span class="p">;</span><span class="w">     </span><span class="c1">// Secondary prescaler 2:1</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">PPRE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b10</span><span class="p">;</span><span class="w">      </span><span class="c1">// Primary prescaler 4:1</span>
+<span class="n">SPI1STATbits</span><span class="p">.</span><span class="n">SPIEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c1">// Enable SPI</span>
+
+<span class="c1">// Transmit one byte (0xAA)</span>
+<span class="n">SPI1BUF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xAA</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">SPI1STATbits</span><span class="p">.</span><span class="n">SPIRBF</span><span class="p">);</span><span class="w">  </span><span class="c1">// Wait until received</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">received</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SPI1BUF</span><span class="p">;</span><span class="w">    </span><span class="c1">// Read incoming byte</span>
+</code></pre></div>
+<hr />
+<h3 id="use-cases">🧪 Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h3>
+<ul>
+<li>SD cards, flash memory</li>
+<li>OLED displays</li>
+<li>High-speed sensors (accelerometers, gyros)</li>
+<li>DACs or other peripherals needing fast streaming</li>
+</ul>
+<hr />
+<blockquote>
+<p>🔧 SPI is great for <strong>speed</strong> and <strong>low-latency</strong>, but requires more pins and doesn’t support automatic addressing like I2C.</p>
+</blockquote>
+<p>Next up: we’ll cover <strong>I2C</strong>, ideal for connecting many devices with fewer wires.</p>
+<h3 id="quiz-spi-basics">🧠 Quiz: SPI Basics<a class="headerlink" href="#quiz-spi-basics" title="Permanent link">&para;</a></h3>
+<p>Which of the following is <strong>NOT true</strong> about the SPI protocol?</p>
+<div class="upper-alpha">
+<ol>
+<li>It uses a clock signal shared by the master  </li>
+<li>It can transfer and receive data simultaneously  </li>
+<li>It requires only one wire for communication  </li>
+<li>It allows for fast data exchange with peripherals  </li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>.</p>
+<p>SPI uses <strong>at least 4 wires</strong>: SCK, MOSI, MISO, and SS.<br />
+While it's fast and full-duplex, it’s <strong>not a single-wire protocol</strong> like some asynchronous options.</p>
+</details>
+<hr />
+<h3 id="prompt-practice_1">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice_1" title="Permanent link">&para;</a></h3>
+<p>Write code to configure <strong>SPI1</strong> on the PIC24 to operate in <strong>8-bit master mode</strong>, then send the value <code>0x55</code> and store the received byte.</p>
+<details class="example">
+<summary>Click to show solution</summary>
+<div class="highlight"><pre><span></span><code><span class="c1">// SPI1 Master Mode Setup</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">MSTEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c1">// Master mode</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">MODE16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">       </span><span class="c1">// 8-bit mode</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">CKE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">          </span><span class="c1">// Data changes on active-to-idle clock edge</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">SMP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">          </span><span class="c1">// Input sampled in middle of data output</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">SPRE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b110</span><span class="p">;</span><span class="w">     </span><span class="c1">// Secondary prescaler 2:1</span>
+<span class="n">SPI1CON1bits</span><span class="p">.</span><span class="n">PPRE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b10</span><span class="p">;</span><span class="w">      </span><span class="c1">// Primary prescaler 4:1</span>
+<span class="n">SPI1STATbits</span><span class="p">.</span><span class="n">SPIEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c1">// Enable SPI</span>
+
+<span class="c1">// Transmit 0x55 and receive byte</span>
+<span class="n">SPI1BUF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x55</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">SPI1STATbits</span><span class="p">.</span><span class="n">SPIRBF</span><span class="p">);</span><span class="w">  </span><span class="c1">// Wait for transmission complete</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">received</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SPI1BUF</span><span class="p">;</span><span class="w">    </span><span class="c1">// Read received byte</span>
+</code></pre></div>
+</details>
+<h2 id="section-4-i2c-inter-integrated-circuit">Section 4: I2C (Inter-Integrated Circuit)<a class="headerlink" href="#section-4-i2c-inter-integrated-circuit" title="Permanent link">&para;</a></h2>
+<p><strong>I2C</strong> is a synchronous, serial protocol designed for <strong>communication between multiple devices</strong> using just <strong>two wires</strong>:</p>
+<ul>
+<li><strong>SCL</strong>: Clock line</li>
+<li><strong>SDA</strong>: Data line</li>
+</ul>
+<p>One device acts as the <strong>master</strong> (controls the clock), while others act as <strong>slaves</strong>.</p>
+<hr />
+<h3 id="i2c-addressing">🧠 I2C Addressing<a class="headerlink" href="#i2c-addressing" title="Permanent link">&para;</a></h3>
+<p>Each slave on the bus has a <strong>7-bit or 10-bit address</strong>. The master begins communication by sending:</p>
+<ul>
+<li>A <strong>START condition</strong></li>
+<li>The <strong>address</strong> of the device it wants to talk to</li>
+<li>A <strong>Read/Write bit</strong></li>
+<li>A slave responds with an <strong>ACK</strong> or <strong>NACK</strong></li>
+</ul>
+<hr />
+<h3 id="typical-use-cases_1">🧪 Typical Use Cases<a class="headerlink" href="#typical-use-cases_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reading data from sensors (temp, accelerometer, etc.)</li>
+<li>Communicating with I2C memory (EEPROMs)</li>
+<li>Interfacing with real-time clocks or displays</li>
+</ul>
+<blockquote>
+<p>📚 I2C is slower than SPI but allows many devices to share just <strong>two pins</strong>, saving valuable I/O space.</p>
+</blockquote>
+<hr />
+<h3 id="i2c-example-reading-a-byte-from-a-slave-pseudo-code">⚙️ I2C Example: Reading a Byte from a Slave (Pseudo-code)<a class="headerlink" href="#i2c-example-reading-a-byte-from-a-slave-pseudo-code" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">I2C1CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">SEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">               </span><span class="c1">// START condition</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">SEN</span><span class="p">);</span><span class="w">           </span><span class="c1">// Wait for START complete</span>
+
+<span class="n">I2C1TRN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b10100000</span><span class="p">;</span><span class="w">              </span><span class="c1">// Send slave address (write mode)</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">TBF</span><span class="p">);</span><span class="w">          </span><span class="c1">// Wait until byte sent</span>
+
+<span class="c1">// Wait for ACK from slave</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">ACKSTAT</span><span class="p">);</span><span class="w">      </span><span class="c1">// 0 = ACK, 1 = NACK</span>
+
+<span class="n">I2C1TRN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x00</span><span class="p">;</span><span class="w">                    </span><span class="c1">// Send register address to read</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">TBF</span><span class="p">);</span>
+
+<span class="c1">// Restart condition to switch to read mode</span>
+<span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">RSEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">RSEN</span><span class="p">);</span>
+
+<span class="n">I2C1TRN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b10100001</span><span class="p">;</span><span class="w">              </span><span class="c1">// Send slave address (read mode)</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">TBF</span><span class="p">);</span>
+
+<span class="c1">// Wait for ACK, then enable receive</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">ACKSTAT</span><span class="p">);</span>
+<span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">RCEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">              </span><span class="c1">// Enable receive mode</span>
+
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">RBF</span><span class="p">);</span><span class="w">         </span><span class="c1">// Wait for byte</span>
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2C1RCV</span><span class="p">;</span><span class="w">           </span><span class="c1">// Read received byte</span>
+
+<span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">PEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">               </span><span class="c1">// STOP condition</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">PEN</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="notes">⚠️ Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>I2C requires <strong>pull-up resistors</strong> on both SDA and SCL lines</li>
+<li>Only <strong>one master</strong> should control the bus at a time</li>
+<li>Communication is slower (~100–400kHz typically), but very space-efficient</li>
+</ul>
+<hr />
+<p>Next, we’ll look at how to read <strong>real-world analog signals</strong> using the <strong>ADC module</strong>.</p>
+<h3 id="quiz-i2c-communication">🧠 Quiz: I2C Communication<a class="headerlink" href="#quiz-i2c-communication" title="Permanent link">&para;</a></h3>
+<p>Why does I2C require pull-up resistors on the SDA and SCL lines?</p>
+<div class="upper-alpha">
+<ol>
+<li>To limit power draw from slaves  </li>
+<li>To allow multiple masters to drive the bus simultaneously  </li>
+<li>To ensure the lines return to HIGH when not actively driven  </li>
+<li>To increase the data rate of communication  </li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>.</p>
+<p>I2C uses <strong>open-drain outputs</strong>, meaning devices can pull the line LOW but not drive it HIGH.<br />
+<strong>Pull-up resistors</strong> ensure the lines default to HIGH when not being pulled down — allowing multiple devices to safely share the bus.</p>
+</details>
+<hr />
+<h3 id="prompt-practice_2">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice_2" title="Permanent link">&para;</a></h3>
+<p>Write code to initiate an I2C transmission to a device with address <code>0x68</code>, send a register address <code>0x1C</code>, then restart and request a single byte of data from it.</p>
+<details class="example">
+<summary>Click to show solution</summary>
+<div class="highlight"><pre><span></span><code><span class="c1">// START condition</span>
+<span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">SEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">SEN</span><span class="p">);</span>
+
+<span class="c1">// Send slave address (write)</span>
+<span class="n">I2C1TRN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xD0</span><span class="p">;</span><span class="w">                    </span><span class="c1">// 0x68 &lt;&lt; 1 | 0 (write)</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">TBF</span><span class="p">);</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">ACKSTAT</span><span class="p">);</span><span class="w">     </span><span class="c1">// Wait for ACK</span>
+
+<span class="c1">// Send register address (0x1C)</span>
+<span class="n">I2C1TRN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x1C</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">TBF</span><span class="p">);</span>
+
+<span class="c1">// RESTART condition</span>
+<span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">RSEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">RSEN</span><span class="p">);</span>
+
+<span class="c1">// Send slave address (read)</span>
+<span class="n">I2C1TRN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xD1</span><span class="p">;</span><span class="w">                    </span><span class="c1">// 0x68 &lt;&lt; 1 | 1 (read)</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">TBF</span><span class="p">);</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">ACKSTAT</span><span class="p">);</span>
+
+<span class="c1">// Enable receive mode</span>
+<span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">RCEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">I2C1STATbits</span><span class="p">.</span><span class="n">RBF</span><span class="p">);</span><span class="w">        </span><span class="c1">// Wait for byte</span>
+
+<span class="kt">uint8_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2C1RCV</span><span class="p">;</span><span class="w">         </span><span class="c1">// Read data</span>
+
+<span class="c1">// STOP condition</span>
+<span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">PEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">I2C1CONbits</span><span class="p">.</span><span class="n">PEN</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<h2 id="section-5-adc-analog-to-digital-converter">Section 5: ADC (Analog-to-Digital Converter)<a class="headerlink" href="#section-5-adc-analog-to-digital-converter" title="Permanent link">&para;</a></h2>
+<p><strong>Analog-to-Digital Conversion (ADC)</strong> lets your microcontroller read <strong>real-world analog signals</strong> — like voltage, temperature, or light level — and convert them into <strong>digital values</strong> it can process.</p>
+<hr />
+<h3 id="what-does-the-adc-do">🧠 What Does the ADC Do?<a class="headerlink" href="#what-does-the-adc-do" title="Permanent link">&para;</a></h3>
+<p>An ADC samples an input voltage (e.g., 0–3.3V) and converts it into a digital number based on:</p>
+<ul>
+<li><strong>Resolution</strong> (typically 10 bits on PIC24 → values from 0 to 1023)</li>
+<li><strong>Reference Voltage</strong> (<code>VREF+</code> and <code>VREF-</code>)</li>
+<li><strong>Sampling time</strong> (how long it takes to stabilize before conversion)</li>
+</ul>
+<blockquote>
+<p>For example, if <code>VREF+ = 3.3V</code>, then a reading of 512 ≈ 1.65V.</p>
+</blockquote>
+<hr />
+<h3 id="configuring-adc-on-pic24">⚙️ Configuring ADC on PIC24<a class="headerlink" href="#configuring-adc-on-pic24" title="Permanent link">&para;</a></h3>
+<p>Let’s read analog voltage on <strong>AN0 (RB0)</strong> using the 10-bit ADC module.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Configure RB0/AN0 as analog input</span>
+<span class="n">AD1PCFGbits</span><span class="p">.</span><span class="n">PCFG0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">          </span><span class="c1">// Set AN0 as analog</span>
+<span class="n">TRISBbits</span><span class="p">.</span><span class="n">TRISB0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c1">// Set RB0 as input</span>
+
+<span class="c1">// ADC Configuration</span>
+<span class="n">AD1CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">FORM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// Integer output</span>
+<span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">SSRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w">           </span><span class="c1">// Auto-convert</span>
+<span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">ASAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c1">// Auto-sample</span>
+
+<span class="n">AD1CON2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                    </span><span class="c1">// Use MUXA, Vref+ = AVdd, Vref- = AVss</span>
+<span class="n">AD1CON3bits</span><span class="p">.</span><span class="n">ADCS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">           </span><span class="c1">// ADC clock = Tcy × (ADCS + 1)</span>
+<span class="n">AD1CHSbits</span><span class="p">.</span><span class="n">CH0SA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// Select AN0</span>
+
+<span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">ADON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c1">// Turn on ADC</span>
+
+<span class="c1">// Read a value</span>
+<span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w">                  </span><span class="c1">// Allow ADC to stabilize</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">DONE</span><span class="p">);</span><span class="w">      </span><span class="c1">// Wait for conversion</span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADC1BUF0</span><span class="p">;</span><span class="w">     </span><span class="c1">// Read the result</span>
+</code></pre></div>
+<hr />
+<h3 id="example-conversions-10-bit-adc">📏 Example Conversions (10-bit ADC)<a class="headerlink" href="#example-conversions-10-bit-adc" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Input Voltage</th>
+<th>ADC Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0 V</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1.65 V</td>
+<td>512</td>
+</tr>
+<tr>
+<td>3.3 V</td>
+<td>1023</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📐 ADC values are linear — you can scale them to voltage using:<br />
+<code>V = (ADC / 1023.0) × VREF</code></p>
+</blockquote>
+<hr />
+<p>Next up: a quick summary of all communication modules and where they’re most useful!</p>
+<h2 id="section-6-summary-and-use-cases">Section 6: Summary and Use Cases<a class="headerlink" href="#section-6-summary-and-use-cases" title="Permanent link">&para;</a></h2>
+<p>Here's a quick recap of the communication and peripheral modules covered:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Use Case</th>
+<th>Pros</th>
+<th>Tradeoffs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART</td>
+<td>PC comms, debugging</td>
+<td>Simple, widely supported</td>
+<td>One-to-one only, no addressing</td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>Sensors, memory, displays</td>
+<td>Fast, full-duplex</td>
+<td>Needs 4 wires, no native addressing</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>Multiple devices, clocks, EEPROMs</td>
+<td>Two wires, device addressing</td>
+<td>Slower, requires pull-ups</td>
+</tr>
+<tr>
+<td>ADC</td>
+<td>Sensors, analog input</td>
+<td>Converts real-world signals</td>
+<td>Needs stable voltage, limited speed</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🛠️ Choose the right tool for the job — and test with real hardware whenever possible!</p>
+</blockquote>
+<hr />
+<h2 id="quiz-understanding-adc">🧠 Quiz: Understanding ADC<a class="headerlink" href="#quiz-understanding-adc" title="Permanent link">&para;</a></h2>
+<p>You’re using a 10-bit ADC with a reference voltage of 3.3V.<br />
+What voltage does a digital reading of <code>682</code> most closely represent?</p>
+<div class="upper-alpha">
+<ol>
+<li>1.1 V  </li>
+<li>2.2 V  </li>
+<li>3.0 V  </li>
+<li>3.3 V  </li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B (2.2 V)</strong>.</p>
+<p>Use the conversion formula:<br />
+<code>V = (ADC / 1023) × VREF</code><br />
+→ <code>(682 / 1023) × 3.3V ≈ 2.2V</code></p>
+</details>
+<hr />
+<h2 id="prompt-practice_3">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice_3" title="Permanent link">&para;</a></h2>
+<p>Write code to configure the ADC to read from <strong>AN2 (RB2)</strong> and store the result in a variable.</p>
+<details class="example">
+<summary>Click to show solution</summary>
+<div class="highlight"><pre><span></span><code><span class="c1">// Configure AN2/RB2 as analog input</span>
+<span class="n">AD1PCFGbits</span><span class="p">.</span><span class="n">PCFG2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// AN2 = analog</span>
+<span class="n">TRISBbits</span><span class="p">.</span><span class="n">TRISB2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c1">// RB2 as input</span>
+
+<span class="c1">// Basic ADC config</span>
+<span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">FORM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">            </span><span class="c1">// Integer format</span>
+<span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">SSRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w">            </span><span class="c1">// Auto-convert</span>
+<span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">ASAM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c1">// Auto-sample</span>
+
+<span class="n">AD1CON2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">AD1CON3bits</span><span class="p">.</span><span class="n">ADCS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="n">AD1CHSbits</span><span class="p">.</span><span class="n">CH0SA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">            </span><span class="c1">// Use AN2</span>
+
+<span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">ADON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c1">// Enable ADC</span>
+
+<span class="c1">// Read the ADC value</span>
+<span class="n">__delay_ms</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">AD1CON1bits</span><span class="p">.</span><span class="n">DONE</span><span class="p">);</span>
+<span class="kt">uint16_t</span><span class="w"> </span><span class="n">adcValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADC1BUF0</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<hr />
+<p>That’s the end of Chapter 8! 🎉</p>
 
 
 
@@ -1372,7 +2378,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-13
+    2025-04-14
   </span>
 
     

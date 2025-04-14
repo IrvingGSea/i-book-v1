@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-5-external-interrupts" class="md-skip">
+        <a href="#chapter-5-timers-and-interrupts" class="md-skip">
           Skip to content
         </a>
       
@@ -466,28 +466,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-are-external-interrupts" class="md-nav__link">
+  <a href="#section-1-what-are-timers" class="md-nav__link">
     <span class="md-ellipsis">
-      📟 What Are External Interrupts?
+      Section 1: What Are Timers?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1: What Are Timers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-timers-actually-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 What Timers Actually Do
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-pins-and-registers" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#why-timers-matter" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Key Pins and Registers
+      🧠 Why Timers Matter
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📌 Key Pins and Registers">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#important-registers" class="md-nav__link">
+  <a href="#software-loops-vs-hardware-timers" class="md-nav__link">
     <span class="md-ellipsis">
-      Important Registers:
+      ⌚ Software Loops vs Hardware Timers
     </span>
   </a>
   
@@ -499,45 +508,201 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edge-triggered-behavior" class="md-nav__link">
+  <a href="#section-2-timer-configuration-on-the-pic24" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Edge-Triggered Behavior
+      Section 2: Timer Configuration on the PIC24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: Timer Configuration on the PIC24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-timer-setup-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Basic Timer Setup Steps
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example-int0-button-interrupt" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#key-timer-registers-for-timerx" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚡ Example: INT0 Button Interrupt
+      🧠 Key Timer Registers (for TimerX)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#setup-code" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#prescaler-controlling-timer-speed" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup Code:
+      🔧 Prescaler: Controlling Timer Speed
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#section-3-interrupts-responding-to-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Interrupts - Responding to Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Interrupts - Responding to Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Why Use Interrupts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-interrupts-work-in-pic24" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 How Interrupts Work in PIC24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 How Interrupts Work in PIC24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-timer1-interrupt-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Timer1 Interrupt Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupt-stack-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Interrupt Stack Behavior
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-blinking-an-led-with-a-timer-interrupt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Blinking an LED with a Timer Interrupt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Blinking an LED with a Timer Interrupt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-timer-interrupt-gpio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Configuration: Timer + Interrupt + GPIO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Why This Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timing-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⌛ Timing Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-summary-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Summary and Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Summary and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩 Best Practices
+      ✅ Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz-timers-and-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: Timers and Interrupts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
+  <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Use Cases
+      ✍️ Prompt Practice
     </span>
   </a>
   
@@ -1214,28 +1379,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-are-external-interrupts" class="md-nav__link">
+  <a href="#section-1-what-are-timers" class="md-nav__link">
     <span class="md-ellipsis">
-      📟 What Are External Interrupts?
+      Section 1: What Are Timers?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1: What Are Timers?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-timers-actually-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 What Timers Actually Do
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#key-pins-and-registers" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#why-timers-matter" class="md-nav__link">
     <span class="md-ellipsis">
-      📌 Key Pins and Registers
+      🧠 Why Timers Matter
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📌 Key Pins and Registers">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#important-registers" class="md-nav__link">
+  <a href="#software-loops-vs-hardware-timers" class="md-nav__link">
     <span class="md-ellipsis">
-      Important Registers:
+      ⌚ Software Loops vs Hardware Timers
     </span>
   </a>
   
@@ -1247,45 +1421,201 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edge-triggered-behavior" class="md-nav__link">
+  <a href="#section-2-timer-configuration-on-the-pic24" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Edge-Triggered Behavior
+      Section 2: Timer Configuration on the PIC24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: Timer Configuration on the PIC24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-timer-setup-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Basic Timer Setup Steps
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#example-int0-button-interrupt" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#key-timer-registers-for-timerx" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚡ Example: INT0 Button Interrupt
+      🧠 Key Timer Registers (for TimerX)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#setup-code" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#prescaler-controlling-timer-speed" class="md-nav__link">
     <span class="md-ellipsis">
-      Setup Code:
+      🔧 Prescaler: Controlling Timer Speed
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#section-3-interrupts-responding-to-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Interrupts - Responding to Events
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Interrupts - Responding to Events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Why Use Interrupts?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-interrupts-work-in-pic24" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 How Interrupts Work in PIC24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 How Interrupts Work in PIC24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-timer1-interrupt-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Timer1 Interrupt Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interrupt-stack-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Interrupt Stack Behavior
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-blinking-an-led-with-a-timer-interrupt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Blinking an LED with a Timer Interrupt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Blinking an LED with a Timer Interrupt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-timer-interrupt-gpio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Configuration: Timer + Interrupt + GPIO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Why This Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timing-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⌛ Timing Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-summary-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Summary and Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Summary and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      🧩 Best Practices
+      ✅ Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz-timers-and-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: Timers and Interrupts
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
+  <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Use Cases
+      ✍️ Prompt Practice
     </span>
   </a>
   
@@ -1310,101 +1640,309 @@
   
 
 
-<h1 id="chapter-5-external-interrupts">Chapter 5: External Interrupts<a class="headerlink" href="#chapter-5-external-interrupts" title="Permanent link">&para;</a></h1>
-<h2 id="what-are-external-interrupts">📟 What Are External Interrupts?<a class="headerlink" href="#what-are-external-interrupts" title="Permanent link">&para;</a></h2>
-<p>External interrupts allow the microcontroller to <strong>respond immediately to changes on input pins</strong> — such as buttons, sensors, or other devices triggering a logic change.</p>
-<p>They are incredibly useful for handling <strong>real-time user input</strong> or reacting to asynchronous events.</p>
+<h1 id="chapter-5-timers-and-interrupts">Chapter 5: Timers and Interrupts<a class="headerlink" href="#chapter-5-timers-and-interrupts" title="Permanent link">&para;</a></h1>
+<h2 id="section-1-what-are-timers">Section 1: What Are Timers?<a class="headerlink" href="#section-1-what-are-timers" title="Permanent link">&para;</a></h2>
+<p>Timers are built-in hardware modules that allow the microcontroller to <strong>track the passage of time</strong>. Unlike using <code>NOP</code> instructions or software loops for delays, hardware timers are far more <strong>precise, efficient, and interrupt-friendly</strong>.</p>
 <hr />
-<h2 id="key-pins-and-registers">📌 Key Pins and Registers<a class="headerlink" href="#key-pins-and-registers" title="Permanent link">&para;</a></h2>
-<p>PIC24 devices support multiple external interrupts using special pins:</p>
+<h3 id="what-timers-actually-do">🔁 What Timers Actually Do<a class="headerlink" href="#what-timers-actually-do" title="Permanent link">&para;</a></h3>
+<p>At their core, timers are just <strong>counters</strong>. They increment on each clock cycle (or prescaled clock cycle), and you can configure:</p>
+<ul>
+<li>When they <strong>start</strong></li>
+<li>When they <strong>reset</strong></li>
+<li>What value triggers an <strong>interrupt or event</strong></li>
+<li>Whether they count <strong>continuously</strong> or <strong>one time</strong></li>
+</ul>
+<hr />
+<h3 id="why-timers-matter">🧠 Why Timers Matter<a class="headerlink" href="#why-timers-matter" title="Permanent link">&para;</a></h3>
+<p>Timers are one of the most essential peripherals for real-world embedded systems. They allow your program to:</p>
+<ul>
+<li><strong>Delay</strong> an operation for a fixed time</li>
+<li><strong>Toggle LEDs</strong> at precise intervals (blinking)</li>
+<li><strong>Measure durations</strong> between events (e.g., how long a button is pressed)</li>
+<li>Generate <strong>PWM (Pulse Width Modulation)</strong></li>
+<li>Act as the heartbeat of an <strong>RTOS (Real-Time Operating System)</strong></li>
+</ul>
+<hr />
+<h3 id="software-loops-vs-hardware-timers">⌚ Software Loops vs Hardware Timers<a class="headerlink" href="#software-loops-vs-hardware-timers" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Interrupt</th>
-<th>Pin</th>
+<th>Method</th>
+<th>Accurate?</th>
+<th>Affects CPU?</th>
+<th>Good for...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Software Delay</td>
+<td>❌</td>
+<td>✅ Yes</td>
+<td>Quick hacks, rough timing</td>
+</tr>
+<tr>
+<td>Hardware Timer</td>
+<td>✅</td>
+<td>❌ No</td>
+<td>Precise, real-time timing</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ Timers are especially powerful when combined with <strong>interrupts</strong>, allowing your code to respond to time events without constantly checking them.</p>
+</blockquote>
+<hr />
+<p>In the next section, we’ll explore how to configure and use timers on the PIC24 — including key registers and modes.</p>
+<h2 id="section-2-timer-configuration-on-the-pic24">Section 2: Timer Configuration on the PIC24<a class="headerlink" href="#section-2-timer-configuration-on-the-pic24" title="Permanent link">&para;</a></h2>
+<p>The PIC24 family includes multiple timers (Timer1, Timer2, etc.) that can be configured using special function registers (SFRs). To make a timer do anything useful, you’ll need to configure:</p>
+<ul>
+<li>The <strong>timer control register</strong> (e.g., <code>T1CON</code>)</li>
+<li>The <strong>period register</strong> (<code>PRx</code>) — when the timer should reset</li>
+<li>The <strong>timer count register</strong> (<code>TMRx</code>) — current value</li>
+<li>Optional: prescaler, interrupt enable, and clock source</li>
+</ul>
+<hr />
+<h3 id="basic-timer-setup-steps">🔹 Basic Timer Setup Steps<a class="headerlink" href="#basic-timer-setup-steps" title="Permanent link">&para;</a></h3>
+<p>Here’s a typical configuration for a simple periodic timer:</p>
+<div class="highlight"><pre><span></span><code><span class="n">T1CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">                </span><span class="c1">// Common practice to set everything low before modifying the bits you do care about</span>
+<span class="n">T1CONbits</span><span class="p">.</span><span class="n">TCKPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b10</span><span class="p">;</span><span class="w">     </span><span class="c1">// Prescaler = 1:64</span>
+<span class="n">PR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15625</span><span class="p">;</span><span class="w">             </span><span class="c1">// Set period register (timer resets at this value)</span>
+<span class="n">TMR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                </span><span class="c1">// Clear the timer count</span>
+<span class="n">T1CONbits</span><span class="p">.</span><span class="n">TON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">       </span><span class="c1">// Turn on Timer1</span>
+</code></pre></div>
+<h3 id="key-timer-registers-for-timerx">🧠 Key Timer Registers (for TimerX)<a class="headerlink" href="#key-timer-registers-for-timerx" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Register</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>INT0</td>
-<td>Usually RB7</td>
-<td>Edge-triggered, non-maskable</td>
+<td><code>T⟨x⟩CON</code></td>
+<td>Timer Control Register for TimerX</td>
 </tr>
 <tr>
-<td>INT1</td>
-<td>Configurable</td>
-<td>Edge-triggered, maskable</td>
+<td><code>PR⟨x⟩</code></td>
+<td>Period Register — timer resets at this value</td>
 </tr>
 <tr>
-<td>INT2</td>
-<td>Configurable</td>
-<td>Edge-triggered, maskable</td>
+<td><code>TMR⟨x⟩</code></td>
+<td>Timer Count Register (increments over time)</td>
+</tr>
+<tr>
+<td><code>IFS0bits.T⟨x⟩IF</code></td>
+<td>Interrupt Flag — set when timer expires</td>
+</tr>
+<tr>
+<td><code>IEC0bits.T⟨x⟩IE</code></td>
+<td>Interrupt Enable bit</td>
 </tr>
 </tbody>
 </table>
-<h3 id="important-registers">Important Registers:<a class="headerlink" href="#important-registers" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>🔁 Replace ⟨x⟩ with the timer number: 1, 2, 3, etc.</p>
+</blockquote>
+<h3 id="prescaler-controlling-timer-speed">🔧 Prescaler: Controlling Timer Speed<a class="headerlink" href="#prescaler-controlling-timer-speed" title="Permanent link">&para;</a></h3>
+<p>Most timers have a prescaler, which divides the system clock slow down how fast the timer increments. 
+For example:</p>
 <table>
 <thead>
 <tr>
-<th>Register / Bit</th>
-<th>Purpose</th>
+<th>Prescaler</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>INTxIF</code> (IFSx)</td>
-<td>Interrupt Flag — set when the event occurs</td>
+<td>1:1</td>
+<td>Fastest (no division)</td>
 </tr>
 <tr>
-<td><code>INTxIE</code> (IECx)</td>
-<td>Interrupt Enable — must be set to 1</td>
+<td>1:8</td>
+<td>8× slower</td>
 </tr>
 <tr>
-<td><code>INTxEP</code></td>
-<td>Edge polarity (1 = falling, 0 = rising)</td>
+<td>1:64</td>
+<td>64× slower</td>
 </tr>
 <tr>
-<td><code>RPINR0</code>, <code>RPINR1</code>, …</td>
-<td>Remappable pins for INT1, INT2 (if supported)</td>
+<td>1:256</td>
+<td>Slowest — 256× slower</td>
 </tr>
 </tbody>
 </table>
+<p>Choose a prescaler so your period fits nicely within a 16-bit register (0–65535).</p>
+<p>Tip: If your timer counts too fast, try increasing the prescaler or switching to a 32-bit timer by combining two 16-bit timers (e.g., Timer2 + Timer3).</p>
+<p>In the next section, we’ll explore interrupts — and how they make timers even more powerful by allowing your code to respond asynchronously when the timer expires.</p>
+<h2 id="section-3-interrupts-responding-to-events">Section 3: Interrupts - Responding to Events<a class="headerlink" href="#section-3-interrupts-responding-to-events" title="Permanent link">&para;</a></h2>
+<p>In a real-world embedded system, you often want your code to respond <strong>as soon as something happens</strong> — without constantly checking for it. That’s where <strong>interrupts</strong> come in.</p>
+<p>An <strong>interrupt</strong> is a hardware-triggered event that causes the processor to pause what it’s doing and run a <strong>special function</strong> called an <strong>Interrupt Service Routine (ISR)</strong>.</p>
 <hr />
-<h2 id="edge-triggered-behavior">🧠 Edge-Triggered Behavior<a class="headerlink" href="#edge-triggered-behavior" title="Permanent link">&para;</a></h2>
-<p>You can configure external interrupts to trigger on:</p>
-<ul>
-<li><strong>Rising edge</strong>: logic level 0 → 1 (e.g., button press)</li>
-<li><strong>Falling edge</strong>: logic level 1 → 0 (e.g., button release)</li>
-</ul>
-<p>This is controlled by the <code>INTxEP</code> bit.</p>
-<hr />
-<h2 id="example-int0-button-interrupt">⚡ Example: INT0 Button Interrupt<a class="headerlink" href="#example-int0-button-interrupt" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">__attribute__</span><span class="p">((</span><span class="n">interrupt</span><span class="p">,</span><span class="w"> </span><span class="n">no_auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_INT0Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">INT0IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">     </span><span class="c1">// Clear interrupt flag</span>
-<span class="w">    </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">     </span><span class="c1">// Toggle an LED</span>
+<h3 id="why-use-interrupts">🔹 Why Use Interrupts?<a class="headerlink" href="#why-use-interrupts" title="Permanent link">&para;</a></h3>
+<p>Without interrupts, you'd need to use <strong>polling</strong> — continuously checking for a condition inside a loop:</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">timerExpired</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// check again and again...</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="setup-code">Setup Code:<a class="headerlink" href="#setup-code" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="n">TRISBbits</span><span class="p">.</span><span class="n">TRISB7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">     </span><span class="c1">// Set RB7 (INT0) as input</span>
-<span class="n">INTCON2bits</span><span class="p">.</span><span class="n">INT0EP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">   </span><span class="c1">// Trigger on falling edge</span>
-<span class="n">IFS0bits</span><span class="p">.</span><span class="n">INT0IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">      </span><span class="c1">// Clear flag</span>
-<span class="n">IEC0bits</span><span class="p">.</span><span class="n">INT0IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">      </span><span class="c1">// Enable INT0 interrupt</span>
+<p>This wastes CPU cycles. Instead, interrupts allow the microcontroller to do other things and only respond when needed. </p>
+<h3 id="how-interrupts-work-in-pic24">🔧 How Interrupts Work in PIC24<a class="headerlink" href="#how-interrupts-work-in-pic24" title="Permanent link">&para;</a></h3>
+<p>When an interrupt occurs (e.g., a timer hits <code>PRx</code>):</p>
+<ol>
+<li>The CPU <strong>pauses the main program</strong></li>
+<li>The return address and some key registers are <strong>pushed onto the stack</strong></li>
+<li>The <strong>ISR</strong> is executed (defined by you)</li>
+<li>A <code>RETFIE</code> (Return from Interrupt) instruction:</li>
+<li>Pops saved values from the stack</li>
+<li>Resumes main code exactly where it left off</li>
+</ol>
+<h4 id="example-timer1-interrupt-flow">Example: Timer1 Interrupt Flow<a class="headerlink" href="#example-timer1-interrupt-flow" title="Permanent link">&para;</a></h4>
+<p>Assuming you've enabled the Timer1 interrupt:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">__attribute__</span><span class="p">((</span><span class="n">__interrupt__</span><span class="p">,</span><span class="w"> </span><span class="n">auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_T1Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">T1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Clear interrupt flag</span>
+<span class="w">    </span><span class="c1">// Handle event (e.g., toggle LED)</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="best-practices">🧩 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<p>This function runs automatically every time Timer1.
+<code>IFS0bits.T1IF</code> must be cleared manually at the beginning of the ISR to prevent retriggering </p>
+<h3 id="interrupt-stack-behavior">📦 Interrupt Stack Behavior<a class="headerlink" href="#interrupt-stack-behavior" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>What Happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interrupt occurs</td>
+<td>Return address + status pushed to stack</td>
+</tr>
+<tr>
+<td>ISR runs</td>
+<td>Executes your code</td>
+</tr>
+<tr>
+<td>RETFIE</td>
+<td>Pops return data and resumes main program</td>
+</tr>
+</tbody>
+</table>
+<p>This is very similar to a <code>CALL</code>, but initiated by the hardware rather than code. </p>
+<h2 id="section-4-blinking-an-led-with-a-timer-interrupt">Section 4: Blinking an LED with a Timer Interrupt<a class="headerlink" href="#section-4-blinking-an-led-with-a-timer-interrupt" title="Permanent link">&para;</a></h2>
+<p>Let’s build one of the most classic embedded applications: <strong>blinking an LED</strong> at regular intervals using a <strong>hardware timer and interrupt</strong>.</p>
+<hr />
+<h3 id="goal">🔹 Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Always <strong>clear the interrupt flag</strong> (<code>INTxIF</code>) at the start or end of the ISR  </li>
-<li>Use <strong>pull-up/down resistors</strong> to prevent floating inputs  </li>
-<li>Debounce mechanical inputs (like buttons) in software or hardware  </li>
-<li>Keep the ISR <strong>short and efficient</strong></li>
+<li>Use <strong>Timer1</strong> to generate an interrupt every 500 ms</li>
+<li>Each time the interrupt occurs, toggle an LED connected to <strong>PORTB, bit 0</strong></li>
 </ul>
-<h2 id="use-cases">🧠 Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="configuration-timer-interrupt-gpio">🛠️ Configuration: Timer + Interrupt + GPIO<a class="headerlink" href="#configuration-timer-interrupt-gpio" title="Permanent link">&para;</a></h3>
+<p>Here’s a complete example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Setup in main()</span>
+<span class="n">TRISBbits</span><span class="p">.</span><span class="n">TRISB0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">         </span><span class="c1">// Set RB0 as output</span>
+<span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// Initialize LED OFF</span>
+
+<span class="n">T1CONbits</span><span class="p">.</span><span class="n">TCKPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">          </span><span class="c1">// Prescaler 1:256</span>
+<span class="n">PR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">31250</span><span class="p">;</span><span class="w">                  </span><span class="c1">// 500ms interval with Fcy = 16MHz</span>
+<span class="n">TMR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="n">IFS0bits</span><span class="p">.</span><span class="n">T1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">            </span><span class="c1">// Clear interrupt flag</span>
+<span class="n">IEC0bits</span><span class="p">.</span><span class="n">T1IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c1">// Enable Timer1 interrupt</span>
+<span class="n">T1CONbits</span><span class="p">.</span><span class="n">TON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c1">// Turn on Timer1</span>
+
+<span class="c1">// Interrupt Service Routine</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">__attribute__</span><span class="p">((</span><span class="n">__interrupt__</span><span class="p">,</span><span class="w"> </span><span class="n">auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_T1Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB0</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">      </span><span class="c1">// Toggle LED</span>
+<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">T1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">        </span><span class="c1">// Clear interrupt flag</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="why-this-works">🧠 Why This Works<a class="headerlink" href="#why-this-works" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Button presses  </li>
-<li>Motion detectors  </li>
-<li>Limit switches in robotics  </li>
-<li>External sensor signals</li>
+<li>The timer counts up to <code>PR1</code> and triggers an interrupt  </li>
+<li>The ISR toggles the LED and resets the flag  </li>
+<li>The processor <strong>automatically returns</strong> to your main loop without losing track</li>
 </ul>
+<blockquote>
+<p>✅ You don’t need to manually check the timer — the interrupt does the work!</p>
+</blockquote>
+<h3 id="timing-notes">⌛ Timing Notes<a class="headerlink" href="#timing-notes" title="Permanent link">&para;</a></h3>
+<p>This example assumes:
+- <strong>Fcy = 16 MHz</strong> (i.e., 8 MHz instruction cycle)
+- Prescaler = 1:256
+- PR1 = 31250 → 500 ms</p>
+<p>If your clock speed is different, you'll need to recalculate <code>PR1</code>.</p>
+<h2 id="section-5-summary-and-best-practices">Section 5: Summary and Best Practices<a class="headerlink" href="#section-5-summary-and-best-practices" title="Permanent link">&para;</a></h2>
+<p>Timers and interrupts are two of the most powerful features of any microcontroller — and they often work best <strong>together</strong>.</p>
+<hr />
+<h3 id="key-takeaways">🧠 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A <strong>timer</strong> is a hardware counter that increments with time</li>
+<li>Use <code>PRx</code> to define the period, and <code>TMRx</code> to track the current count</li>
+<li>Prescalers help slow the timer down to match your time intervals</li>
+<li>When a timer reaches its period, it can <strong>trigger an interrupt</strong></li>
+<li>The interrupt service routine (<strong>ISR</strong>) runs automatically, handles the task, and returns</li>
+<li>Interrupts use the <strong>stack</strong> to preserve your program state</li>
+</ul>
+<hr />
+<h3 id="best-practices">✅ Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✔️ <strong>Always clear the interrupt flag</strong> (<code>IFSx</code>) inside your ISR</li>
+<li>✔️ Keep ISRs <strong>short and efficient</strong> — don’t do too much inside</li>
+<li>✔️ Use <strong>prescalers</strong> to avoid overflow and fit time into a 16-bit period</li>
+<li>✔️ For more timing flexibility, consider <strong>32-bit timers</strong> (pairing TMR2 + TMR3)</li>
+<li>❌ Avoid polling timers unless your task is very short or must be ultra-deterministic</li>
+<li>❌ Never use <code>delay()</code> loops when timers can do the job more cleanly</li>
+</ul>
+<hr />
+<p>Next, we’ll take what we’ve learned about interrupts and apply it to external inputs — so your microcontroller can respond to real-world events like <strong>button presses or signal edges</strong> in <strong>Chapter 6: External Interrupts &amp; Input Capture</strong>.</p>
+<h2 id="quiz-timers-and-interrupts">🧠 Quiz: Timers and Interrupts<a class="headerlink" href="#quiz-timers-and-interrupts" title="Permanent link">&para;</a></h2>
+<p>What happens when the timer reaches the value in <code>PR1</code> and interrupts are enabled?</p>
+<div class="highlight"><pre><span></span><code><span class="n">T1CONbits</span><span class="p">.</span><span class="n">TON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">PR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">31250</span><span class="p">;</span>
+<span class="n">IEC0bits</span><span class="p">.</span><span class="n">T1IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<div class="upper-alpha">
+<ol>
+<li>The timer stops and resets to 0  </li>
+<li>The CPU halts until the flag is cleared  </li>
+<li>An interrupt is triggered and the ISR runs  </li>
+<li>The timer overflows and restarts silently  </li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>.</p>
+<p>Once the timer reaches <code>PR1</code>, it resets to 0 and triggers an interrupt — <strong>only if interrupts are enabled</strong>.<br />
+This causes the processor to run the ISR (Interrupt Service Routine) associated with that timer.<br />
+After the ISR completes and the flag is cleared, the main program resumes.</p>
+</details>
+<h2 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h2>
+<p>Write code that configures <strong>Timer1</strong> to generate an interrupt every <strong>250 milliseconds</strong>, assuming a system clock (Fcy) of 16 MHz.<br />
+In the ISR, toggle an LED connected to <strong>PORTB bit 2</strong>.</p>
+<details class="example">
+<summary>Click to show solution</summary>
+<div class="highlight"><pre><span></span><code><span class="c1">// Main setup</span>
+<span class="n">TRISBbits</span><span class="p">.</span><span class="n">TRISB2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// RB2 as output</span>
+<span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">             </span><span class="c1">// Start with LED OFF</span>
+
+<span class="n">T1CONbits</span><span class="p">.</span><span class="n">TCKPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">            </span><span class="c1">// Prescaler 1:256</span>
+<span class="n">PR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15625</span><span class="p">;</span><span class="w">                    </span><span class="c1">// 250ms at Fcy = 16MHz</span>
+<span class="n">TMR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="n">IFS0bits</span><span class="p">.</span><span class="n">T1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">              </span><span class="c1">// Clear interrupt flag</span>
+<span class="n">IEC0bits</span><span class="p">.</span><span class="n">T1IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">              </span><span class="c1">// Enable Timer1 interrupt</span>
+<span class="n">T1CONbits</span><span class="p">.</span><span class="n">TON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">              </span><span class="c1">// Turn on Timer1</span>
+
+<span class="c1">// ISR</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">__attribute__</span><span class="p">((</span><span class="n">__interrupt__</span><span class="p">,</span><span class="w"> </span><span class="n">auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_T1Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB2</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">        </span><span class="c1">// Toggle LED</span>
+<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">T1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">          </span><span class="c1">// Clear interrupt flag</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
 
 
 
@@ -1425,7 +1963,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-13
+    2025-04-14
   </span>
 
     

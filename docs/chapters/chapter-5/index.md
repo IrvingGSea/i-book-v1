@@ -235,7 +235,7 @@ Timers and interrupts are two of the most powerful features of any microcontroll
 
 Next, we’ll take what we’ve learned about interrupts and apply it to external inputs — so your microcontroller can respond to real-world events like **button presses or signal edges** in **Chapter 6: External Interrupts & Input Capture**.
 
-## 🧠 Quiz: Timers and Interrupts
+### 🧠 Quiz: Timers and Interrupts
 
 What happens when the timer reaches the value in `PR1` and interrupts are enabled?
 
@@ -259,7 +259,7 @@ IEC0bits.T1IE = 1;
     This causes the processor to run the ISR (Interrupt Service Routine) associated with that timer.  
     After the ISR completes and the flag is cleared, the main program resumes.
 
-## ✍️ Prompt Practice
+### ✍️ Prompt Practice
 
 Write code that configures **Timer1** to generate an interrupt every **250 milliseconds**, assuming a system clock (Fcy) of 16 MHz.  
 In the ISR, toggle an LED connected to **PORTB bit 2**.

@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-7-output-compare" class="md-skip">
+        <a href="#chapter-7-output-compare-pwm" class="md-skip">
           Skip to content
         </a>
       
@@ -510,54 +510,219 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-output-compare" class="md-nav__link">
+  <a href="#section-1-what-is-output-compare" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Is Output Compare?
+      Section 1: What Is Output Compare?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1: What Is Output Compare?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-its-used-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 What It's Used For
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 How It Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-registers-example-oc1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Core Registers (Example: OC1)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-what-is-pwm-pulse-width-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 2: What Is PWM (Pulse Width Modulation)?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: What Is PWM (Pulse Width Modulation)?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Key Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-its-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔦 Why It's Useful
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-duty-cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      📉 Example Duty Cycles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-generating-pwm-with-output-compare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Generating PWM with Output Compare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Generating PWM with Output Compare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Configuration Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-50-duty-cycle-on-oc1-using-tmr2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Example: 50% Duty Cycle on OC1 using TMR2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-on-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Notes on Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-software-vs-hardware-pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Software vs Hardware PWM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Software vs Hardware PWM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Software PWM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-pwm-with-output-compare" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Hardware PWM (with Output Compare)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚖️ Comparison Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-summary-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Summary and Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Summary and Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Real-World Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz-understanding-pwm-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: Understanding PWM Behavior
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-registers" class="md-nav__link">
+  <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
-      🧰 Key Registers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-pwm-works-with-output-compare" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚡ How PWM Works with Output Compare
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-generate-1-khz-pwm-on-oc1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ Example: Generate 1 kHz PWM on OC1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Use Cases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧩 Tips
+      ✍️ Prompt Practice
     </span>
   </a>
   
@@ -1190,54 +1355,219 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-output-compare" class="md-nav__link">
+  <a href="#section-1-what-is-output-compare" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Is Output Compare?
+      Section 1: What Is Output Compare?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 1: What Is Output Compare?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-its-used-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 What It's Used For
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 How It Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-registers-example-oc1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Core Registers (Example: OC1)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-what-is-pwm-pulse-width-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 2: What Is PWM (Pulse Width Modulation)?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: What Is PWM (Pulse Width Modulation)?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Key Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-its-useful" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔦 Why It's Useful
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-duty-cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      📉 Example Duty Cycles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-generating-pwm-with-output-compare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Generating PWM with Output Compare
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Generating PWM with Output Compare">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Configuration Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-50-duty-cycle-on-oc1-using-tmr2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Example: 50% Duty Cycle on OC1 using TMR2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes-on-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Notes on Values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-software-vs-hardware-pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Software vs Hardware PWM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Software vs Hardware PWM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-pwm" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Software PWM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-pwm-with-output-compare" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Hardware PWM (with Output Compare)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚖️ Comparison Table
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-summary-and-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Summary and Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Summary and Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-world-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Real-World Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz-understanding-pwm-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: Understanding PWM Behavior
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-registers" class="md-nav__link">
+  <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
-      🧰 Key Registers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-pwm-works-with-output-compare" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚡ How PWM Works with Output Compare
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-generate-1-khz-pwm-on-oc1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ Example: Generate 1 kHz PWM on OC1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Use Cases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧩 Tips
+      ✍️ Prompt Practice
     </span>
   </a>
   
@@ -1262,87 +1592,337 @@
   
 
 
-<h1 id="chapter-7-output-compare">Chapter 7: Output Compare<a class="headerlink" href="#chapter-7-output-compare" title="Permanent link">&para;</a></h1>
-<h2 id="what-is-output-compare">🎯 What Is Output Compare?<a class="headerlink" href="#what-is-output-compare" title="Permanent link">&para;</a></h2>
-<p>The <strong>Output Compare (OC)</strong> module is used to generate timed digital outputs on a pin. It’s most commonly used for:</p>
-<ul>
-<li>Generating <strong>PWM (Pulse Width Modulation)</strong> signals  </li>
-<li>Producing precise <strong>single-shot pulses</strong>  </li>
-<li>Creating <strong>timed toggles</strong> for waveform generation  </li>
-</ul>
-<p>It works alongside a timer (like TMR2 or TMR3) to compare the timer’s value against programmed thresholds.</p>
+<h1 id="chapter-7-output-compare-pwm">Chapter 7: Output Compare &amp; PWM<a class="headerlink" href="#chapter-7-output-compare-pwm" title="Permanent link">&para;</a></h1>
+<h2 id="section-1-what-is-output-compare">Section 1: What Is Output Compare?<a class="headerlink" href="#section-1-what-is-output-compare" title="Permanent link">&para;</a></h2>
+<p>The <strong>Output Compare (OCx)</strong> module on the PIC24 allows you to generate a digital output signal based on a <strong>timer match event</strong>.</p>
+<p>At a high level, you configure a timer (like <code>TMR2</code>), and when the timer reaches a specific value stored in the <code>OCxR</code> or <code>OCxRS</code> register, the output pin <strong>toggles</strong>, <strong>sets</strong>, <strong>clears</strong>, or <strong>pulses</strong> depending on your chosen mode.</p>
 <hr />
-<h2 id="key-registers">🧰 Key Registers<a class="headerlink" href="#key-registers" title="Permanent link">&para;</a></h2>
+<h3 id="what-its-used-for">🧠 What It's Used For<a class="headerlink" href="#what-its-used-for" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Generate precise timing pulses</strong></li>
+<li><strong>Toggle an output pin</strong> without software involvement</li>
+<li><strong>Create PWM signals</strong> by controlling pulse width via timer values</li>
+</ul>
+<hr />
+<h3 id="how-it-works">🔁 How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Timer (e.g., <code>TMR2</code>) counts up</li>
+<li>When <code>TMR2</code> matches <code>OCxR</code>, the output pin changes</li>
+<li>In PWM mode, this continues as long as the timer runs</li>
+</ol>
+<p>This all happens in <strong>hardware</strong>, without using up CPU cycles.</p>
+<hr />
+<h3 id="core-registers-example-oc1">🧪 Core Registers (Example: OC1)<a class="headerlink" href="#core-registers-example-oc1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>Register</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OC1R</code></td>
+<td>Compare value — when output changes initially</td>
+</tr>
+<tr>
+<td><code>OC1RS</code></td>
+<td>Secondary compare — used in PWM mode</td>
+</tr>
+<tr>
+<td><code>OC1CON</code></td>
+<td>Control register for mode selection and timer link</td>
+</tr>
+<tr>
+<td><code>OC1IF</code></td>
+<td>Interrupt flag (optional use)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔗 Output Compare modules are tightly tied to timers — most often <strong>TMR2 or TMR3</strong> — because these timers are <strong>16-bit</strong>, high-resolution, and designed for timing tasks like PWM generation.<br />
+Timers like TMR1 are typically reserved for timekeeping or general interrupts, while TMR2/TMR3 are better suited for waveform generation.</p>
+</blockquote>
+<hr />
+<p>In the next section, we’ll step back briefly and explain what <strong>Pulse Width Modulation (PWM)</strong> is — since that’s the most popular use case for Output Compare modules.</p>
+<h2 id="section-2-what-is-pwm-pulse-width-modulation">Section 2: What Is PWM (Pulse Width Modulation)?<a class="headerlink" href="#section-2-what-is-pwm-pulse-width-modulation" title="Permanent link">&para;</a></h2>
+<p><strong>Pulse Width Modulation (PWM)</strong> is a technique used to <strong>simulate analog control</strong> using a digital signal that rapidly switches between HIGH and LOW.</p>
+<p>Instead of sending a constant voltage, PWM sends <strong>pulses</strong> — and by controlling <strong>how long</strong> the signal stays HIGH during each cycle, you can control the <strong>average power delivered</strong>.</p>
+<hr />
+<h3 id="key-concepts">🧠 Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Period</strong>: The total duration of one complete on/off cycle</li>
+<li><strong>Duty cycle</strong>: The percentage of the period that the signal is HIGH</li>
+<li>100% duty = always ON</li>
+<li>0% duty = always OFF</li>
+<li>50% duty = ON for half the time, OFF for the other half</li>
+<li><strong>Frequency</strong>: How many PWM cycles occur per second (Hz)</li>
+</ul>
+<hr />
+<h3 id="why-its-useful">🔦 Why It's Useful<a class="headerlink" href="#why-its-useful" title="Permanent link">&para;</a></h3>
+<p>PWM allows you to:
+- <strong>Dim an LED</strong> by adjusting brightness
+- <strong>Control motor speed</strong> or servo position
+- <strong>Modulate audio signals</strong>
+- Generate analog-like control signals without needing a dedicated Digital-to-Analog Converter (DAC) — the PWM duty cycle controls the average voltage instead.</p>
+<p>All of this is done with <strong>just one digital output pin</strong>.</p>
+<hr />
+<h3 id="example-duty-cycles">📉 Example Duty Cycles<a class="headerlink" href="#example-duty-cycles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Duty Cycle</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>OCxCON1</code></td>
-<td>Main control register for OC module</td>
+<td>0%</td>
+<td>Always OFF</td>
 </tr>
 <tr>
-<td><code>OCxCON2</code></td>
-<td>Sync options, advanced features</td>
+<td>25%</td>
+<td>Brief ON, mostly OFF</td>
 </tr>
 <tr>
-<td><code>OCxR</code></td>
-<td>Compare register (start of pulse)</td>
+<td>50%</td>
+<td>Equal ON and OFF</td>
 </tr>
 <tr>
-<td><code>OCxRS</code></td>
-<td>Secondary register (end of pulse)</td>
+<td>75%</td>
+<td>Mostly ON</td>
 </tr>
 <tr>
-<td><code>TMRy</code></td>
-<td>Timer driving the output compare</td>
+<td>100%</td>
+<td>Always ON</td>
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p>🎛️ Adjusting duty cycle lets you control how much "power" a device receives over time.</p>
+</blockquote>
 <hr />
-<h2 id="how-pwm-works-with-output-compare">⚡ How PWM Works with Output Compare<a class="headerlink" href="#how-pwm-works-with-output-compare" title="Permanent link">&para;</a></h2>
-<p>PWM signals switch between high and low at regular intervals:</p>
-<ul>
-<li>The <strong>duty cycle</strong> (how long the signal is high) is controlled by <code>OCxRS</code></li>
-<li>The <strong>period</strong> is defined by the timer (typically via <code>PR2</code>)</li>
-<li>OC pins can be routed using the <strong>Peripheral Pin Select (PPS)</strong> system</li>
-</ul>
+<p>In the next section, we’ll connect this concept to <strong>Output Compare</strong> and show how to generate PWM signals in hardware using the <code>OCx</code> module.</p>
+<h2 id="section-3-generating-pwm-with-output-compare">Section 3: Generating PWM with Output Compare<a class="headerlink" href="#section-3-generating-pwm-with-output-compare" title="Permanent link">&para;</a></h2>
+<p>Now that you understand how PWM works, let's generate it in hardware using the <strong>Output Compare (OCx)</strong> module on the PIC24.</p>
+<p>The OCx module can be configured to output a <strong>PWM signal</strong> using a timer (typically <code>TMR2</code> or <code>TMR3</code>) as a time base.</p>
 <hr />
-<h2 id="example-generate-1-khz-pwm-on-oc1">⚙️ Example: Generate 1 kHz PWM on OC1<a class="headerlink" href="#example-generate-1-khz-pwm-on-oc1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setupOC1_PWM</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Configure Timer2 for 1 kHz (assuming 8 MHz clock, prescaler 1:64)</span>
-<span class="w">    </span><span class="n">T2CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8030</span><span class="p">;</span><span class="w">      </span><span class="c1">// Enable TMR2, prescaler 1:64</span>
-<span class="w">    </span><span class="n">PR2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1249</span><span class="p">;</span><span class="w">          </span><span class="c1">// Period = (8MHz / 64 / 1kHz) - 1</span>
+<h3 id="configuration-overview">🔧 Configuration Overview<a class="headerlink" href="#configuration-overview" title="Permanent link">&para;</a></h3>
+<p>To generate PWM with <code>OCx</code>:</p>
+<ol>
+<li>Set up a timer (<code>TMR2</code> or <code>TMR3</code>) with the desired period</li>
+<li>Set <code>OCxR</code> to define when the pulse goes HIGH</li>
+<li>Set <code>OCxRS</code> to define when the pulse goes LOW</li>
+<li>Configure <code>OCxCON</code> to enable PWM mode</li>
+<li>Map the OCx output to a physical pin (using PPS if required)</li>
+</ol>
+<hr />
+<h3 id="example-50-duty-cycle-on-oc1-using-tmr2">🛠️ Example: 50% Duty Cycle on OC1 using TMR2<a class="headerlink" href="#example-50-duty-cycle-on-oc1-using-tmr2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">//Setting configuration so we don&#39;t keep any unwanted specification from prior, good practice</span>
+<span class="n">T2CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">OC1CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">                 </span>
 
-<span class="w">    </span><span class="n">OC1CON1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0006</span><span class="p">;</span><span class="w">    </span><span class="c1">// OC1 in edge-aligned PWM mode</span>
-<span class="w">    </span><span class="n">OC1R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">            </span><span class="c1">// Initial duty cycle = 0</span>
-<span class="w">    </span><span class="n">OC1RS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">625</span><span class="p">;</span><span class="w">         </span><span class="c1">// 50% duty cycle (625 out of 1250)</span>
+<span class="c1">// Map OC1 output to RP9 (e.g., RB9)</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xbf</span><span class="p">);</span><span class="w">   </span><span class="c1">// Unlock PPS</span>
+<span class="n">RPOR4bits</span><span class="p">.</span><span class="n">RP9R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span><span class="w">                      </span><span class="c1">// RP9 = OC1</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mh">0x40</span><span class="p">);</span><span class="w">   </span><span class="c1">// Lock PPS</span>
 
-<span class="w">    </span><span class="c1">// Route OC1 to pin using PPS (example: RP3)</span>
-<span class="w">    </span><span class="n">RPOR1bits</span><span class="p">.</span><span class="n">RP3R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span><span class="w"> </span><span class="c1">// RP3 = OC1</span>
+<span class="c1">// Configure OC1 for PWM</span>
+<span class="n">OC1CONbits</span><span class="p">.</span><span class="n">OCM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b110</span><span class="p">;</span><span class="w">           </span><span class="c1">// PWM mode, fault pin disabled</span>
+<span class="n">OC1CONbits</span><span class="p">.</span><span class="n">OCTSEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">            </span><span class="c1">// Use Timer2</span>
+<span class="n">OC1RS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25000</span><span class="p">;</span><span class="w">                    </span><span class="c1">// 50% duty cycle (pulse ends here)</span>
+<span class="n">OC1R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25000</span><span class="p">;</span><span class="w">                     </span><span class="c1">// Initial pulse start point</span>
+<span class="n">OC1CONbits</span><span class="p">.</span><span class="n">ON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                </span><span class="c1">// Enable Output Compare</span>
 
-<span class="w">    </span><span class="n">OC1CON1bits</span><span class="p">.</span><span class="n">OCM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b110</span><span class="p">;</span><span class="w"> </span><span class="c1">// Enable OC1 in PWM mode</span>
-<span class="p">}</span><span class="w"> </span><span class="c1">// This sets up a clean 1kHz PWM output with a 50% duty cycle</span>
+<span class="c1">// Configure Timer2 for PWM period</span>
+<span class="n">T2CONbits</span><span class="p">.</span><span class="n">TCKPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b010</span><span class="p">;</span><span class="w">          </span><span class="c1">// Prescaler 1:64</span>
+<span class="n">PR2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">49999</span><span class="p">;</span><span class="w">                      </span><span class="c1">// Sets PWM period</span>
+<span class="n">TMR2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">T2CONbits</span><span class="p">.</span><span class="n">TON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                </span><span class="c1">// Start Timer2</span>
 </code></pre></div>
-<h2 id="use-cases">🧠 Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="notes-on-values">📏 Notes on Values<a class="headerlink" href="#notes-on-values" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Dim LEDs with PWM  </li>
-<li>Control motor speed (DC or servo motors)  </li>
-<li>Generate audio tones  </li>
-<li>Create square waves or timing pulses  </li>
-<li>Trigger external circuitry at precise intervals  </li>
+<li><code>PR2</code> sets the <strong>period</strong> of the PWM</li>
+<li><code>OC1RS</code> sets the <strong>duty cycle</strong> (pulse width)</li>
+<li>A value of <code>OC1RS = PR2 / 2</code> gives <strong>50% duty</strong></li>
+<li>You can change <code>OC1RS</code> on the fly to adjust brightness/speed/etc.</li>
 </ul>
-<h2 id="tips">🧩 Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>🧠 Think of the timer as the metronome and OCx as the switch that turns the output pin ON and OFF with precise timing.</p>
+</blockquote>
+<hr />
+<p>Next, we’ll compare this <strong>hardware PWM</strong> with the software-based version — and show why hardware is often the better choice.</p>
+<h2 id="section-4-software-vs-hardware-pwm">Section 4: Software vs Hardware PWM<a class="headerlink" href="#section-4-software-vs-hardware-pwm" title="Permanent link">&para;</a></h2>
+<p>There are two ways to generate a PWM signal on a microcontroller:</p>
+<ol>
+<li><strong>Software PWM</strong> — manually toggle a pin inside a loop</li>
+<li><strong>Hardware PWM</strong> — use the Output Compare (OCx) module linked to a timer</li>
+</ol>
+<p>Let’s compare the two approaches:</p>
+<hr />
+<h3 id="software-pwm">🖥️ Software PWM<a class="headerlink" href="#software-pwm" title="Permanent link">&para;</a></h3>
+<p>In software PWM, you write code like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">      </span><span class="c1">// Set HIGH</span>
+<span class="w">    </span><span class="n">delay_us</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w">           </span><span class="c1">// ON time</span>
+<span class="w">    </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">      </span><span class="c1">// Set LOW</span>
+<span class="w">    </span><span class="n">delay_us</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w">           </span><span class="c1">// OFF time</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This works, but it:
+- Uses the <strong>CPU 100% of the time</strong>
+- Is affected by <strong>interrupts or timing jitter</strong>
+- Doesn’t scale well (you can’t drive many PWM channels at once)</p>
+<hr />
+<h3 id="hardware-pwm-with-output-compare">⚙️ Hardware PWM (with Output Compare)<a class="headerlink" href="#hardware-pwm-with-output-compare" title="Permanent link">&para;</a></h3>
+<p>In hardware PWM, once you configure the <code>OCx</code> module, the PWM output runs <strong>automatically</strong> in the background.</p>
+<p>Benefits:
+- 🔄 <strong>Doesn't use CPU cycles</strong>
+- 🔍 <strong>Precise timing</strong> tied to hardware clock
+- 💡 <strong>Reliable frequency and duty cycle</strong>
+- 📈 <strong>Scales well</strong> (multiple OCx channels)</p>
+<blockquote>
+<p>🧠 Hardware PWM is like a <strong>metronome</strong>: once set, it keeps time perfectly — while your code is free to focus on other tasks.</p>
+</blockquote>
+<hr />
+<p>Unless you need something very custom, <strong>hardware PWM is always the better choice</strong> when available.</p>
+<hr />
+<h3 id="comparison-table">⚖️ Comparison Table<a class="headerlink" href="#comparison-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Software PWM</th>
+<th>Hardware PWM (OCx)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU Usage</td>
+<td>High (manual toggling)</td>
+<td>Minimal (runs independently)</td>
+</tr>
+<tr>
+<td>Timing Accuracy</td>
+<td>Affected by code &amp; delays</td>
+<td>Very accurate (timer-based)</td>
+</tr>
+<tr>
+<td>Interrupt Sensitivity</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>Poor (one pin at a time)</td>
+<td>Excellent (multiple OCx modules)</td>
+</tr>
+<tr>
+<td>Power Efficiency</td>
+<td>Low</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>✅ Use <strong>hardware PWM</strong> whenever precise, low-overhead control is needed.</p>
+</blockquote>
+<p>Next, we’ll wrap up with common applications and best practices.</p>
+<h2 id="section-5-summary-and-use-cases">Section 5: Summary and Use Cases<a class="headerlink" href="#section-5-summary-and-use-cases" title="Permanent link">&para;</a></h2>
+<p>The <strong>Output Compare (OCx)</strong> module is one of the most powerful peripherals on the PIC24 — especially when used to generate <strong>PWM signals</strong>.</p>
+<p>Paired with a timer, it allows you to produce high-precision digital waveforms that simulate analog control — <strong>without using CPU time</strong>.</p>
+<hr />
+<h3 id="key-takeaways">🔁 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h3>
 <ul>
-<li>OC modules require a running timer (e.g., TMR2 or TMR3)  </li>
-<li><code>OCxRS</code> defines the <strong>on-time</strong>, <code>PRx</code> defines the total <strong>period</strong>  </li>
-<li>Always route the OC output to a pin via <strong>Peripheral Pin Select (PPS)</strong>  </li>
-<li>Use <code>OCxCON1bits.OCM</code> to select the mode (PWM, single compare, etc.)  </li>
+<li><strong>Output Compare</strong> compares a timer value to a register (<code>OCxR</code>/<code>OCxRS</code>) and toggles an output accordingly.</li>
+<li><strong>PWM</strong> (Pulse Width Modulation) controls average power by varying ON/OFF times.</li>
+<li>Hardware PWM is far superior to software-based PWM in timing accuracy, scalability, and CPU usage.</li>
+<li>You can remap OCx to various output pins using <strong>Peripheral Pin Select (PPS)</strong>.</li>
 </ul>
+<hr />
+<h3 id="real-world-applications">💡 Real-World Applications<a class="headerlink" href="#real-world-applications" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>How PWM Helps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LED Dimming</td>
+<td>Adjust brightness by changing duty cycle</td>
+</tr>
+<tr>
+<td>Servo Control</td>
+<td>Send precise pulse widths (1–2 ms range)</td>
+</tr>
+<tr>
+<td>Motor Speed Control</td>
+<td>Modulate voltage applied to motor coils</td>
+</tr>
+<tr>
+<td>Audio Generation</td>
+<td>Output tones or waveforms digitally</td>
+</tr>
+<tr>
+<td>Power Regulation</td>
+<td>Smooth delivery of variable DC voltage</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔧 PWM is everywhere — from drone motors to smart lightbulbs.</p>
+</blockquote>
+<hr />
+<p>Next up, we’ll explore <strong>communication and peripheral modules</strong>, including UART, SPI, I2C, and ADCs!</p>
+<h2 id="quiz-understanding-pwm-behavior">🧠 Quiz: Understanding PWM Behavior<a class="headerlink" href="#quiz-understanding-pwm-behavior" title="Permanent link">&para;</a></h2>
+<p>What happens if the value in <code>OC1RS</code> is set equal to <code>PR2</code> when generating PWM using Timer2?</p>
+<div class="highlight"><pre><span></span><code><span class="n">PR2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40000</span><span class="p">;</span>
+<span class="n">OC1RS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40000</span><span class="p">;</span>
+</code></pre></div>
+<div class="upper-alpha">
+<ol>
+<li>The PWM signal will always be HIGH  </li>
+<li>The PWM signal will be 50% duty cycle  </li>
+<li>The PWM signal will always be LOW  </li>
+<li>The PWM signal will toggle randomly  </li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>.</p>
+<p>If <code>OC1RS</code> equals <code>PR2</code>, the pulse stays HIGH for the full duration of the PWM period — resulting in <strong>100% duty cycle</strong>.<br />
+The output never drops LOW during the cycle.</p>
+</details>
+<hr />
+<h2 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h2>
+<p>Write code to configure <strong>OC1</strong> to generate a <strong>75% duty cycle PWM signal</strong> on pin <strong>RP9</strong>, using <strong>Timer2</strong> and a <strong>period of 20 ms</strong> (standard servo PWM timing).<br />
+Assume a system clock of <strong>16 MHz</strong>.</p>
+<details class="example">
+<summary>Click to show solution</summary>
+<div class="highlight"><pre><span></span><code><span class="c1">// Configure Timer2 for 20 ms period</span>
+<span class="n">T2CONbits</span><span class="p">.</span><span class="n">TCKPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">              </span><span class="c1">// Prescaler 1:256</span>
+<span class="n">PR2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1250</span><span class="p">;</span><span class="w">                       </span><span class="c1">// 20 ms at 16 MHz / 256</span>
+
+<span class="n">TMR2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">T2CONbits</span><span class="p">.</span><span class="n">TON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                </span><span class="c1">// Start Timer2</span>
+
+<span class="c1">// Map OC1 output to RP9 (RB9)</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xbf</span><span class="p">);</span><span class="w">   </span><span class="c1">// Unlock PPS</span>
+<span class="n">RPOR4bits</span><span class="p">.</span><span class="n">RP9R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span><span class="w">                      </span><span class="c1">// RP9 = OC1</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mh">0x40</span><span class="p">);</span><span class="w">   </span><span class="c1">// Lock PPS</span>
+
+<span class="c1">// Configure OC1 for PWM mode</span>
+<span class="n">OC1CONbits</span><span class="p">.</span><span class="n">OCM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mb">0b110</span><span class="p">;</span><span class="w">           </span><span class="c1">// PWM mode, no fault pin</span>
+<span class="n">OC1CONbits</span><span class="p">.</span><span class="n">OCTSEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">            </span><span class="c1">// Use Timer2</span>
+
+<span class="n">OC1RS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">937</span><span class="p">;</span><span class="w">                      </span><span class="c1">// 75% duty cycle (0.75 × 1250)</span>
+<span class="n">OC1R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">937</span><span class="p">;</span><span class="w">                       </span><span class="c1">// Initial compare value</span>
+<span class="n">OC1CONbits</span><span class="p">.</span><span class="n">ON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                </span><span class="c1">// Enable Output Compare</span>
+</code></pre></div>
+</details>
 
 
 
@@ -1363,7 +1943,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-13
+    2025-04-14
   </span>
 
     

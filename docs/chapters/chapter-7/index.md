@@ -249,7 +249,7 @@ Paired with a timer, it allows you to produce high-precision digital waveforms t
 
 Next up, we’ll explore **communication and peripheral modules**, including UART, SPI, I2C, and ADCs!
 
-## 🧠 Quiz: Understanding PWM Behavior
+### 🧠 Quiz: Understanding PWM Behavior
 
 What happens if the value in `OC1RS` is set equal to `PR2` when generating PWM using Timer2?
 
@@ -273,7 +273,7 @@ OC1RS = 40000;
 
 ---
 
-## ✍️ Prompt Practice
+### ✍️ Prompt Practice
 
 Write code to configure **OC1** to generate a **75% duty cycle PWM signal** on pin **RP9**, using **Timer2** and a **period of 20 ms** (standard servo PWM timing).  
 Assume a system clock of **16 MHz**.

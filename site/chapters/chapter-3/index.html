@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-3-stack-call-and-function-frames" class="md-skip">
+        <a href="#chapter-3-branching-loops-in-assembly" class="md-skip">
           Skip to content
         </a>
       
@@ -422,46 +422,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-this-chapter-matters" class="md-nav__link">
+  <a href="#section-1-controlling-the-flow-of-execution" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Why This Chapter Matters
+      Section 1: Controlling the Flow of Execution
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-1-what-is-the-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Section 1: What Is the Stack?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-2-stack-related-registers" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧰 Section 2: Stack-Related Registers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-3-function-calls-the-call-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      📥 Section 3: Function Calls &amp; the Call Stack
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📥 Section 3: Function Calls &amp; the Call Stack">
+    <nav class="md-nav" aria-label="Section 1: Controlling the Flow of Execution">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-call-instruction" class="md-nav__link">
+  <a href="#real-world-example-polling-a-button" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: CALL Instruction
+      Real-World Example: Polling a Button
     </span>
   </a>
   
@@ -473,20 +446,221 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-4-stack-frame-layout-manual-setup" class="md-nav__link">
+  <a href="#section-2-unconditional-branching" class="md-nav__link">
     <span class="md-ellipsis">
-      Section 4: Stack Frame Layout (Manual Setup)
+      🧱Section 2: Unconditional Branching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧱Section 2: Unconditional Branching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bra-branch-always" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 BRA — Branch Always
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#section-5-why-its-important" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#call-and-return-preview" class="md-nav__link">
     <span class="md-ellipsis">
-      Section 5: Why It's Important
+      🔹 Call and Return (Preview)
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-conditional-branching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Conditional Branching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Conditional Branching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-compare-with-cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Step 1: Compare with CP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-branch-based-on-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Step 2: Branch Based on Flags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-condition-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 What Are Condition Flags?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-loops-in-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Loops in Assembly
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Loops in Assembly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#counting-down-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Counting Down Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counting-up-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Counting Up Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-assembly-loops-require-manual-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Why Assembly Loops Require Manual Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#looping-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looping Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-labeling-and-structure-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Labeling and Structure Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Labeling and Structure Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-and-using-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Defining and Using Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-labeling-habits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Labeling Habits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-nop-for-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NOP for Debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-structure-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Structure Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Test Your Understanding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Test Your Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quiz-how-many-times-does-the-loop-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: How Many Times Does the Loop Run?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1205,46 +1379,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-this-chapter-matters" class="md-nav__link">
+  <a href="#section-1-controlling-the-flow-of-execution" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Why This Chapter Matters
+      Section 1: Controlling the Flow of Execution
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-1-what-is-the-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Section 1: What Is the Stack?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-2-stack-related-registers" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧰 Section 2: Stack-Related Registers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-3-function-calls-the-call-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      📥 Section 3: Function Calls &amp; the Call Stack
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📥 Section 3: Function Calls &amp; the Call Stack">
+    <nav class="md-nav" aria-label="Section 1: Controlling the Flow of Execution">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-call-instruction" class="md-nav__link">
+  <a href="#real-world-example-polling-a-button" class="md-nav__link">
     <span class="md-ellipsis">
-      Example: CALL Instruction
+      Real-World Example: Polling a Button
     </span>
   </a>
   
@@ -1256,20 +1403,221 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#section-4-stack-frame-layout-manual-setup" class="md-nav__link">
+  <a href="#section-2-unconditional-branching" class="md-nav__link">
     <span class="md-ellipsis">
-      Section 4: Stack Frame Layout (Manual Setup)
+      🧱Section 2: Unconditional Branching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧱Section 2: Unconditional Branching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bra-branch-always" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 BRA — Branch Always
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#section-5-why-its-important" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#call-and-return-preview" class="md-nav__link">
     <span class="md-ellipsis">
-      Section 5: Why It's Important
+      🔹 Call and Return (Preview)
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-conditional-branching" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: Conditional Branching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: Conditional Branching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-compare-with-cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Step 1: Compare with CP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-branch-based-on-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Step 2: Branch Based on Flags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-condition-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 What Are Condition Flags?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-loops-in-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Loops in Assembly
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Loops in Assembly">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#counting-down-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Counting Down Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counting-up-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Counting Up Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-assembly-loops-require-manual-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Why Assembly Loops Require Manual Control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#looping-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Looping Summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-labeling-and-structure-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Labeling and Structure Tips
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Labeling and Structure Tips">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-and-using-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Defining and Using Labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-labeling-habits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Labeling Habits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-nop-for-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using NOP for Debugging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-structure-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Structure Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-your-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Test Your Understanding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Test Your Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quiz-how-many-times-does-the-loop-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: How Many Times Does the Loop Run?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Prompt Practice
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1292,82 +1640,299 @@
   
 
 
-<h1 id="chapter-3-stack-call-and-function-frames">Chapter 3: Stack, Call, and Function Frames<a class="headerlink" href="#chapter-3-stack-call-and-function-frames" title="Permanent link">&para;</a></h1>
-<h2 id="why-this-chapter-matters">🧠 Why This Chapter Matters<a class="headerlink" href="#why-this-chapter-matters" title="Permanent link">&para;</a></h2>
-<p>This chapter explores how the PIC24 manages <strong>function calls</strong>, <strong>local variables</strong>, and <strong>return addresses</strong> using the <strong>stack</strong>. Understanding this helps you:</p>
+<h1 id="chapter-3-branching-loops-in-assembly">Chapter 3: Branching &amp; Loops in Assembly<a class="headerlink" href="#chapter-3-branching-loops-in-assembly" title="Permanent link">&para;</a></h1>
+<h2 id="section-1-controlling-the-flow-of-execution">Section 1: Controlling the Flow of Execution<a class="headerlink" href="#section-1-controlling-the-flow-of-execution" title="Permanent link">&para;</a></h2>
+<p>Until now, we’ve written assembly code that executes <strong>linearly</strong> — one instruction after another from top to bottom. But real programs rarely follow a straight path. They make <strong>decisions</strong>, <strong>repeat tasks</strong>, and <strong>jump</strong> between sections of code.</p>
+<p>To do this in assembly, we use:</p>
 <ul>
-<li>Write assembly functions that interact cleanly with C code  </li>
-<li>Handle recursion, interrupts, and nested function calls  </li>
-<li>Use registers like <code>W14</code> (Frame Pointer) and <code>W15</code> (Stack Pointer) effectively  </li>
+<li><strong>Branching</strong> to jump to different parts of the code</li>
+<li><strong>Conditional instructions</strong> to decide <em>when</em> to branch</li>
+<li><strong>Loops</strong> to repeat actions until a condition is met</li>
+</ul>
+<p>Just like in higher-level languages (<code>if</code>, <code>while</code>, <code>for</code>), branching and looping let us create flexible, reactive, and dynamic programs — but we build them manually in assembly using a combination of <strong>labels</strong>, <strong>comparison instructions</strong>, and <strong>branch instructions</strong>.</p>
+<h3 id="real-world-example-polling-a-button">Real-World Example: Polling a Button<a class="headerlink" href="#real-world-example-polling-a-button" title="Permanent link">&para;</a></h3>
+<p>Let’s say you want your microcontroller to <strong>wait until a button is pressed</strong>, and then turn on an LED. That requires:</p>
+<ul>
+<li>Repeatedly checking a pin (a loop)</li>
+<li>Branching based on whether the pin is high or low (a decision)</li>
+</ul>
+<p>In assembly, that logic would look like:</p>
+<p><div class="highlight"><pre><span></span><code><span class="nl">CheckButton:</span>
+<span class="w">    </span><span class="nf">MOV</span><span class="w">     </span><span class="no">PORTB</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">         </span><span class="c1">; Load PORTB into W0</span>
+<span class="w">    </span><span class="nf">AND</span><span class="w">     </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="mi">#0</span><span class="no">x0001</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">   </span><span class="c1">; Mask all but bit 0 (RB0)</span>
+<span class="w">    </span><span class="nf">CP</span><span class="w">      </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="mi">#0</span><span class="w">            </span><span class="c1">; Is RB0 low?</span>
+<span class="w">    </span><span class="nf">BEQ</span><span class="w">     </span><span class="no">CheckButton</span><span class="w">       </span><span class="c1">; If yes, button not pressed → loop back</span>
+
+<span class="w">    </span><span class="nf">BSET</span><span class="w">    </span><span class="no">LATB</span><span class="p">,</span><span class="w"> </span><span class="mi">#1</span><span class="w">          </span><span class="c1">; Set RB1 (turn on LED)</span>
+</code></pre></div>
+This example shows both a <strong>loop</strong>(keep checking) and a <strong>branch</strong>(skip ahead once the button is pressed)</p>
+<blockquote>
+<p>⚠️ <strong>Avoid using <code>INC LATB</code> or <code>ADD LATB, #value</code></strong></p>
+</blockquote>
+<p>These instructions modify the <strong>entire 16-bit latch</strong>, which can unintentionally affect multiple output pins. For example:</p>
+<ul>
+<li>If only RB1 should be set, <code>INC</code> might toggle RB0 or clear RB1 depending on the current value.</li>
+<li>Using arithmetic operations doesn’t preserve the state of other bits.</li>
+</ul>
+<h2 id="section-2-unconditional-branching">🧱Section 2: Unconditional Branching<a class="headerlink" href="#section-2-unconditional-branching" title="Permanent link">&para;</a></h2>
+<p>In assembly, <strong>unconditional branching</strong> allows you to jump to another part of your program without checking any condition. It’s like saying, “Go here, no matter what.”</p>
+<p>This is useful for:</p>
+<ul>
+<li>Skipping over code</li>
+<li>Repeating a block (with labels)</li>
+<li>Structuring loops</li>
+<li>Returning to a main loop after an operation</li>
 </ul>
 <hr />
-<h2 id="section-1-what-is-the-stack">✅ Section 1: What Is the Stack?<a class="headerlink" href="#section-1-what-is-the-stack" title="Permanent link">&para;</a></h2>
-<p>The <strong>stack</strong> is a region of RAM used for storing temporary data during program execution.</p>
-<ul>
-<li><strong>LIFO (Last In, First Out)</strong> structure  </li>
-<li>Grows <strong>downward</strong> in memory (from high to low addresses)  </li>
-<li>Stores:  </li>
-<li>Return addresses  </li>
-<li>Local variables  </li>
-<li>Saved register values  </li>
-</ul>
-<hr />
-<h2 id="section-2-stack-related-registers">🧰 Section 2: Stack-Related Registers<a class="headerlink" href="#section-2-stack-related-registers" title="Permanent link">&para;</a></h2>
+<h3 id="bra-branch-always">🔹 <code>BRA</code> — Branch Always<a class="headerlink" href="#bra-branch-always" title="Permanent link">&para;</a></h3>
+<p>The <code>BRA</code> instruction causes the program to <strong>jump to a label</strong>. Execution continues from that label as if the code above it didn’t exist.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nf">BRA</span><span class="w">     </span><span class="no">MainLoop</span><span class="w"> </span>
+</code></pre></div>
+BRA uses relative addressing (i.e. jump a certain number of instruction forward/backward). 
+A tip for BRA is to use it for most control flow and loops.</p>
+<h3 id="call-and-return-preview">🔹 <code>Call</code> and <code>Return</code> (Preview)<a class="headerlink" href="#call-and-return-preview" title="Permanent link">&para;</a></h3>
+<p>You can also branch to a subroutine using <code>Call</code>, which saves the current program counter(PC) onto the stack. When the subroutine is done, it uses RETURN to jump back.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">CALL</span><span class="w">    </span><span class="no">DelayLoop</span><span class="w">    </span><span class="c1">; Jump to subroutine</span>
+<span class="nf">RETURN</span><span class="w">               </span><span class="c1">; Return from it</span>
+</code></pre></div>
+<p>We'll cover the stack and subroutines more deeply in <strong>Chapter 4</strong>, so for now just think of <code>CALL</code> as a way to jump to a reusable block of code and RETURN as a way to come back. </p>
+<h3 id="summary">🧠 Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Register</th>
+<th>Instruction</th>
 <th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>W14</code></td>
-<td>Frame Pointer (FP) — base of current stack frame</td>
+<td><code>BRA</code></td>
+<td>Unconditional branch (relative)</td>
 </tr>
 <tr>
-<td><code>W15</code></td>
-<td>Stack Pointer (SP) — points to the top of the stack</td>
+<td><code>CALL</code></td>
+<td>Branch to subroutine (saves return address on stack)</td>
+</tr>
+<tr>
+<td><code>RETURN</code></td>
+<td>Return from subroutine (restores execution flow)</td>
 </tr>
 </tbody>
 </table>
-<p>These registers are automatically used when calling/returning from functions in C, and are <strong>manually used</strong> in assembly when creating stack frames.</p>
+<h2 id="section-3-conditional-branching">Section 3: Conditional Branching<a class="headerlink" href="#section-3-conditional-branching" title="Permanent link">&para;</a></h2>
+<p>Sometimes, you want to branch <strong>only if a condition is true</strong> — like jumping to a section of code <em>only if two values match</em>, or <em>only if a counter hasn’t hit zero yet</em>.</p>
+<p>To do that, PIC24 uses a two-step process:
+1. Compare values using the <code>CP</code> (Compare) instruction
+2. Use a conditional branch like <code>BNE</code> or <code>BEQ</code> based on the result</p>
 <hr />
-<h2 id="section-3-function-calls-the-call-stack">📥 Section 3: Function Calls &amp; the Call Stack<a class="headerlink" href="#section-3-function-calls-the-call-stack" title="Permanent link">&para;</a></h2>
-<p>When a function is called:</p>
-<ol>
-<li>The <strong>return address</strong> is pushed onto the stack  </li>
-<li>Control jumps to the function  </li>
-<li>The <strong>callee</strong> function can:  </li>
-<li>Push <code>Wn</code> registers it will use  </li>
-<li>Allocate space for local variables  </li>
-<li>When the function finishes, the return address is popped  </li>
-<li>Execution resumes at the caller  </li>
-</ol>
-<h3 id="example-call-instruction">Example: <code>CALL</code> Instruction<a class="headerlink" href="#example-call-instruction" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nf">CALL</span><span class="w">    </span><span class="no">myFunction</span>
+<h3 id="step-1-compare-with-cp">🔹 Step 1: Compare with <code>CP</code><a class="headerlink" href="#step-1-compare-with-cp" title="Permanent link">&para;</a></h3>
+<p>The <code>CP</code> instruction <strong>compares two values</strong> by internally performing a subtraction (without storing the result). It sets <strong>status flags</strong> (Zero, Negative, Overflow, etc.) based on the result.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nf">CP</span><span class="w">      </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="no">W1</span><span class="w">     </span><span class="c1">; Compare W0 to W1</span>
 </code></pre></div>
-<p>This:
- - Pushes the program counter(return address)
- - Jumps to myFunction</p>
-<h2 id="section-4-stack-frame-layout-manual-setup">Section 4: Stack Frame Layout (Manual Setup)<a class="headerlink" href="#section-4-stack-frame-layout-manual-setup" title="Permanent link">&para;</a></h2>
-<p>You can manually manage the stack like this: 
-; Prologue - setting up the stack frame
-PUSH    W0              ; Save register if needed
-PUSH    W1
-MOV     W15, W14        ; Set Frame Pointer = Stack Pointer
-SUB     #4, W15         ; Allocate 4 bytes for local variables</p>
-<p>; Function body here...</p>
-<p>; Epilogue - cleaning up the stack
-<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="no">W14</span><span class="p">,</span><span class="w"> </span><span class="no">W15</span><span class="w">        </span><span class="c1">; Reset Stack Pointer</span>
-<span class="nf">POP</span><span class="w">     </span><span class="no">W1</span>
-<span class="nf">POP</span><span class="w">     </span><span class="no">W0</span>
-<span class="nf">RETURN</span>
-</code></pre></div></p>
-<h2 id="section-5-why-its-important">Section 5: Why It's Important<a class="headerlink" href="#section-5-why-its-important" title="Permanent link">&para;</a></h2>
-<p>Without the stack, nested function calls wouldn't work.
-Local Variables would overwrite each other.
-Interrupt service routins would be unsafe.</p>
+After this, the processor knows whether <code>W0 == W1</code>, <code>W0 &lt; W1</code>, or <code>W0 &gt; W1</code></p>
+<h3 id="step-2-branch-based-on-flags">🔹 Step 2: Branch Based on Flags<a class="headerlink" href="#step-2-branch-based-on-flags" title="Permanent link">&para;</a></h3>
+<p>Once <code>CP</code> sets the condition flags, you can use one of several conditional branch instructions:</p>
+<table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Meaning</th>
+<th>Condition Tested</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BEQ</code></td>
+<td>Branch if equal</td>
+<td>Z = 1 (Zero flag)</td>
+</tr>
+<tr>
+<td><code>BNE</code></td>
+<td>Branch if not equal</td>
+<td>Z = 0</td>
+</tr>
+<tr>
+<td><code>BLT</code></td>
+<td>Branch if less than (signed)</td>
+<td>N ≠ V</td>
+</tr>
+<tr>
+<td><code>BGE</code></td>
+<td>Branch if greater/equal</td>
+<td>N = V</td>
+</tr>
+<tr>
+<td><code>BRA</code></td>
+<td>Branch always (no condition)</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="nf">CP</span><span class="w">      </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="mi">#10</span><span class="w">      </span><span class="c1">; Compare W0 to literal 10</span>
+<span class="nf">BEQ</span><span class="w">     </span><span class="no">MatchLabel</span><span class="w">   </span><span class="c1">; If W0 == 10, jump to MatchLabel</span>
+<span class="w">    </span><span class="c1">; This code runs if W0 ≠ 10</span>
+
+<span class="nl">MatchLabel:</span>
+<span class="w">    </span><span class="c1">; This code runs only if W0 == 10</span>
+</code></pre></div>
+<h3 id="what-are-condition-flags">🧠 What Are Condition Flags?<a class="headerlink" href="#what-are-condition-flags" title="Permanent link">&para;</a></h3>
+<p>When the PIC24 performs a compare, it updates specific bits in the <strong>Status Register (SR)</strong>:</p>
+<ul>
+<li><strong>Z (Zero)</strong>: Set if the result is zero (values matched)  </li>
+<li><strong>N (Negative)</strong>: Set if result was negative  </li>
+<li><strong>C (Carry)</strong> and <strong>V (Overflow)</strong>: Used in signed/unsigned comparisons  </li>
+</ul>
+<p>These flags are <strong>not written directly by your code</strong> — they’re set automatically by instructions like <code>CP</code>, <code>SUB</code>, or <code>ADD</code>.</p>
+<h2 id="section-4-loops-in-assembly">Section 4: Loops in Assembly<a class="headerlink" href="#section-4-loops-in-assembly" title="Permanent link">&para;</a></h2>
+<p>Loops are a fundamental programming structure that let you repeat code <strong>until a condition is met</strong>. In high-level languages, we use constructs like <code>for</code> or <code>while</code>. In assembly, we build loops manually using:</p>
+<ul>
+<li>A <strong>label</strong> to mark the start of the loop</li>
+<li>A <strong>comparison (<code>CP</code>)</strong></li>
+<li>A <strong>conditional branch (<code>BNE</code>, <code>BEQ</code>, etc.)</strong></li>
+</ul>
+<hr />
+<h3 id="counting-down-example">🔹 Counting Down Example<a class="headerlink" href="#counting-down-example" title="Permanent link">&para;</a></h3>
+<p>This loop counts from 3 down to 0 and stops when the counter reaches zero:</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">MOV</span><span class="w">     </span><span class="mi">#3</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">         </span><span class="c1">; Initialize counter to 3</span>
+
+<span class="nl">LoopStart:</span>
+<span class="w">    </span><span class="c1">; [Insert code you want to repeat here]</span>
+
+<span class="w">    </span><span class="nf">DEC</span><span class="w">     </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">         </span><span class="c1">; Decrement counter</span>
+<span class="w">    </span><span class="nf">CP</span><span class="w">      </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="mi">#0</span><span class="w">         </span><span class="c1">; Is counter zero?</span>
+<span class="w">    </span><span class="nf">BNE</span><span class="w">     </span><span class="no">LoopStart</span><span class="w">      </span><span class="c1">; If not, repeat loop</span>
+</code></pre></div>
+This loop executes 3 times with W0 values: 2, 1, 0</p>
+<h3 id="counting-up-example">🔹 Counting Up Example<a class="headerlink" href="#counting-up-example" title="Permanent link">&para;</a></h3>
+<p>If you want to count up instead:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">MOV</span><span class="w">     </span><span class="mi">#0</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">         </span><span class="c1">; Start at 0</span>
+
+<span class="nl">LoopStart:</span>
+<span class="w">    </span><span class="c1">; [Repeat logic here]</span>
+
+<span class="w">    </span><span class="nf">INC</span><span class="w">     </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">         </span><span class="c1">; Increment counter</span>
+<span class="w">    </span><span class="nf">CP</span><span class="w">      </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="mi">#4</span><span class="w">         </span><span class="c1">; Stop when W0 reaches 4</span>
+<span class="w">    </span><span class="nf">BNE</span><span class="w">     </span><span class="no">LoopStart</span>
+</code></pre></div>
+<p>This runs the loop while W0 = 0,1,2,3 - a total of 4 iterations.</p>
+<h3 id="why-assembly-loops-require-manual-control">🔹 Why Assembly Loops Require Manual Control<a class="headerlink" href="#why-assembly-loops-require-manual-control" title="Permanent link">&para;</a></h3>
+<p>Unlike C or Python, assembly doesn’t have <code>while</code>, <code>for</code>, or <code>do...while</code> built in. But using just a few instructions, you can build any loop structure:</p>
+<table>
+<thead>
+<tr>
+<th>High-Level Idea</th>
+<th>Assembly Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>while (x != 0)</code></td>
+<td>label + <code>CP</code> + <code>BNE</code></td>
+</tr>
+<tr>
+<td><code>for (i = 0; i &lt; 4; i++)</code></td>
+<td><code>MOV</code> + label + <code>INC</code> + <code>CP</code> + <code>BNE</code></td>
+</tr>
+<tr>
+<td>Infinite loop</td>
+<td>label + <code>BRA label</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="looping-summary">Looping Summary:<a class="headerlink" href="#looping-summary" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Loops require a counter, a label, a comparison, and a branch.</li>
+<li><code>BNE</code> is commonly used to repeat while not equal to a target.</li>
+<li>You can loop upward, downward, or infinitely depending on the logic.</li>
+<li>Assembly loops give you full control, but also require more careful setup.</li>
+</ul>
+<h2 id="section-5-labeling-and-structure-tips">Section 5: Labeling and Structure Tips<a class="headerlink" href="#section-5-labeling-and-structure-tips" title="Permanent link">&para;</a></h2>
+<p>In assembly programming, <strong>labels</strong> are used to name a location in code that you can jump to using <code>BRA</code>, <code>CALL</code>, or conditional branches.</p>
+<p>They’re the foundation for loops, subroutines, and organizing non-linear control flow.</p>
+<hr />
+<h3 id="defining-and-using-labels">🔹 Defining and Using Labels<a class="headerlink" href="#defining-and-using-labels" title="Permanent link">&para;</a></h3>
+<p>A label is a name followed by a colon <code>:</code>. It marks a position in your program.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nl">Start:</span>
+<span class="w">    </span><span class="nf">MOV</span><span class="w">     </span><span class="mi">#3</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span>
+<span class="w">    </span><span class="nf">BRA</span><span class="w">     </span><span class="no">Start</span><span class="w">         </span><span class="c1">; Jumps back to Start</span>
+</code></pre></div>
+You can branch to a label anywhere in your program - forward or backward.</p>
+<h3 id="good-labeling-habits">Good Labeling Habits<a class="headerlink" href="#good-labeling-habits" title="Permanent link">&para;</a></h3>
+<p>To keep your code readable and maintainable, follow these practices: </p>
+<ul>
+<li>
+<p><strong>Use descriptive names</strong><br />
+  → e.g., <code>LoopStart</code>, <code>CheckDone</code>, <code>RetryLimit</code> — avoid generic labels like <code>L1</code>, <code>L2</code></p>
+</li>
+<li>
+<p><strong>Align labels to the left margin</strong><br />
+  → Makes them easy to see when scanning your code</p>
+</li>
+<li>
+<p><strong>Indent instructions beneath labels</strong><br />
+  → Improves visual clarity and shows structure</p>
+</li>
+<li>
+<p><strong>Choose a consistent style</strong><br />
+  → Capitalized (<code>WAIT_LOOP:</code>) or camelCase (<code>waitLoop:</code>), just keep it uniform</p>
+</li>
+<li>
+<p><strong>Use <code>NOP</code> for debugging or timing padding</strong><br />
+  → Safe spot for breakpoints or delay without affecting program logic</p>
+</li>
+</ul>
+<h3 id="using-nop-for-debugging">Using <code>NOP</code> for Debugging<a class="headerlink" href="#using-nop-for-debugging" title="Permanent link">&para;</a></h3>
+<p>The <code>NOP</code> instruction ("No Operation) does nothing - it simply consumes a clock cycle.</p>
+<p>It's useful for: </p>
+<ul>
+<li>Setting breakpoints during debugging</li>
+<li>Adding timing delays (in loops)</li>
+<li>Temporarily padding out code to preserve layout</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nf">NOP</span><span class="w">     </span><span class="c1">; Do nothing - can be a good place to break in debugger</span>
+</code></pre></div>
+<h3 id="why-structure-matters">Why Structure Matters<a class="headerlink" href="#why-structure-matters" title="Permanent link">&para;</a></h3>
+<p>Assembly doesn’t give you much abstraction — so clarity is your responsibility. Clean labels, indentation, and comments go a long way in making your code understandable — especially when debugging or returning to it later.</p>
+<h2 id="test-your-understanding">✅ Test Your Understanding<a class="headerlink" href="#test-your-understanding" title="Permanent link">&para;</a></h2>
+<p>Let’s check your grasp of conditional branching and loops with a quick question.</p>
+<h3 id="quiz-how-many-times-does-the-loop-run">🧠 Quiz: How Many Times Does the Loop Run?<a class="headerlink" href="#quiz-how-many-times-does-the-loop-run" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="mi">#4</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span>
+<span class="nl">Loop:</span>
+<span class="w">    </span><span class="nf">DEC</span><span class="w">     </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span>
+<span class="w">    </span><span class="nf">CP</span><span class="w">      </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="mi">#0</span>
+<span class="w">    </span><span class="nf">BNE</span><span class="w">     </span><span class="no">Loop</span>
+</code></pre></div>
+<div class="upper-alpha">
+<ol>
+<li>3  </li>
+<li>4  </li>
+<li>5  </li>
+<li>Infinite loop  </li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B (4)</strong>.</p>
+<p>The loop runs as W0 takes the values: 3, 2, 1, 0 — which is <strong>4 total iterations</strong>. After the final decrement to 0, <code>BNE</code> no longer branches.</p>
+</details>
+<h3 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h3>
+<p>Can you write a loop that <strong>counts from 0 to 3</strong>, storing each value to memory?</p>
+<p>Try to solve it yourself before expanding the answer below!</p>
+<details class="example">
+<summary>Click to show solution</summary>
+<p>```asm
+MOV     #0, W0           ; Initialize counter to 0
+MOV     #addr, W1        ; Assume W1 holds base address of memory</p>
+</details>
+<p>Loop:
+    MOV     W0, [W1]         ; Store current value at [W1]
+    INC     W0, W0
+    ADD     #2, W1, W1       ; Move to next memory location (word = 2 bytes)
+    CP      W0, #4
+    BNE     Loop             ; Repeat until W0 == 4
+    ```</p>
+<pre><code>This loop stores the values 0, 1, 2, 3 into consecutive memory locations.
+</code></pre>
 
 
 
@@ -1388,7 +1953,7 @@ Interrupt service routins would be unsafe.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-13
+    2025-04-14
   </span>
 
     

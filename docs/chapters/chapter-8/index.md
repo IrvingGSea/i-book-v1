@@ -482,7 +482,7 @@ Here's a quick recap of the communication and peripheral modules covered:
 
 ---
 
-## 🧠 Quiz: Understanding ADC
+### 🧠 Quiz: Understanding ADC
 
 You’re using a 10-bit ADC with a reference voltage of 3.3V.  
 What voltage does a digital reading of `682` most closely represent?
@@ -503,7 +503,7 @@ What voltage does a digital reading of `682` most closely represent?
 
 ---
 
-## ✍️ Prompt Practice
+### ✍️ Prompt Practice
 
 Write code to configure the ADC to read from **AN2 (RB2)** and store the result in a variable.
 

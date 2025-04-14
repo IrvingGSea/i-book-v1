@@ -251,7 +251,7 @@ Now that you’ve seen how the stack works and how subroutines are built in PIC2
 
 In the next chapter, we’ll expand your control over time with **hardware timers** and learn how to build precise time-based behavior in your programs using **interrupts**.
 
-## 🧠 Quiz: Stack and Subroutines
+### 🧠 Quiz: Stack and Subroutines
 
 What happens to the stack when the following code is executed?
 
@@ -266,6 +266,7 @@ Func1:
 
 Func2:
     RETURN
+```
 
 <div class="upper-alpha" markdown>
 1. The stack is unchanged — calls don’t affect it  
@@ -283,7 +284,7 @@ Func2:
 
     So, two return addresses are pushed and popped in reverse order — **just like a stack (LIFO)**.
 
-## ✍️ Prompt Practice
+### ✍️ Prompt Practice
 
 Write a subroutine called `AddTen` that takes a number in `W0`, adds 10 to it, and returns the result (also in `W0`).  
 Your main program should call `AddTen` with an initial value of `5`, and store the result in `W1`.

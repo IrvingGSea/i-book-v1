@@ -268,7 +268,7 @@ Always refer to your microcontroller’s **datasheet or family reference manual*
 
 Next, we’ll explore **how to generate waveforms and control power** using output compare and PWM in Chapter 7!
 
-## 🧠 Quiz: External Interrupts & Input Capture
+### 🧠 Quiz: External Interrupts & Input Capture
 
 What does the input capture module do when it detects a rising edge on its input pin?
 
@@ -291,7 +291,7 @@ IC1CONbits.ICM = 1;   // Capture on rising edge
 
 ---
 
-## ✍️ Prompt Practice
+### ✍️ Prompt Practice
 
 Write code that configures **Input Capture 1 (IC1)** to capture the time of every **falling edge** on pin **RP7**, using **Timer2** as the time base.  
 Assume you’ve already configured `TMR2` with an appropriate prescaler.
