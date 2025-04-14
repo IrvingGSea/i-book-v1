@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-6-input-capture" class="md-skip">
+        <a href="#chapter-6-external-interrupts-input-capture" class="md-skip">
           Skip to content
         </a>
       
@@ -488,46 +488,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-input-capture" class="md-nav__link">
+  <a href="#section-1-what-are-external-interrupts" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Is Input Capture?
+      Section 1: What Are External Interrupts?
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⏱️ How It Works
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-registers" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧰 Key Registers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-measure-pulse-width-with-input-capture-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ Example: Measure Pulse Width with Input Capture 1
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚙️ Example: Measure Pulse Width with Input Capture 1">
+    <nav class="md-nav" aria-label="Section 1: What Are External Interrupts?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#how-they-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration:
+      🧠 How They Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-lines-intx" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Hardware Lines: INTx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Common Use Cases
     </span>
   </a>
   
@@ -539,27 +530,210 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interrupt-service-routine" class="md-nav__link">
+  <a href="#section-2-configuring-external-interrupts-intx" class="md-nav__link">
     <span class="md-ellipsis">
-      Interrupt Service Routine
+      Section 2: Configuring External Interrupts (INTx)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: Configuring External Interrupts (INTx)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-setup-int1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Basic Setup: INT1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-summary-for-int1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Register Summary for INT1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-toggle-led-on-button-press" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Example: Toggle LED on Button Press
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-note-pull-up-resistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Quick Note: Pull-Up Resistors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-what-is-input-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: What Is Input Capture?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: What Is Input Capture?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-input-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Why Use Input Capture?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Key Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-capture-vs-external-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Input Capture vs External Interrupts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-setting-up-input-capture-icx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Setting Up Input Capture (ICx)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Setting Up Input Capture (ICx)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Basic Configuration Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-example-measure-time-between-pulses" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Code Example: Measure Time Between Pulses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-detection-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Edge Detection Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-summary-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Summary and Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Summary and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ---
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="---">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-peripheral-pin-mapping-pps" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Note: Peripheral Pin Mapping (PPS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz-external-interrupts-input-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: External Interrupts &amp; Input Capture
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-cases-for-input-capture" class="md-nav__link">
+  <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Use Cases for Input Capture
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧩 Tips
+      ✍️ Prompt Practice
     </span>
   </a>
   
@@ -1214,46 +1388,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-input-capture" class="md-nav__link">
+  <a href="#section-1-what-are-external-interrupts" class="md-nav__link">
     <span class="md-ellipsis">
-      🎯 What Is Input Capture?
+      Section 1: What Are External Interrupts?
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⏱️ How It Works
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-registers" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧰 Key Registers
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-measure-pulse-width-with-input-capture-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      ⚙️ Example: Measure Pulse Width with Input Capture 1
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="⚙️ Example: Measure Pulse Width with Input Capture 1">
+    <nav class="md-nav" aria-label="Section 1: What Are External Interrupts?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#how-they-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration:
+      🧠 How They Work
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-lines-intx" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Hardware Lines: INTx
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Common Use Cases
     </span>
   </a>
   
@@ -1265,27 +1430,210 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#interrupt-service-routine" class="md-nav__link">
+  <a href="#section-2-configuring-external-interrupts-intx" class="md-nav__link">
     <span class="md-ellipsis">
-      Interrupt Service Routine
+      Section 2: Configuring External Interrupts (INTx)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 2: Configuring External Interrupts (INTx)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-setup-int1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Basic Setup: INT1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-summary-for-int1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Register Summary for INT1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-toggle-led-on-button-press" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Example: Toggle LED on Button Press
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-note-pull-up-resistors" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Quick Note: Pull-Up Resistors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-what-is-input-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 3: What Is Input Capture?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 3: What Is Input Capture?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-input-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Why Use Input Capture?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Key Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-capture-vs-external-interrupts" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Input Capture vs External Interrupts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-setting-up-input-capture-icx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 4: Setting Up Input Capture (ICx)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 4: Setting Up Input Capture (ICx)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-configuration-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Basic Configuration Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-example-measure-time-between-pulses" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Code Example: Measure Time Between Pulses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-detection-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Edge Detection Options
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-summary-and-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Section 5: Summary and Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Section 5: Summary and Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Key Takeaways
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Best Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      ---
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="---">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#note-peripheral-pin-mapping-pps" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Note: Peripheral Pin Mapping (PPS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz-external-interrupts-input-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Quiz: External Interrupts &amp; Input Capture
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-cases-for-input-capture" class="md-nav__link">
+  <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
-      🧠 Use Cases for Input Capture
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧩 Tips
+      ✍️ Prompt Practice
     </span>
   </a>
   
@@ -1310,91 +1658,326 @@
   
 
 
-<h1 id="chapter-6-input-capture">Chapter 6: Input Capture<a class="headerlink" href="#chapter-6-input-capture" title="Permanent link">&para;</a></h1>
-<h2 id="what-is-input-capture">🎯 What Is Input Capture?<a class="headerlink" href="#what-is-input-capture" title="Permanent link">&para;</a></h2>
-<p>Input Capture allows the PIC24 to <strong>record the exact time a digital signal changes</strong>, such as rising or falling edges on an input pin. It’s useful for:</p>
-<ul>
-<li>Measuring <strong>pulse width</strong>  </li>
-<li>Determining <strong>frequency</strong>  </li>
-<li>Capturing <strong>timestamped events</strong> (e.g., RPM sensors, echo returns)</li>
-</ul>
+<h1 id="chapter-6-external-interrupts-input-capture">Chapter 6: External Interrupts &amp; Input Capture<a class="headerlink" href="#chapter-6-external-interrupts-input-capture" title="Permanent link">&para;</a></h1>
+<h2 id="section-1-what-are-external-interrupts">Section 1: What Are External Interrupts?<a class="headerlink" href="#section-1-what-are-external-interrupts" title="Permanent link">&para;</a></h2>
+<p>External interrupts allow your microcontroller to <strong>react immediately to changes on specific input pins</strong>, such as when a button is pressed, a sensor detects motion, or a digital signal changes state.</p>
 <hr />
-<h2 id="how-it-works">⏱️ How It Works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h2>
+<h3 id="how-they-work">🧠 How They Work<a class="headerlink" href="#how-they-work" title="Permanent link">&para;</a></h3>
+<p>External interrupts are triggered by <strong>electrical transitions</strong> on dedicated interrupt pins:</p>
+<ul>
+<li><strong>Rising edge</strong> → when the signal goes from LOW (0) to HIGH (1)</li>
+<li><strong>Falling edge</strong> → when the signal goes from HIGH (1) to LOW (0)</li>
+<li>Some systems allow <strong>both edges</strong> to trigger an interrupt</li>
+</ul>
+<p>When such a change is detected, the microcontroller <strong>pauses its current task</strong>, runs a specific function called an <strong>Interrupt Service Routine (ISR)</strong>, then <strong>returns to what it was doing</strong> — all within a few cycles.</p>
+<hr />
+<h3 id="hardware-lines-intx">🔌 Hardware Lines: INTx<a class="headerlink" href="#hardware-lines-intx" title="Permanent link">&para;</a></h3>
+<p>The PIC24 provides dedicated external interrupt inputs:
+- <code>INT0</code> is fixed to a specific pin and always uses rising edge detection
+- <code>INT1</code>, <code>INT2</code>, etc. are <strong>configurable</strong>: you can choose rising or falling edge
+- Each has its own flag (<code>IFSx</code>), enable bit (<code>IECx</code>), and priority level (<code>IPCx</code>)</p>
+<hr />
+<h3 id="common-use-cases">✅ Common Use Cases<a class="headerlink" href="#common-use-cases" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Detecting a <strong>button press</strong> (toggle an LED, start/stop a timer)</li>
+<li>Triggering logic when an object <strong>breaks a beam sensor</strong></li>
+<li>Starting an event when a <strong>signal changes state</strong></li>
+<li>Reading a <strong>pulse train</strong> from another digital system</li>
+</ul>
+<blockquote>
+<p>⏱️ External interrupts allow your microcontroller to be responsive <strong>without constant polling</strong> — saving power and processing time.</p>
+</blockquote>
+<hr />
+<p>In the next section, we’ll show how to configure these interrupts on the PIC24 and respond to real-world input like a button press.</p>
+<h2 id="section-2-configuring-external-interrupts-intx">Section 2: Configuring External Interrupts (INTx)<a class="headerlink" href="#section-2-configuring-external-interrupts-intx" title="Permanent link">&para;</a></h2>
+<p>To use an external interrupt on the PIC24, you'll need to configure three main things:</p>
 <ol>
-<li>A timer (e.g., TMR2) is running in the background  </li>
-<li>When a signal edge is detected, the <strong>current timer value</strong> is saved in a capture register  </li>
-<li>An interrupt can be triggered to notify the CPU  </li>
-<li>The program can read the captured time</li>
+<li><strong>Edge sensitivity</strong> — rising or falling</li>
+<li><strong>Enable the interrupt</strong></li>
+<li><strong>Clear the interrupt flag in your ISR</strong></li>
 </ol>
 <hr />
-<h2 id="key-registers">🧰 Key Registers<a class="headerlink" href="#key-registers" title="Permanent link">&para;</a></h2>
+<h3 id="basic-setup-int1">🔹 Basic Setup: INT1<a class="headerlink" href="#basic-setup-int1" title="Permanent link">&para;</a></h3>
+<p>Here’s how to configure <strong>INT1</strong> to trigger on a <strong>falling edge</strong> (e.g. button press):</p>
+<div class="highlight"><pre><span></span><code><span class="n">TRISBbits</span><span class="p">.</span><span class="n">TRISB7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">              </span><span class="c1">// Set RB7 as input</span>
+<span class="n">INTCON2bits</span><span class="p">.</span><span class="n">INT1EP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c1">// 1 = falling edge, 0 = rising edge</span>
+
+<span class="n">IFS1bits</span><span class="p">.</span><span class="n">INT1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">               </span><span class="c1">// Clear interrupt flag</span>
+<span class="n">IEC1bits</span><span class="p">.</span><span class="n">INT1IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">               </span><span class="c1">// Enable INT1 interrupt</span>
+</code></pre></div>
+<p>And the corresponding ISR:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">__attribute__</span><span class="p">((</span><span class="n">__interrupt__</span><span class="p">,</span><span class="w"> </span><span class="n">auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_INT1Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">IFS1bits</span><span class="p">.</span><span class="n">INT1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// Clear the interrupt flag</span>
+<span class="w">    </span><span class="n">LATBbits</span><span class="p">.</span><span class="n">LATB0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c1">// Toggle LED (for example)</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="register-summary-for-int1">⚙️ Register Summary for INT1<a class="headerlink" href="#register-summary-for-int1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>Register</th>
-<th>Description</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>ICxBUF</code></td>
-<td>Capture buffer — holds captured timer value</td>
+<td><code>INTCON2bits.INT1EP</code></td>
+<td>1 = falling edge, 0 = rising edge</td>
 </tr>
 <tr>
-<td><code>ICxCON1</code></td>
-<td>Control register for Input Capture</td>
+<td><code>IEC1bits.INT1IE</code></td>
+<td>Enable bit for INT1</td>
 </tr>
 <tr>
-<td><code>ICxCON2</code></td>
-<td>Advanced features (chaining, sync)</td>
+<td><code>IFS1bits.INT1IF</code></td>
+<td>Interrupt flag for INT1</td>
 </tr>
 <tr>
-<td><code>IFSx</code>, <code>IECx</code></td>
-<td>Interrupt flag and enable bits for Input Capture</td>
-</tr>
-<tr>
-<td><code>TMRy</code></td>
-<td>Timer used as the timebase (usually TMR2 or TMR3)</td>
+<td><code>IPC5bits.INT1IP</code></td>
+<td>Priority level (optional)</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="example-measure-pulse-width-with-input-capture-1">⚙️ Example: Measure Pulse Width with Input Capture 1<a class="headerlink" href="#example-measure-pulse-width-with-input-capture-1" title="Permanent link">&para;</a></h2>
-<p>Let’s say we want to measure the time between two rising edges of a signal.</p>
-<h3 id="configuration">Configuration:<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">setupInputCapture1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">T2CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x8000</span><span class="p">;</span><span class="w">      </span><span class="c1">// Enable Timer2, no prescale</span>
-<span class="w">    </span><span class="n">IC1CON1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0003</span><span class="p">;</span><span class="w">    </span><span class="c1">// Capture every rising edge</span>
-<span class="w">    </span><span class="n">IC1CON2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0000</span><span class="p">;</span><span class="w">    </span><span class="c1">// Use Timer2 as timebase</span>
-<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">IC1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Clear interrupt flag</span>
-<span class="w">    </span><span class="n">IEC0bits</span><span class="p">.</span><span class="n">IC1IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// Enable IC1 interrupt</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="interrupt-service-routine">Interrupt Service Routine<a class="headerlink" href="#interrupt-service-routine" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kt">uint16_t</span><span class="w"> </span><span class="n">lastCapture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="kt">uint16_t</span><span class="w"> </span><span class="n">pulseWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<h3 id="example-toggle-led-on-button-press">🧪 Example: Toggle LED on Button Press<a class="headerlink" href="#example-toggle-led-on-button-press" title="Permanent link">&para;</a></h3>
+<p>You can connect a <strong>button</strong> between <code>RB7</code> and GND. When pressed, the line goes LOW, triggering the falling edge interrupt. The ISR toggles an LED on <code>RB0</code>.</p>
+<blockquote>
+<p>📝 Remember to include a pull-up resistor (internal or external) to hold <code>RB7</code> HIGH when the button is not pressed.</p>
+</blockquote>
+<hr />
+<h3 id="quick-note-pull-up-resistors">🔌 Quick Note: Pull-Up Resistors<a class="headerlink" href="#quick-note-pull-up-resistors" title="Permanent link">&para;</a></h3>
+<p>When using an external interrupt triggered by a button, the pin needs to have a <strong>known voltage level</strong> when the button is <strong>not pressed</strong>. Otherwise, it may float unpredictably and trigger false interrupts.</p>
+<p>A <strong>pull-up resistor</strong> holds the line HIGH by default. When the button is pressed, it pulls the line LOW — creating a clean falling edge.</p>
+<p>You can use:
+- An <strong>external pull-up resistor</strong> (e.g., 10kΩ to Vdd), or
+- Enable the <strong>internal pull-up</strong> (on some PIC24 devices via <code>CNPUx</code> register)</p>
+<blockquote>
+<p>✅ This ensures your interrupt only fires when the button is intentionally pressed.</p>
+</blockquote>
+<hr />
+<p>Next, we’ll explore <strong>Input Capture</strong>, a different kind of input interrupt used for measuring timing of digital signals.</p>
+<h2 id="section-3-what-is-input-capture">Section 3: What Is Input Capture?<a class="headerlink" href="#section-3-what-is-input-capture" title="Permanent link">&para;</a></h2>
+<p>While external interrupts help detect <strong>when</strong> an event occurs, <strong>input capture</strong> helps you measure <strong>how long</strong> something took or <strong>when exactly</strong> it happened — with precision.</p>
+<p>Input capture is used to <strong>record the exact timer value</strong> at the moment an external signal changes. This allows you to measure things like:</p>
+<ul>
+<li>The time between two button presses</li>
+<li>The frequency of a square wave</li>
+<li>The pulse width of a PWM signal</li>
+</ul>
+<hr />
+<h3 id="why-use-input-capture">🧠 Why Use Input Capture?<a class="headerlink" href="#why-use-input-capture" title="Permanent link">&para;</a></h3>
+<p>Input capture modules are tightly linked to timers. They <strong>"capture" the current timer count</strong> and store it in a buffer the moment a specified edge occurs.</p>
+<p>This enables <strong>precise time stamping</strong> without needing to poll the input manually.</p>
+<hr />
+<h3 id="key-use-cases">📦 Key Use Cases<a class="headerlink" href="#key-use-cases" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pulse width measurement</strong> (how long a signal stayed high or low)</li>
+<li><strong>Frequency detection</strong> (time between rising edges)</li>
+<li><strong>Reaction timing</strong> (time between stimulus and response)</li>
+<li>Detecting <strong>variable pulse signals</strong> like servo control or ultrasonic sensors</li>
+</ul>
+<hr />
+<h3 id="input-capture-vs-external-interrupts">🔁 Input Capture vs External Interrupts<a class="headerlink" href="#input-capture-vs-external-interrupts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>External Interrupt</th>
+<th>Input Capture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose</td>
+<td>Trigger code</td>
+<td>Record time of event</td>
+</tr>
+<tr>
+<td>Edge Response</td>
+<td>ISR runs on edge</td>
+<td>Timer value recorded</td>
+</tr>
+<tr>
+<td>Useful For</td>
+<td>Logic control</td>
+<td>Precision timing</td>
+</tr>
+<tr>
+<td>CPU Involvement</td>
+<td>Immediate ISR</td>
+<td>Minimal — buffered</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🎯 Use <strong>input capture</strong> when you're more interested in <strong>when</strong> something happened than <strong>what</strong> should happen immediately.</p>
+</blockquote>
+<hr />
+<p>In the next section, we’ll walk through how to configure and use input capture modules on the PIC24.</p>
+<h2 id="section-4-setting-up-input-capture-icx">Section 4: Setting Up Input Capture (ICx)<a class="headerlink" href="#section-4-setting-up-input-capture-icx" title="Permanent link">&para;</a></h2>
+<p>To use Input Capture on the PIC24, you'll configure one of the ICx modules (e.g., IC1, IC2) to <strong>record the timer value</strong> when a digital signal changes on a designated pin.</p>
+<p>The capture value is automatically placed into a buffer, which you can read later in software or inside an ISR.</p>
+<hr />
+<h3 id="basic-configuration-steps">🔹 Basic Configuration Steps<a class="headerlink" href="#basic-configuration-steps" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Configure the <strong>pin as an input</strong></li>
+<li>Select the <strong>timer source</strong> (usually TMR2 or TMR3)</li>
+<li>Set the <strong>edge mode</strong> (rising, falling, or every edge)</li>
+<li>Enable <strong>interrupts</strong> (optional, but common)</li>
+<li>Read the <strong>captured value</strong> from the ICx buffer</li>
+</ol>
+<hr />
+<h3 id="code-example-measure-time-between-pulses">🛠️ Code Example: Measure Time Between Pulses<a class="headerlink" href="#code-example-measure-time-between-pulses" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Setup for IC1 using Timer2</span>
+<span class="n">IC1CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="n">T2CON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w">                         </span><span class="c1">//Set the configuration to 0 as good practice</span>
+<span class="n">TRISBbits</span><span class="p">.</span><span class="n">TRISB2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">             </span><span class="c1">// Set RB2 (IC1 input) as input</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">__attribute__</span><span class="p">((</span><span class="n">interrupt</span><span class="p">,</span><span class="w"> </span><span class="n">no_auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_IC1Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">IC1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                  </span><span class="c1">// Clear flag</span>
-<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IC1BUF</span><span class="p">;</span><span class="w">           </span><span class="c1">// Read captured value</span>
-<span class="w">    </span><span class="n">pulseWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">lastCapture</span><span class="p">;</span><span class="w">  </span><span class="c1">// Compute pulse width</span>
-<span class="w">    </span><span class="n">lastCapture</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current</span><span class="p">;</span><span class="w">               </span><span class="c1">// Store for next edge</span>
+<span class="n">T2CONbits</span><span class="p">.</span><span class="n">TCKPS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">              </span><span class="c1">// Prescaler 1:64</span>
+<span class="n">TMR2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">PR2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xFFFF</span><span class="p">;</span>
+<span class="n">T2CONbits</span><span class="p">.</span><span class="n">TON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">                </span><span class="c1">// Turn on Timer2</span>
+
+<span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ICM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">               </span><span class="c1">// Capture on every rising edge</span>
+<span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ICTMR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">            </span><span class="c1">// Use Timer2 as time base</span>
+<span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ICI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">              </span><span class="c1">// Interrupt on every capture</span>
+<span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">               </span><span class="c1">// Enable Input Capture</span>
+
+<span class="n">IFS0bits</span><span class="p">.</span><span class="n">IC1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">              </span><span class="c1">// Clear interrupt flag</span>
+<span class="n">IEC0bits</span><span class="p">.</span><span class="n">IC1IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">              </span><span class="c1">// Enable interrupt</span>
+
+<span class="c1">// ISR to read captured time</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">__attribute__</span><span class="p">((</span><span class="n">__interrupt__</span><span class="p">,</span><span class="w"> </span><span class="n">auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_IC1Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">IC1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">          </span><span class="c1">// Clear interrupt flag</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IC1BUF</span><span class="p">;</span><span class="w">      </span><span class="c1">// Read captured timer value</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="use-cases-for-input-capture">🧠 Use Cases for Input Capture<a class="headerlink" href="#use-cases-for-input-capture" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="edge-detection-options">🔄 Edge Detection Options<a class="headerlink" href="#edge-detection-options" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Mode Value</th>
+<th>Trigger Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Every rising edge</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Every falling edge</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Every edge (rising + falling)</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Module disabled</td>
+</tr>
+</tbody>
+</table>
+<p>Set using: <code>ICxCONbits.ICM = value;</code></p>
+<blockquote>
+<p>📝 You can change the capture mode on the fly if you want to capture both rising and falling edges in sequence.</p>
+</blockquote>
+<hr />
+<p>In the next section, we’ll summarize the difference between external interrupts and input capture, and wrap up with tips and use cases.</p>
+<h2 id="section-5-summary-and-best-practices">Section 5: Summary and Best Practices<a class="headerlink" href="#section-5-summary-and-best-practices" title="Permanent link">&para;</a></h2>
+<p>External interrupts and input capture give your microcontroller the ability to <strong>react to real-world events</strong> and <strong>measure their timing precisely</strong> — both essential tools in embedded systems.</p>
+<hr />
+<h3 id="key-takeaways">🧠 Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Measure the frequency of an external waveform  </li>
-<li>Detect the width of ultrasonic echo pulses  </li>
-<li>Determine RPM from motor encoders  </li>
-<li>Track signal timing in communication protocols  </li>
+<li><strong>External Interrupts (INTx):</strong></li>
+<li>Trigger an <strong>ISR</strong> when a pin changes (rising/falling edge)</li>
+<li>Great for reacting to <strong>button presses</strong> or <strong>logic events</strong></li>
+<li>
+<p>Must <strong>clear the interrupt flag</strong> inside the ISR</p>
+</li>
+<li>
+<p><strong>Input Capture (ICx):</strong></p>
+</li>
+<li>Records the <strong>timer value</strong> when a pin changes</li>
+<li>Perfect for measuring <strong>pulse width</strong>, <strong>frequency</strong>, or <strong>time between events</strong></li>
+<li>
+<p>Doesn’t require logic inside the ISR (just read <code>ICxBUF</code>)</p>
+</li>
+<li>
+<p>Both can be configured for <strong>rising, falling, or both</strong> edges</p>
+</li>
 </ul>
-<h2 id="tips">🧩 Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="best-practices">✅ Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Make sure the timer used is running!  </li>
-<li>Avoid overflow — use a large enough timer or handle wraparound  </li>
-<li>Debounce noisy signals to avoid false captures  </li>
-<li>Use <strong>capture every edge</strong>, <strong>every 2nd edge</strong>, or <strong>rising/falling</strong> as needed via <code>ICxCON1</code> settings  </li>
+<li>✔️ Use <strong>pull-up or pull-down resistors</strong> to ensure clean digital signals</li>
+<li>✔️ <strong>Debounce buttons</strong> (in software or hardware) to avoid multiple triggers</li>
+<li>✔️ Clear flags inside the ISR: <code>IFSxbits.INTxIF</code> or <code>ICxIF</code></li>
+<li>✔️ Use <strong>input capture</strong> when timing is more important than triggering behavior</li>
+<li>❌ Don’t read <code>ICxBUF</code> unless <code>ICxIF</code> is set — you could get junk data</li>
 </ul>
+<h2 id="-">---<a class="headerlink" href="#-" title="Permanent link">&para;</a></h2>
+<h3 id="note-peripheral-pin-mapping-pps">🛠️ Note: Peripheral Pin Mapping (PPS)<a class="headerlink" href="#note-peripheral-pin-mapping-pps" title="Permanent link">&para;</a></h3>
+<p>On PIC24 devices with remappable pins, you must use <strong>Peripheral Pin Select (PPS)</strong> to assign Input Capture (ICx), Output Compare (OCx), UART, and other modules to specific physical pins.</p>
+<p>For example, to map <strong>IC1 to RP7 (e.g., RB7)</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xbf</span><span class="p">);</span><span class="w">   </span><span class="c1">// Unlock PPS</span>
+<span class="n">RPINR7bits</span><span class="p">.</span><span class="n">IC1R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w">                      </span><span class="c1">// IC1 input = RP7</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mh">0x40</span><span class="p">);</span><span class="w">   </span><span class="c1">// Lock PPS</span>
+</code></pre></div>
+<blockquote>
+<p>⚠️ Skipping this step may cause ICx or OCx modules to appear non-functional.</p>
+</blockquote>
+<p>Always refer to your microcontroller’s <strong>datasheet or family reference manual</strong> to find valid RPx mappings for your device.</p>
+<p>Next, we’ll explore <strong>how to generate waveforms and control power</strong> using output compare and PWM in Chapter 7!</p>
+<h2 id="quiz-external-interrupts-input-capture">🧠 Quiz: External Interrupts &amp; Input Capture<a class="headerlink" href="#quiz-external-interrupts-input-capture" title="Permanent link">&para;</a></h2>
+<p>What does the input capture module do when it detects a rising edge on its input pin?</p>
+<div class="highlight"><pre><span></span><code><span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ICM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">   </span><span class="c1">// Capture on rising edge</span>
+</code></pre></div>
+<div class="upper-alpha">
+<ol>
+<li>Immediately jumps to an interrupt  </li>
+<li>Saves the value of PRx  </li>
+<li>Saves the value of TMRx into IC1BUF  </li>
+<li>Resets the timer to zero  </li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>.</p>
+<p>The input capture module stores the <strong>current value of the timer</strong> (usually TMR2 or TMR3) into <code>IC1BUF</code> when the rising edge occurs.<br />
+This lets you determine exactly <strong>when</strong> the signal changed — great for measuring duration, frequency, or spacing between pulses.</p>
+</details>
+<hr />
+<h2 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h2>
+<p>Write code that configures <strong>Input Capture 1 (IC1)</strong> to capture the time of every <strong>falling edge</strong> on pin <strong>RP7</strong>, using <strong>Timer2</strong> as the time base.<br />
+Assume you’ve already configured <code>TMR2</code> with an appropriate prescaler.</p>
+<details class="example">
+<summary>Click to show solution</summary>
+<div class="highlight"><pre><span></span><code><span class="c1">// Set up pin mapping: IC1 on RP7 (RB7)</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xbf</span><span class="p">);</span><span class="w">   </span><span class="c1">// Unlock PPS</span>
+<span class="n">RPINR7bits</span><span class="p">.</span><span class="n">IC1R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w">                      </span><span class="c1">// Map IC1 input to RP7</span>
+<span class="n">__builtin_write_OSCCONL</span><span class="p">(</span><span class="n">OSCCON</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mh">0x40</span><span class="p">);</span><span class="w">   </span><span class="c1">// Lock PPS</span>
+
+<span class="c1">// Configure IC1</span>
+<span class="n">TRISBbits</span><span class="p">.</span><span class="n">TRISB7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c1">// RB7 as input</span>
+<span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ICTMR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c1">// Use Timer2 as time base</span>
+<span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ICM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">             </span><span class="c1">// Capture on falling edge</span>
+<span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ICI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">             </span><span class="c1">// Interrupt on every event</span>
+<span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">              </span><span class="c1">// Turn on IC1</span>
+
+<span class="n">IFS0bits</span><span class="p">.</span><span class="n">IC1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">             </span><span class="c1">// Clear interrupt flag</span>
+<span class="n">IEC0bits</span><span class="p">.</span><span class="n">IC1IE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">             </span><span class="c1">// Enable interrupt</span>
+
+<span class="c1">// IC1 ISR</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">__attribute__</span><span class="p">((</span><span class="n">__interrupt__</span><span class="p">,</span><span class="w"> </span><span class="n">auto_psv</span><span class="p">))</span><span class="w"> </span><span class="n">_IC1Interrupt</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">timeStamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IC1BUF</span><span class="p">;</span><span class="w">   </span><span class="c1">// Read captured time</span>
+<span class="w">    </span><span class="n">IFS0bits</span><span class="p">.</span><span class="n">IC1IF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">            </span><span class="c1">// Clear flag</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
 
 
 
@@ -1415,7 +1998,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-13
+    2025-04-14
   </span>
 
     
