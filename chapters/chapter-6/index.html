@@ -716,12 +716,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#quiz-external-interrupts-input-capture" class="md-nav__link">
     <span class="md-ellipsis">
       🧠 Quiz: External Interrupts &amp; Input Capture
@@ -729,13 +724,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
       ✍️ Prompt Practice
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1616,12 +1616,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#quiz-external-interrupts-input-capture" class="md-nav__link">
     <span class="md-ellipsis">
       🧠 Quiz: External Interrupts &amp; Input Capture
@@ -1629,13 +1624,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
       ✍️ Prompt Practice
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1932,7 +1932,7 @@
 </blockquote>
 <p>Always refer to your microcontroller’s <strong>datasheet or family reference manual</strong> to find valid RPx mappings for your device.</p>
 <p>Next, we’ll explore <strong>how to generate waveforms and control power</strong> using output compare and PWM in Chapter 7!</p>
-<h2 id="quiz-external-interrupts-input-capture">🧠 Quiz: External Interrupts &amp; Input Capture<a class="headerlink" href="#quiz-external-interrupts-input-capture" title="Permanent link">&para;</a></h2>
+<h3 id="quiz-external-interrupts-input-capture">🧠 Quiz: External Interrupts &amp; Input Capture<a class="headerlink" href="#quiz-external-interrupts-input-capture" title="Permanent link">&para;</a></h3>
 <p>What does the input capture module do when it detects a rising edge on its input pin?</p>
 <div class="highlight"><pre><span></span><code><span class="n">IC1CONbits</span><span class="p">.</span><span class="n">ICM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">   </span><span class="c1">// Capture on rising edge</span>
 </code></pre></div>
@@ -1951,7 +1951,7 @@
 This lets you determine exactly <strong>when</strong> the signal changed — great for measuring duration, frequency, or spacing between pulses.</p>
 </details>
 <hr />
-<h2 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h2>
+<h3 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h3>
 <p>Write code that configures <strong>Input Capture 1 (IC1)</strong> to capture the time of every <strong>falling edge</strong> on pin <strong>RP7</strong>, using <strong>Timer2</strong> as the time base.<br />
 Assume you’ve already configured <code>TMR2</code> with an appropriate prescaler.</p>
 <details class="example">
