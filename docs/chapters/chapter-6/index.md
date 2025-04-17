@@ -6,7 +6,7 @@ External interrupts allow your microcontroller to **react immediately to changes
 
 ---
 
-### 🧠 How They Work
+### How They Work
 
 External interrupts are triggered by **electrical transitions** on dedicated interrupt pins:
 
@@ -18,7 +18,7 @@ When such a change is detected, the microcontroller **pauses its current task**,
 
 ---
 
-### 🔌 Hardware Lines: INTx
+### Hardware Lines: INTx
 
 The PIC24 provides dedicated external interrupt inputs:
 - `INT0` is fixed to a specific pin and always uses rising edge detection
@@ -27,14 +27,14 @@ The PIC24 provides dedicated external interrupt inputs:
 
 ---
 
-### ✅ Common Use Cases
+### Common Use Cases
 
 - Detecting a **button press** (toggle an LED, start/stop a timer)
 - Triggering logic when an object **breaks a beam sensor**
 - Starting an event when a **signal changes state**
 - Reading a **pulse train** from another digital system
 
-> ⏱️ External interrupts allow your microcontroller to be responsive **without constant polling** — saving power and processing time.
+>  External interrupts allow your microcontroller to be responsive **without constant polling** — saving power and processing time.
 
 ---
 
@@ -73,7 +73,7 @@ void __attribute__((__interrupt__, auto_psv)) _INT1Interrupt(void) {
 
 ---
 
-### ⚙️ Register Summary for INT1
+### Register Summary for INT1
 
 | Register               | Purpose                              |
 |------------------------|--------------------------------------|
@@ -84,15 +84,15 @@ void __attribute__((__interrupt__, auto_psv)) _INT1Interrupt(void) {
 
 ---
 
-### 🧪 Example: Toggle LED on Button Press
+### Example: Toggle LED on Button Press
 
 You can connect a **button** between `RB7` and GND. When pressed, the line goes LOW, triggering the falling edge interrupt. The ISR toggles an LED on `RB0`.
 
-> 📝 Remember to include a pull-up resistor (internal or external) to hold `RB7` HIGH when the button is not pressed.
+> Remember to include a pull-up resistor (internal or external) to hold `RB7` HIGH when the button is not pressed.
 
 ---
 
-### 🔌 Quick Note: Pull-Up Resistors
+### Quick Note: Pull-Up Resistors
 
 When using an external interrupt triggered by a button, the pin needs to have a **known voltage level** when the button is **not pressed**. Otherwise, it may float unpredictably and trigger false interrupts.
 
@@ -102,7 +102,7 @@ You can use:
 - An **external pull-up resistor** (e.g., 10kΩ to Vdd), or
 - Enable the **internal pull-up** (on some PIC24 devices via `CNPUx` register)
 
-> ✅ This ensures your interrupt only fires when the button is intentionally pressed.
+> This ensures your interrupt only fires when the button is intentionally pressed.
 
 ---
 
@@ -120,7 +120,7 @@ Input capture is used to **record the exact timer value** at the moment an exter
 
 ---
 
-### 🧠 Why Use Input Capture?
+### Why Use Input Capture?
 
 Input capture modules are tightly linked to timers. They **"capture" the current timer count** and store it in a buffer the moment a specified edge occurs.
 
@@ -128,7 +128,7 @@ This enables **precise time stamping** without needing to poll the input manuall
 
 ---
 
-### 📦 Key Use Cases
+### Key Use Cases
 
 - **Pulse width measurement** (how long a signal stayed high or low)
 - **Frequency detection** (time between rising edges)
@@ -137,7 +137,7 @@ This enables **precise time stamping** without needing to poll the input manuall
 
 ---
 
-### 🔁 Input Capture vs External Interrupts
+### Input Capture vs External Interrupts
 
 | Feature              | External Interrupt | Input Capture          |
 |----------------------|--------------------|------------------------|
@@ -146,7 +146,7 @@ This enables **precise time stamping** without needing to poll the input manuall
 | Useful For           | Logic control      | Precision timing       |
 | CPU Involvement      | Immediate ISR      | Minimal — buffered     |
 
-> 🎯 Use **input capture** when you're more interested in **when** something happened than **what** should happen immediately.
+> Use **input capture** when you're more interested in **when** something happened than **what** should happen immediately.
 
 ---
 
@@ -170,7 +170,7 @@ The capture value is automatically placed into a buffer, which you can read late
 
 ---
 
-### 🛠️ Code Example: Measure Time Between Pulses
+### Code Example: Measure Time Between Pulses
 
 ```c
 // Setup for IC1 using Timer2
@@ -200,7 +200,7 @@ void __attribute__((__interrupt__, auto_psv)) _IC1Interrupt(void) {
 
 ---
 
-### 🔄 Edge Detection Options
+### Edge Detection Options
 
 | Mode Value | Trigger Condition      |
 |------------|------------------------|
@@ -211,7 +211,7 @@ void __attribute__((__interrupt__, auto_psv)) _IC1Interrupt(void) {
 
 Set using: `ICxCONbits.ICM = value;`
 
-> 📝 You can change the capture mode on the fly if you want to capture both rising and falling edges in sequence.
+> You can change the capture mode on the fly if you want to capture both rising and falling edges in sequence.
 
 ---
 
@@ -223,7 +223,7 @@ External interrupts and input capture give your microcontroller the ability to *
 
 ---
 
-### 🧠 Key Takeaways
+### Key Takeaways
 
 - **External Interrupts (INTx):**
   - Trigger an **ISR** when a pin changes (rising/falling edge)
@@ -239,7 +239,7 @@ External interrupts and input capture give your microcontroller the ability to *
 
 ---
 
-### ✅ Best Practices
+### Best Practices
 
 - ✔️ Use **pull-up or pull-down resistors** to ensure clean digital signals
 - ✔️ **Debounce buttons** (in software or hardware) to avoid multiple triggers
@@ -250,7 +250,7 @@ External interrupts and input capture give your microcontroller the ability to *
 ---
 ---
 
-### 🛠️ Note: Peripheral Pin Mapping (PPS)
+### Note: Peripheral Pin Mapping (PPS)
 
 On PIC24 devices with remappable pins, you must use **Peripheral Pin Select (PPS)** to assign Input Capture (ICx), Output Compare (OCx), UART, and other modules to specific physical pins.
 
@@ -262,13 +262,13 @@ RPINR7bits.IC1R = 7;                      // IC1 input = RP7
 __builtin_write_OSCCONL(OSCCON | 0x40);   // Lock PPS
 ```
 
-> ⚠️ Skipping this step may cause ICx or OCx modules to appear non-functional.
+> Skipping this step may cause ICx or OCx modules to appear non-functional.
 
 Always refer to your microcontroller’s **datasheet or family reference manual** to find valid RPx mappings for your device.
 
 Next, we’ll explore **how to generate waveforms and control power** using output compare and PWM in Chapter 7!
 
-### 🧠 Quiz: External Interrupts & Input Capture
+### Quiz: External Interrupts & Input Capture
 
 What does the input capture module do when it detects a rising edge on its input pin?
 
@@ -291,7 +291,7 @@ IC1CONbits.ICM = 1;   // Capture on rising edge
 
 ---
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Write code that configures **Input Capture 1 (IC1)** to capture the time of every **falling edge** on pin **RP7**, using **Timer2** as the time base.  
 Assume you’ve already configured `TMR2` with an appropriate prescaler.

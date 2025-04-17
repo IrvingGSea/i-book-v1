@@ -33,14 +33,14 @@ CheckButton:
 ```
 This example shows both a **loop**(keep checking) and a **branch**(skip ahead once the button is pressed)
 
-> ⚠️ **Avoid using `INC LATB` or `ADD LATB, #value`**
+> **Avoid using `INC LATB` or `ADD LATB, #value`**
 
 These instructions modify the **entire 16-bit latch**, which can unintentionally affect multiple output pins. For example:
 
 - If only RB1 should be set, `INC` might toggle RB0 or clear RB1 depending on the current value.
 - Using arithmetic operations doesn’t preserve the state of other bits.
 
-## 🧱Section 2: Unconditional Branching
+## Section 2: Unconditional Branching
 
 In assembly, **unconditional branching** allows you to jump to another part of your program without checking any condition. It’s like saying, “Go here, no matter what.”
 
@@ -74,7 +74,7 @@ RETURN               ; Return from it
 
 We'll cover the stack and subroutines more deeply in **Chapter 4**, so for now just think of `CALL` as a way to jump to a reusable block of code and RETURN as a way to come back. 
 
-### 🧠 Summary
+### Summary
 
 | Instruction | Purpose                                 |
 |-------------|------------------------------------------|
@@ -122,7 +122,7 @@ BEQ     MatchLabel   ; If W0 == 10, jump to MatchLabel
 MatchLabel:
     ; This code runs only if W0 == 10
 ```
-### 🧠 What Are Condition Flags?
+### What Are Condition Flags?
 
 When the PIC24 performs a compare, it updates specific bits in the **Status Register (SR)**:
 
@@ -250,11 +250,11 @@ NOP     ; Do nothing - can be a good place to break in debugger
 
 Assembly doesn’t give you much abstraction — so clarity is your responsibility. Clean labels, indentation, and comments go a long way in making your code understandable — especially when debugging or returning to it later.
 
-## ✅ Test Your Understanding
+## Test Your Understanding
 
 Let’s check your grasp of conditional branching and loops with a quick question.
 
-### 🧠 Quiz: How Many Times Does the Loop Run?
+### Quiz: How Many Times Does the Loop Run?
 
 ```asm
 MOV     #4, W0
@@ -275,7 +275,7 @@ Loop:
 
     The loop runs as W0 takes the values: 3, 2, 1, 0 — which is **4 total iterations**. After the final decrement to 0, `BNE` no longer branches.
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Can you write a loop that **counts from 0 to 3**, storing each value to memory?
 

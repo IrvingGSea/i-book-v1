@@ -12,7 +12,7 @@ These components allow the microcontroller to **interact with the real world** �
 
 ---
 
-### 📦 Microcontroller Block Diagram
+### Microcontroller Block Diagram
 
 The diagram below shows a typical microcontroller architecture.
 
@@ -25,11 +25,11 @@ As shown:
 - Modules like UART, SPI, ADC, and timers are all built-in
 - Flash stores the program, and RAM stores runtime variables
 
-> 🧠 Unlike general-purpose computers, microcontrollers are built for **dedicated control tasks** — not multitasking or user interaction.
+> Unlike general-purpose computers, microcontrollers are built for **dedicated control tasks** — not multitasking or user interaction.
 
 ---
 
-### ✅ Key Characteristics
+### Key Characteristics
 
 - 🔹 **Small footprint**: Ideal for embedded systems with limited space
 - 🔹 **Real-time responsiveness**: Handles time-sensitive tasks predictably
@@ -49,7 +49,7 @@ This device strikes a great balance between simplicity and power — making it i
 
 ---
 
-### 🔍 Key Features
+### Key Features
 
 | Feature             | Value                         |
 |---------------------|-------------------------------|
@@ -62,11 +62,11 @@ This device strikes a great balance between simplicity and power — making it i
 | ADC Channels        | 10-bit, 13 input channels      |
 | UART / SPI / I2C    | 2 UARTs, 2 SPI, 1 I2C          |
 
-> 📎 Datasheet Reference: [PIC24FJ64GA002 Datasheet (Microchip)](https://ww1.microchip.com/downloads/en/DeviceDoc/39881D.pdf)
+> Datasheet Reference: [PIC24FJ64GA002 Datasheet (Microchip)](https://ww1.microchip.com/downloads/en/DeviceDoc/39881D.pdf)
 
 ---
 
-### 🧠 Why This Chip?
+### Why This Chip?
 
 - Widely supported in **MPLAB X IDE** and the **XC16 compiler**
 - Features common **peripherals** used in real-world systems
@@ -83,7 +83,7 @@ To write, compile, and test code for the PIC24FJ64GA002, we use Microchip’s of
 
 ---
 
-### 💻 MPLAB X IDE
+### MPLAB X IDE
 
 **MPLAB X** is an Integrated Development Environment (IDE) that supports Microchip’s entire family of devices, including PIC24.
 
@@ -91,11 +91,11 @@ To write, compile, and test code for the PIC24FJ64GA002, we use Microchip’s of
 - Runs on Windows, macOS, and Linux
 - Allows simulation, breakpoints, memory inspection, and more
 
-> 🔗 Download: [MPLAB X IDE – Microchip](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)
+> Download: [MPLAB X IDE – Microchip](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)
 
 ---
 
-### ⚙️ XC16 Compiler
+### XC16 Compiler
 
 Microchip’s **XC16** is a C compiler tailored for 16-bit devices like the PIC24 family.
 
@@ -103,11 +103,11 @@ Microchip’s **XC16** is a C compiler tailored for 16-bit devices like the PIC2
 - Works directly inside MPLAB X
 - Supports optimization levels for size, speed, and debugging
 
-> 🛠️ In this book, we’ll stick to **C and inline assembly** where needed — all compiled using XC16.
+> In this book, we’ll stick to **C and inline assembly** where needed — all compiled using XC16.
 
 ---
 
-### 🧪 Simulators and Debuggers
+### Simulators and Debuggers
 
 You can:
 - Simulate logic (LEDs, registers, timing) using MPLAB’s built-in simulator
@@ -127,7 +127,7 @@ While general-purpose computers focus on speed, user interaction, and multitaski
 
 ---
 
-### 💻 General-Purpose Programming (e.g., Python, Java)
+### General-Purpose Programming (e.g., Python, Java)
 
 - Focus on **user experience** and **abstraction**
 - Often use **operating systems** for multitasking and memory management
@@ -135,7 +135,7 @@ While general-purpose computers focus on speed, user interaction, and multitaski
 
 ---
 
-### 🤖 Embedded Programming (e.g., C, Assembly)
+### Embedded Programming (e.g., C, Assembly)
 
 - Runs **bare-metal** or with minimal OS support
 - Must manage **timing, memory, and power** directly
@@ -151,7 +151,7 @@ While general-purpose computers focus on speed, user interaction, and multitaski
 | Language           | C / Assembly                     | Java, Python, C#            |
 | Use Cases          | Thermostats, robots, sensors      | Web apps, spreadsheets, games |
 
-> ⏱️ In embedded systems, a **missed deadline** or **unexpected delay** can cause system failure — timing is everything.
+>  In embedded systems, a **missed deadline** or **unexpected delay** can cause system failure — timing is everything.
 
 ---
 
@@ -163,7 +163,7 @@ Let’s review the key points from this chapter:
 
 ---
 
-### 🧠 Core Ideas
+### Core Ideas
 
 - A **microcontroller** is a self-contained system with a CPU, memory, and peripherals built into one chip
 - The **PIC24FJ64GA002** is a 16-bit MCU with timers, ADCs, communication modules, and 64 KB of Flash
@@ -172,7 +172,7 @@ Let’s review the key points from this chapter:
 
 ---
 
-### 🔌 Where Are Microcontrollers Used?
+### Where Are Microcontrollers Used?
 
 | Use Case                | Example Devices                         |
 |--------------------------|------------------------------------------|
@@ -184,9 +184,9 @@ Let’s review the key points from this chapter:
 
 ---
 
-> 🔍 As you go through this book, you’ll develop the **low-level control skills** that make these devices possible — starting from the very first line of assembly code.
+> As you go through this book, you’ll develop the **low-level control skills** that make these devices possible — starting from the very first line of assembly code.
 
-### 🧠 Quiz: Microcontroller Fundamentals
+### Quiz: Microcontroller Fundamentals
 
 Which of the following is **true** about microcontrollers?
 
@@ -205,7 +205,7 @@ Which of the following is **true** about microcontrollers?
 
 ---
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Think of an everyday device that uses a microcontroller (e.g., microwave, car key fob, thermostat).  
 How might that microcontroller interact with the real world?

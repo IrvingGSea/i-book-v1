@@ -711,12 +711,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#quiz-stack-and-subroutines" class="md-nav__link">
     <span class="md-ellipsis">
       🧠 Quiz: Stack and Subroutines
@@ -724,13 +719,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
       ✍️ Prompt Practice
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1694,12 +1694,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#quiz-stack-and-subroutines" class="md-nav__link">
     <span class="md-ellipsis">
       🧠 Quiz: Stack and Subroutines
@@ -1707,13 +1702,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
       ✍️ Prompt Practice
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1980,17 +1980,19 @@ When <code>RETURN</code> executes:
 </ul>
 <hr />
 <p>In the next chapter, we’ll expand your control over time with <strong>hardware timers</strong> and learn how to build precise time-based behavior in your programs using <strong>interrupts</strong>.</p>
-<h2 id="quiz-stack-and-subroutines">🧠 Quiz: Stack and Subroutines<a class="headerlink" href="#quiz-stack-and-subroutines" title="Permanent link">&para;</a></h2>
+<h3 id="quiz-stack-and-subroutines">🧠 Quiz: Stack and Subroutines<a class="headerlink" href="#quiz-stack-and-subroutines" title="Permanent link">&para;</a></h3>
 <p>What happens to the stack when the following code is executed?</p>
-<p>```asm
-    CALL    Func1
-    ; do something
-    CALL    Func2
-    ; done</p>
-<p>Func1:
-    RETURN</p>
-<p>Func2:
-    RETURN</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nf">CALL</span><span class="w">    </span><span class="no">Func1</span>
+<span class="w">    </span><span class="c1">; do something</span>
+<span class="w">    </span><span class="nf">CALL</span><span class="w">    </span><span class="no">Func2</span>
+<span class="w">    </span><span class="c1">; done</span>
+
+<span class="nl">Func1:</span>
+<span class="w">    </span><span class="nf">RETURN</span>
+
+<span class="nl">Func2:</span>
+<span class="w">    </span><span class="nf">RETURN</span>
+</code></pre></div>
 <div class="upper-alpha">
 <ol>
 <li>The stack is unchanged — calls don’t affect it  </li>
@@ -2007,7 +2009,7 @@ After <code>Func1</code> returns, the address is popped.<br />
 The same happens with <code>Func2</code>.</p>
 <p>So, two return addresses are pushed and popped in reverse order — <strong>just like a stack (LIFO)</strong>.</p>
 </details>
-<h2 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h2>
+<h3 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h3>
 <p>Write a subroutine called <code>AddTen</code> that takes a number in <code>W0</code>, adds 10 to it, and returns the result (also in <code>W0</code>).<br />
 Your main program should call <code>AddTen</code> with an initial value of <code>5</code>, and store the result in <code>W1</code>.</p>
 <p>Try writing it yourself before checking the solution!</p>

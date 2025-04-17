@@ -685,12 +685,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#quiz-timers-and-interrupts" class="md-nav__link">
     <span class="md-ellipsis">
       🧠 Quiz: Timers and Interrupts
@@ -698,13 +693,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
       ✍️ Prompt Practice
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1598,12 +1598,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#quiz-timers-and-interrupts" class="md-nav__link">
     <span class="md-ellipsis">
       🧠 Quiz: Timers and Interrupts
@@ -1611,13 +1606,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
       ✍️ Prompt Practice
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1898,7 +1898,7 @@ For example:</p>
 </ul>
 <hr />
 <p>Next, we’ll take what we’ve learned about interrupts and apply it to external inputs — so your microcontroller can respond to real-world events like <strong>button presses or signal edges</strong> in <strong>Chapter 6: External Interrupts &amp; Input Capture</strong>.</p>
-<h2 id="quiz-timers-and-interrupts">🧠 Quiz: Timers and Interrupts<a class="headerlink" href="#quiz-timers-and-interrupts" title="Permanent link">&para;</a></h2>
+<h3 id="quiz-timers-and-interrupts">🧠 Quiz: Timers and Interrupts<a class="headerlink" href="#quiz-timers-and-interrupts" title="Permanent link">&para;</a></h3>
 <p>What happens when the timer reaches the value in <code>PR1</code> and interrupts are enabled?</p>
 <div class="highlight"><pre><span></span><code><span class="n">T1CONbits</span><span class="p">.</span><span class="n">TON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="n">PR1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">31250</span><span class="p">;</span>
@@ -1919,7 +1919,7 @@ For example:</p>
 This causes the processor to run the ISR (Interrupt Service Routine) associated with that timer.<br />
 After the ISR completes and the flag is cleared, the main program resumes.</p>
 </details>
-<h2 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h2>
+<h3 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h3>
 <p>Write code that configures <strong>Timer1</strong> to generate an interrupt every <strong>250 milliseconds</strong>, assuming a system clock (Fcy) of 16 MHz.<br />
 In the ISR, toggle an LED connected to <strong>PORTB bit 2</strong>.</p>
 <details class="example">

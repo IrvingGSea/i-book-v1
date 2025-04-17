@@ -8,7 +8,7 @@ At a high level, you configure a timer (like `TMR2`), and when the timer reaches
 
 ---
 
-### 🧠 What It's Used For
+### What It's Used For
 
 - **Generate precise timing pulses**
 - **Toggle an output pin** without software involvement
@@ -16,7 +16,7 @@ At a high level, you configure a timer (like `TMR2`), and when the timer reaches
 
 ---
 
-### 🔁 How It Works
+### How It Works
 
 1. Timer (e.g., `TMR2`) counts up
 2. When `TMR2` matches `OCxR`, the output pin changes
@@ -26,7 +26,7 @@ This all happens in **hardware**, without using up CPU cycles.
 
 ---
 
-### 🧪 Core Registers (Example: OC1)
+### Core Registers (Example: OC1)
 
 | Register     | Role                                           |
 |--------------|------------------------------------------------|
@@ -35,7 +35,7 @@ This all happens in **hardware**, without using up CPU cycles.
 | `OC1CON`     | Control register for mode selection and timer link |
 | `OC1IF`      | Interrupt flag (optional use)                  |
 
-> 🔗 Output Compare modules are tightly tied to timers — most often **TMR2 or TMR3** — because these timers are **16-bit**, high-resolution, and designed for timing tasks like PWM generation.  
+> Output Compare modules are tightly tied to timers — most often **TMR2 or TMR3** — because these timers are **16-bit**, high-resolution, and designed for timing tasks like PWM generation.  
 > Timers like TMR1 are typically reserved for timekeeping or general interrupts, while TMR2/TMR3 are better suited for waveform generation.
 
 
@@ -51,7 +51,7 @@ Instead of sending a constant voltage, PWM sends **pulses** — and by controlli
 
 ---
 
-### 🧠 Key Concepts
+### Key Concepts
 
 - **Period**: The total duration of one complete on/off cycle
 - **Duty cycle**: The percentage of the period that the signal is HIGH
@@ -62,7 +62,7 @@ Instead of sending a constant voltage, PWM sends **pulses** — and by controlli
 
 ---
 
-### 🔦 Why It's Useful
+### Why It's Useful
 
 PWM allows you to:
 - **Dim an LED** by adjusting brightness
@@ -76,7 +76,7 @@ All of this is done with **just one digital output pin**.
 
 ---
 
-### 📉 Example Duty Cycles
+### Example Duty Cycles
 
 | Duty Cycle | Description             |
 |------------|-------------------------|
@@ -86,7 +86,7 @@ All of this is done with **just one digital output pin**.
 | 75%        | Mostly ON               |
 | 100%       | Always ON               |
 
-> 🎛️ Adjusting duty cycle lets you control how much "power" a device receives over time.
+> Adjusting duty cycle lets you control how much "power" a device receives over time.
 
 ---
 
@@ -100,7 +100,7 @@ The OCx module can be configured to output a **PWM signal** using a timer (typic
 
 ---
 
-### 🔧 Configuration Overview
+### Configuration Overview
 
 To generate PWM with `OCx`:
 
@@ -112,7 +112,7 @@ To generate PWM with `OCx`:
 
 ---
 
-### 🛠️ Example: 50% Duty Cycle on OC1 using TMR2
+### Example: 50% Duty Cycle on OC1 using TMR2
 
 ```c
 //Setting configuration so we don't keep any unwanted specification from prior, good practice
@@ -140,14 +140,14 @@ T2CONbits.TON = 1;                // Start Timer2
 
 ---
 
-### 📏 Notes on Values
+### Notes on Values
 
 - `PR2` sets the **period** of the PWM
 - `OC1RS` sets the **duty cycle** (pulse width)
 - A value of `OC1RS = PR2 / 2` gives **50% duty**
 - You can change `OC1RS` on the fly to adjust brightness/speed/etc.
 
-> 🧠 Think of the timer as the metronome and OCx as the switch that turns the output pin ON and OFF with precise timing.
+> Think of the timer as the metronome and OCx as the switch that turns the output pin ON and OFF with precise timing.
 
 ---
 
@@ -164,7 +164,7 @@ Let’s compare the two approaches:
 
 ---
 
-### 🖥️ Software PWM
+### Software PWM
 
 In software PWM, you write code like this:
 
@@ -184,17 +184,17 @@ This works, but it:
 
 ---
 
-### ⚙️ Hardware PWM (with Output Compare)
+### Hardware PWM (with Output Compare)
 
 In hardware PWM, once you configure the `OCx` module, the PWM output runs **automatically** in the background.
 
 Benefits:
-- 🔄 **Doesn't use CPU cycles**
-- 🔍 **Precise timing** tied to hardware clock
-- 💡 **Reliable frequency and duty cycle**
-- 📈 **Scales well** (multiple OCx channels)
+- **Doesn't use CPU cycles**
+- **Precise timing** tied to hardware clock
+- **Reliable frequency and duty cycle**
+- **Scales well** (multiple OCx channels)
 
-> 🧠 Hardware PWM is like a **metronome**: once set, it keeps time perfectly — while your code is free to focus on other tasks.
+> Hardware PWM is like a **metronome**: once set, it keeps time perfectly — while your code is free to focus on other tasks.
 
 ---
 
@@ -202,7 +202,7 @@ Unless you need something very custom, **hardware PWM is always the better choic
 
 ---
 
-### ⚖️ Comparison Table
+### Comparison Table
 
 | Feature                | Software PWM               | Hardware PWM (OCx)         |
 |------------------------|----------------------------|-----------------------------|
@@ -212,7 +212,7 @@ Unless you need something very custom, **hardware PWM is always the better choic
 | Scalability           | Poor (one pin at a time)   | Excellent (multiple OCx modules) |
 | Power Efficiency      | Low                        | High                        |
 
-> ✅ Use **hardware PWM** whenever precise, low-overhead control is needed.
+> Use **hardware PWM** whenever precise, low-overhead control is needed.
 
 Next, we’ll wrap up with common applications and best practices.
 
@@ -224,7 +224,7 @@ Paired with a timer, it allows you to produce high-precision digital waveforms t
 
 ---
 
-### 🔁 Key Takeaways
+### Key Takeaways
 
 - **Output Compare** compares a timer value to a register (`OCxR`/`OCxRS`) and toggles an output accordingly.
 - **PWM** (Pulse Width Modulation) controls average power by varying ON/OFF times.
@@ -233,7 +233,7 @@ Paired with a timer, it allows you to produce high-precision digital waveforms t
 
 ---
 
-### 💡 Real-World Applications
+### Real-World Applications
 
 | Application        | How PWM Helps                           |
 |--------------------|------------------------------------------|
@@ -243,13 +243,13 @@ Paired with a timer, it allows you to produce high-precision digital waveforms t
 | Audio Generation   | Output tones or waveforms digitally      |
 | Power Regulation   | Smooth delivery of variable DC voltage   |
 
-> 🔧 PWM is everywhere — from drone motors to smart lightbulbs.
+> PWM is everywhere — from drone motors to smart lightbulbs.
 
 ---
 
 Next up, we’ll explore **communication and peripheral modules**, including UART, SPI, I2C, and ADCs!
 
-### 🧠 Quiz: Understanding PWM Behavior
+### Quiz: Understanding PWM Behavior
 
 What happens if the value in `OC1RS` is set equal to `PR2` when generating PWM using Timer2?
 
@@ -273,7 +273,7 @@ OC1RS = 40000;
 
 ---
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Write code to configure **OC1** to generate a **75% duty cycle PWM signal** on pin **RP9**, using **Timer2** and a **period of 20 ms** (standard servo PWM timing).  
 Assume a system clock of **16 MHz**.

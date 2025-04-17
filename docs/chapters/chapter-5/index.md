@@ -6,7 +6,7 @@ Timers are built-in hardware modules that allow the microcontroller to **track t
 
 ---
 
-### 🔁 What Timers Actually Do
+### What Timers Actually Do
 
 At their core, timers are just **counters**. They increment on each clock cycle (or prescaled clock cycle), and you can configure:
 
@@ -17,7 +17,7 @@ At their core, timers are just **counters**. They increment on each clock cycle 
 
 ---
 
-### 🧠 Why Timers Matter
+### Why Timers Matter
 
 Timers are one of the most essential peripherals for real-world embedded systems. They allow your program to:
 
@@ -29,14 +29,14 @@ Timers are one of the most essential peripherals for real-world embedded systems
 
 ---
 
-### ⌚ Software Loops vs Hardware Timers
+### Software Loops vs Hardware Timers
 
 | Method           | Accurate? | Affects CPU? | Good for...                  |
 |------------------|-----------|--------------|------------------------------|
 | Software Delay   | ❌        | ✅ Yes        | Quick hacks, rough timing    |
 | Hardware Timer   | ✅        | ❌ No         | Precise, real-time timing    |
 
-> ✅ Timers are especially powerful when combined with **interrupts**, allowing your code to respond to time events without constantly checking them.
+> Timers are especially powerful when combined with **interrupts**, allowing your code to respond to time events without constantly checking them.
 
 ---
 
@@ -65,7 +65,7 @@ TMR1 = 0;                // Clear the timer count
 T1CONbits.TON = 1;       // Turn on Timer1
 ```
 
-### 🧠 Key Timer Registers (for TimerX)
+### Key Timer Registers (for TimerX)
 
 | Register             | Description                                  |
 |----------------------|----------------------------------------------|
@@ -75,10 +75,10 @@ T1CONbits.TON = 1;       // Turn on Timer1
 | `IFS0bits.T⟨x⟩IF`    | Interrupt Flag — set when timer expires       |
 | `IEC0bits.T⟨x⟩IE`    | Interrupt Enable bit                         |
 
-> 🔁 Replace ⟨x⟩ with the timer number: 1, 2, 3, etc.
+> Replace ⟨x⟩ with the timer number: 1, 2, 3, etc.
 
 
-### 🔧 Prescaler: Controlling Timer Speed
+### Prescaler: Controlling Timer Speed
 
 Most timers have a prescaler, which divides the system clock slow down how fast the timer increments. 
 For example:
@@ -117,7 +117,7 @@ while (!timerExpired) {
 
 This wastes CPU cycles. Instead, interrupts allow the microcontroller to do other things and only respond when needed. 
 
-### 🔧 How Interrupts Work in PIC24
+### How Interrupts Work in PIC24
 
 When an interrupt occurs (e.g., a timer hits `PRx`):
 
@@ -142,7 +142,7 @@ void __attribute__((__interrupt__, auto_psv)) _T1Interrupt(void) {
 This function runs automatically every time Timer1.
 `IFS0bits.T1IF` must be cleared manually at the beginning of the ISR to prevent retriggering 
 
-### 📦 Interrupt Stack Behavior
+### Interrupt Stack Behavior
 
 | Action           | What Happens                               |
 |------------------|--------------------------------------------|
@@ -165,7 +165,7 @@ Let’s build one of the most classic embedded applications: **blinking an LED**
 
 ---
 
-### 🛠️ Configuration: Timer + Interrupt + GPIO
+### Configuration: Timer + Interrupt + GPIO
 
 Here’s a complete example:
 
@@ -188,15 +188,15 @@ void __attribute__((__interrupt__, auto_psv)) _T1Interrupt(void) {
     IFS0bits.T1IF = 0;        // Clear interrupt flag
 }
 ```
-### 🧠 Why This Works
+### Why This Works
 
 - The timer counts up to `PR1` and triggers an interrupt  
 - The ISR toggles the LED and resets the flag  
 - The processor **automatically returns** to your main loop without losing track
 
-> ✅ You don’t need to manually check the timer — the interrupt does the work!
+> You don’t need to manually check the timer — the interrupt does the work!
 
-### ⌛ Timing Notes
+### Timing Notes
 
 This example assumes:
 - **Fcy = 16 MHz** (i.e., 8 MHz instruction cycle)
@@ -211,7 +211,7 @@ Timers and interrupts are two of the most powerful features of any microcontroll
 
 ---
 
-### 🧠 Key Takeaways
+### Key Takeaways
 
 - A **timer** is a hardware counter that increments with time
 - Use `PRx` to define the period, and `TMRx` to track the current count
@@ -222,7 +222,7 @@ Timers and interrupts are two of the most powerful features of any microcontroll
 
 ---
 
-### ✅ Best Practices
+### Best Practices
 
 - ✔️ **Always clear the interrupt flag** (`IFSx`) inside your ISR
 - ✔️ Keep ISRs **short and efficient** — don’t do too much inside
@@ -235,7 +235,7 @@ Timers and interrupts are two of the most powerful features of any microcontroll
 
 Next, we’ll take what we’ve learned about interrupts and apply it to external inputs — so your microcontroller can respond to real-world events like **button presses or signal edges** in **Chapter 6: External Interrupts & Input Capture**.
 
-### 🧠 Quiz: Timers and Interrupts
+### Quiz: Timers and Interrupts
 
 What happens when the timer reaches the value in `PR1` and interrupts are enabled?
 
@@ -259,7 +259,7 @@ IEC0bits.T1IE = 1;
     This causes the processor to run the ISR (Interrupt Service Routine) associated with that timer.  
     After the ISR completes and the flag is cleared, the main program resumes.
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Write code that configures **Timer1** to generate an interrupt every **250 milliseconds**, assuming a system clock (Fcy) of 16 MHz.  
 In the ISR, toggle an LED connected to **PORTB bit 2**.

@@ -705,12 +705,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#quiz-understanding-pwm-behavior" class="md-nav__link">
     <span class="md-ellipsis">
       🧠 Quiz: Understanding PWM Behavior
@@ -718,13 +713,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
       ✍️ Prompt Practice
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1550,12 +1550,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#quiz-understanding-pwm-behavior" class="md-nav__link">
     <span class="md-ellipsis">
       🧠 Quiz: Understanding PWM Behavior
@@ -1563,13 +1558,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#prompt-practice" class="md-nav__link">
     <span class="md-ellipsis">
       ✍️ Prompt Practice
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1877,7 +1877,7 @@ Timers like TMR1 are typically reserved for timekeeping or general interrupts, w
 </blockquote>
 <hr />
 <p>Next up, we’ll explore <strong>communication and peripheral modules</strong>, including UART, SPI, I2C, and ADCs!</p>
-<h2 id="quiz-understanding-pwm-behavior">🧠 Quiz: Understanding PWM Behavior<a class="headerlink" href="#quiz-understanding-pwm-behavior" title="Permanent link">&para;</a></h2>
+<h3 id="quiz-understanding-pwm-behavior">🧠 Quiz: Understanding PWM Behavior<a class="headerlink" href="#quiz-understanding-pwm-behavior" title="Permanent link">&para;</a></h3>
 <p>What happens if the value in <code>OC1RS</code> is set equal to <code>PR2</code> when generating PWM using Timer2?</p>
 <div class="highlight"><pre><span></span><code><span class="n">PR2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40000</span><span class="p">;</span>
 <span class="n">OC1RS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">40000</span><span class="p">;</span>
@@ -1897,7 +1897,7 @@ Timers like TMR1 are typically reserved for timekeeping or general interrupts, w
 The output never drops LOW during the cycle.</p>
 </details>
 <hr />
-<h2 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h2>
+<h3 id="prompt-practice">✍️ Prompt Practice<a class="headerlink" href="#prompt-practice" title="Permanent link">&para;</a></h3>
 <p>Write code to configure <strong>OC1</strong> to generate a <strong>75% duty cycle PWM signal</strong> on pin <strong>RP9</strong>, using <strong>Timer2</strong> and a <strong>period of 20 ms</strong> (standard servo PWM timing).<br />
 Assume a system clock of <strong>16 MHz</strong>.</p>
 <details class="example">

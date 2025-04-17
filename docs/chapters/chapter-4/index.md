@@ -4,7 +4,7 @@
 
 A **stack** is a special kind of data structure that operates on a **Last In, First Out (LIFO)** principle — the last item you place on the stack is the first one to be removed.
 
-### 🔁 Real-World Analogy
+### Real-World Analogy
 
 Think of a stack of plates in a cafeteria:
 - You **push** a clean plate on top of the pile
@@ -15,7 +15,7 @@ This "top-first" behavior is exactly how the stack works in your microcontroller
 
 ---
 
-### 🧱 Why Do We Need a Stack?
+### Why Do We Need a Stack?
 
 Stacks are used any time the program needs to **pause what it's doing**, remember something, and **come back to it later**.
 
@@ -28,7 +28,7 @@ If you didn't have a stack, calling one function from another — or returning f
 
 ---
 
-### 🧭 Key Operations
+### Key Operations
 
 | Term     | Meaning                                  |
 |----------|-------------------------------------------|
@@ -123,9 +123,9 @@ By convention, `W14` is often used as a **frame pointer**, especially in higher-
 - Managing **local variables** relative to a base offset  
 - Navigating function **call frames** more easily in complex call chains  
 
-> 📝 Note: The frame pointer is **not required** for basic assembly subroutines, but it can help with stack-traceability in deeper projects.
+> Note: The frame pointer is **not required** for basic assembly subroutines, but it can help with stack-traceability in deeper projects.
 
-### 📊 Summary of Stack Registers
+### Summary of Stack Registers
 
 | Register | Role                  | Usage Example              |
 |----------|-----------------------|----------------------------|
@@ -163,7 +163,7 @@ When `RETURN` executes:
  - The processor pops the return address from the stack
  - Execution resumes immediately after the `CALL`
 
-### 🧪 What the Stack Looks Like
+### What the Stack Looks Like
 
 Before `CALL DoubleValue`, the stack might look like this:
 
@@ -174,7 +174,7 @@ Before `CALL DoubleValue`, the stack might look like this:
 
 After `RETURN`, the address is popped off and the stack returns to its previous state.
 
-### ✅ Notes
+### Notes
 
 - The value is passed in `W0`, and the result is returned in `W0`. This is a **common calling convention** for small assembly routines.  
 - For more complex functions, you may also use `W1`, `W2`, or the stack itself to pass/return data.
@@ -201,7 +201,7 @@ When you `RETURN`:
 
 ---
 
-### 🧭 Example: Two Nested Calls
+### Example: Two Nested Calls
 
 ```asm
 Main:
@@ -228,7 +228,7 @@ Now that you’ve seen how the stack works and how subroutines are built in PIC2
 
 ---
 
-### 🧠 Key Takeaways
+### Key Takeaways
 
 - The **stack** stores return addresses (and optionally local data) when calling subroutines.
 - `CALL` and `RETURN` handle **stack push/pop automatically** for return addresses.
@@ -238,7 +238,7 @@ Now that you’ve seen how the stack works and how subroutines are built in PIC2
 
 ---
 
-### ✅ Best Practices for Subroutines
+### Best Practices for Subroutines
 
 - ✔️ Use **`W0`** to pass parameters and return values in small subroutines.
 - ✔️ Use **`CALL`/`RETURN`** for clean function separation.
@@ -251,7 +251,7 @@ Now that you’ve seen how the stack works and how subroutines are built in PIC2
 
 In the next chapter, we’ll expand your control over time with **hardware timers** and learn how to build precise time-based behavior in your programs using **interrupts**.
 
-### 🧠 Quiz: Stack and Subroutines
+### Quiz: Stack and Subroutines
 
 What happens to the stack when the following code is executed?
 
@@ -284,7 +284,7 @@ Func2:
 
     So, two return addresses are pushed and popped in reverse order — **just like a stack (LIFO)**.
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Write a subroutine called `AddTen` that takes a number in `W0`, adds 10 to it, and returns the result (also in `W0`).  
 Your main program should call `AddTen` with an initial value of `5`, and store the result in `W1`.

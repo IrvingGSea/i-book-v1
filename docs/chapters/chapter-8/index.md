@@ -13,18 +13,18 @@ To accomplish this, microcontrollers use a variety of **serial communication pro
 
 ---
 
-### 🧠 Serial vs Parallel Communication
+### Serial vs Parallel Communication
 
 | Type      | Description                                  | Example Use          |
 |-----------|----------------------------------------------|----------------------|
 | Parallel  | Multiple bits sent simultaneously (wider)    | Older systems, LCDs  |
 | Serial    | Bits sent one at a time over fewer wires     | UART, SPI, I2C       |
 
-> 🔎 Parallel is faster in theory, but requires many I/O pins and wires. Serial is simpler, more scalable, and dominates in modern designs.
+> Parallel is faster in theory, but requires many I/O pins and wires. Serial is simpler, more scalable, and dominates in modern designs.
 
 ---
 
-### 📦 Why We Use UART, SPI, and I2C
+### Why We Use UART, SPI, and I2C
 
 These three protocols are the most common in microcontroller systems:
 
@@ -38,7 +38,7 @@ Each has tradeoffs — some are better for **speed**, some for **simplicity**, a
 
 ---
 
-### ⚠️ Tradeoffs & Limitations
+### Tradeoffs & Limitations
 
 | Protocol | Limitations                                                                 |
 |----------|------------------------------------------------------------------------------|
@@ -46,7 +46,7 @@ Each has tradeoffs — some are better for **speed**, some for **simplicity**, a
 | SPI      | Needs **more wires**, no built-in addressing, typically **one master only** |
 | I2C      | Slower than SPI, more complex protocol, can suffer from **bus contention**  |
 
-> ⚖️ Choosing the right protocol depends on the number of devices, speed requirements, and system complexity.
+> Choosing the right protocol depends on the number of devices, speed requirements, and system complexity.
 
 ---
 
@@ -63,7 +63,7 @@ Instead, both devices agree on a **baud rate** (bits per second), like `9600`, `
 
 ---
 
-### 🧠 UART Frame Format
+### UART Frame Format
 
 Each UART message is made up of:
 - 1 start bit
@@ -73,11 +73,11 @@ Each UART message is made up of:
 
 So sending **1 byte** over UART actually sends **at least 10 bits**.
 
-> ⏳ Timing is critical — both devices must use the same baud rate to avoid garbled data.
+> Timing is critical — both devices must use the same baud rate to avoid garbled data.
 
 ---
 
-### ⚙️ Configuring UART on the PIC24
+### Configuring UART on the PIC24
 
 UART modules are named `U1MODE`, `U1STA`, etc. for **UART1**. You’ll also need to map TX/RX pins using PPS.
 
@@ -108,19 +108,19 @@ while (1) {
 
 ---
 
-### 🧪 Typical Use Cases
+### Typical Use Cases
 
 - Serial terminals (via USB-to-UART converters)
 - Debugging (print variables over UART)
 - Interfacing with GPS, Bluetooth, or WiFi modules
 
-> 🛠️ UART is often your **first line of communication and debugging** when bringing up a new project.
+> UART is often your **first line of communication and debugging** when bringing up a new project.
 
 ---
 
 Up next: we’ll cover **SPI**, a faster protocol with full-duplex communication.
 
-### 🧠 Quiz: UART Communication
+### Quiz: UART Communication
 
 Which of the following **must be true** for two devices to successfully communicate over UART?
 
@@ -139,7 +139,7 @@ Which of the following **must be true** for two devices to successfully communic
 
 ---
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Write code to configure **UART1** to transmit the string `"Hello"` continuously at **115200 baud**, using TX on **RP9**.
 
@@ -174,7 +174,7 @@ Unlike UART, SPI uses a **shared clock line**, which enables tight synchronizati
 
 ---
 
-### 🔌 SPI Signals
+### SPI Signals
 
 | Line | Name  | Direction (Master → Slave) |
 |------|-------|-----------------------------|
@@ -187,7 +187,7 @@ Unlike UART, SPI uses a **shared clock line**, which enables tight synchronizati
 
 ---
 
-### 🧠 How SPI Works
+### How SPI Works
 
 - The **master** controls the clock (SCK)
 - Data is shifted out **bit by bit** on MOSI/MISO
@@ -196,7 +196,7 @@ Unlike UART, SPI uses a **shared clock line**, which enables tight synchronizati
 
 ---
 
-### ⚙️ Configuring SPI on PIC24 (as Master)
+### Configuring SPI on PIC24 (as Master)
 
 ```c
 // Set up SPI1 in Master mode (8-bit, clock = Fosc/16)
@@ -217,7 +217,7 @@ uint8_t received = SPI1BUF;    // Read incoming byte
 
 ---
 
-### 🧪 Use Cases
+### Use Cases
 
 - SD cards, flash memory
 - OLED displays
@@ -226,11 +226,11 @@ uint8_t received = SPI1BUF;    // Read incoming byte
 
 ---
 
-> 🔧 SPI is great for **speed** and **low-latency**, but requires more pins and doesn’t support automatic addressing like I2C.
+> SPI is great for **speed** and **low-latency**, but requires more pins and doesn’t support automatic addressing like I2C.
 
 Next up: we’ll cover **I2C**, ideal for connecting many devices with fewer wires.
 
-### 🧠 Quiz: SPI Basics
+### Quiz: SPI Basics
 
 Which of the following is **NOT true** about the SPI protocol?
 
@@ -249,7 +249,7 @@ Which of the following is **NOT true** about the SPI protocol?
 
 ---
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Write code to configure **SPI1** on the PIC24 to operate in **8-bit master mode**, then send the value `0x55` and store the received byte.
 
@@ -280,7 +280,7 @@ One device acts as the **master** (controls the clock), while others act as **sl
 
 ---
 
-### 🧠 I2C Addressing
+### I2C Addressing
 
 Each slave on the bus has a **7-bit or 10-bit address**. The master begins communication by sending:
 
@@ -291,17 +291,17 @@ Each slave on the bus has a **7-bit or 10-bit address**. The master begins commu
 
 ---
 
-### 🧪 Typical Use Cases
+### Typical Use Cases
 
 - Reading data from sensors (temp, accelerometer, etc.)
 - Communicating with I2C memory (EEPROMs)
 - Interfacing with real-time clocks or displays
 
-> 📚 I2C is slower than SPI but allows many devices to share just **two pins**, saving valuable I/O space.
+> I2C is slower than SPI but allows many devices to share just **two pins**, saving valuable I/O space.
 
 ---
 
-### ⚙️ I2C Example: Reading a Byte from a Slave (Pseudo-code)
+### I2C Example: Reading a Byte from a Slave (Pseudo-code)
 
 ```c
 I2C1CON = 0;
@@ -337,7 +337,7 @@ while (I2C1CONbits.PEN);
 
 ---
 
-### ⚠️ Notes
+### Notes
 
 - I2C requires **pull-up resistors** on both SDA and SCL lines
 - Only **one master** should control the bus at a time
@@ -347,7 +347,7 @@ while (I2C1CONbits.PEN);
 
 Next, we’ll look at how to read **real-world analog signals** using the **ADC module**.
 
-### 🧠 Quiz: I2C Communication
+### Quiz: I2C Communication
 
 Why does I2C require pull-up resistors on the SDA and SCL lines?
 
@@ -366,7 +366,7 @@ Why does I2C require pull-up resistors on the SDA and SCL lines?
 
 ---
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Write code to initiate an I2C transmission to a device with address `0x68`, send a register address `0x1C`, then restart and request a single byte of data from it.
 
@@ -411,7 +411,7 @@ Write code to initiate an I2C transmission to a device with address `0x68`, send
 
 ---
 
-### 🧠 What Does the ADC Do?
+### What Does the ADC Do?
 
 An ADC samples an input voltage (e.g., 0–3.3V) and converts it into a digital number based on:
 
@@ -423,7 +423,7 @@ An ADC samples an input voltage (e.g., 0–3.3V) and converts it into a digital 
 
 ---
 
-### ⚙️ Configuring ADC on PIC24
+### Configuring ADC on PIC24
 
 Let’s read analog voltage on **AN0 (RB0)** using the 10-bit ADC module.
 
@@ -452,7 +452,7 @@ uint16_t result = ADC1BUF0;     // Read the result
 
 ---
 
-### 📏 Example Conversions (10-bit ADC)
+### Example Conversions (10-bit ADC)
 
 | Input Voltage | ADC Value |
 |---------------|------------|
@@ -460,7 +460,7 @@ uint16_t result = ADC1BUF0;     // Read the result
 | 1.65 V        | 512        |
 | 3.3 V         | 1023       |
 
-> 📐 ADC values are linear — you can scale them to voltage using:  
+> ADC values are linear — you can scale them to voltage using:  
 > `V = (ADC / 1023.0) × VREF`
 
 ---
@@ -478,11 +478,11 @@ Here's a quick recap of the communication and peripheral modules covered:
 | I2C    | Multiple devices, clocks, EEPROMs   | Two wires, device addressing      | Slower, requires pull-ups         |
 | ADC    | Sensors, analog input               | Converts real-world signals       | Needs stable voltage, limited speed |
 
-> 🛠️ Choose the right tool for the job — and test with real hardware whenever possible!
+> Choose the right tool for the job — and test with real hardware whenever possible!
 
 ---
 
-### 🧠 Quiz: Understanding ADC
+### Quiz: Understanding ADC
 
 You’re using a 10-bit ADC with a reference voltage of 3.3V.  
 What voltage does a digital reading of `682` most closely represent?
@@ -503,7 +503,7 @@ What voltage does a digital reading of `682` most closely represent?
 
 ---
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Write code to configure the ADC to read from **AN2 (RB2)** and store the result in a variable.
 
@@ -534,5 +534,5 @@ Write code to configure the ADC to read from **AN2 (RB2)** and store the result 
 
 
 
-That’s the end of Chapter 8! 🎉
+That’s the end of Chapter 8! 
 

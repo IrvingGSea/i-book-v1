@@ -6,10 +6,10 @@ Modern embedded systems are often programmed in high-level languages like C, but
 
 Assembly gives you:
 
-- 🔍 **Complete control** over the CPU, memory, and peripheral access
-- ⚡ **Performance optimizations** that compilers can't always guarantee
-- 🧠 A deep understanding of what C code is actually doing "under the hood"
-- 🛠️ The ability to debug complex timing or hardware interaction issues
+- **Complete control** over the CPU, memory, and peripheral access
+- **Performance optimizations** that compilers can't always guarantee
+- A deep understanding of what C code is actually doing "under the hood"
+- The ability to debug complex timing or hardware interaction issues
 
 Most high-level code on microcontrollers is eventually compiled into assembly — learning how to **read and write it directly** unlocks a new level of skill and insight.
 
@@ -41,7 +41,7 @@ Where:
 
 ---
 
-### 📋 Example: Moving Data
+### Example: Moving Data
 
 ```asm
 MOV     W1, W0      ; Copy contents of W1 into W0
@@ -53,7 +53,7 @@ MOV     #10, W2     ; Load the literal value 10 into W2
 
 ---
 
-### 💬 Commenting Your Code
+### Commenting Your Code
 
 Use **semicolons** (`;`) to add inline comments:
 
@@ -62,7 +62,7 @@ CLR     W3          ; Clear register W3
 ADD     W1, W2      ; Add W1 to W2 (result stored in W2)
 ```
 
-> 🧠 In PIC24 assembly, instructions often **modify the second operand** — the destination — directly.
+> In PIC24 assembly, instructions often **modify the second operand** — the destination — directly.
 
 ## Section 3: Working Registers (W0–W15)
 
@@ -72,7 +72,7 @@ These are used in most instructions for arithmetic, logic, data movement, and me
 
 ---
 
-### 🧠 What Are Working Registers?
+### What Are Working Registers?
 
 Working registers are **fast-access memory locations** inside the CPU. They're used to:
 
@@ -83,7 +83,7 @@ Working registers are **fast-access memory locations** inside the CPU. They're u
 
 ---
 
-### 📋 Common Usage
+### Common Usage
 
 | Register | Role                  | Notes                                |
 |----------|------------------------|----------------------------------------|
@@ -93,11 +93,11 @@ Working registers are **fast-access memory locations** inside the CPU. They're u
 
 ---
 
-> 📦 Unlike high-level variables, working registers are **not named** — you must track their purpose as you code.
+> Unlike high-level variables, working registers are **not named** — you must track their purpose as you code.
 
 ---
 
-### 💡 Example
+### Example
 
 ```asm
 MOV     #42, W1       ; Load literal 42 into W1
@@ -115,7 +115,7 @@ Addressing modes define **how operands are accessed** in an instruction. PIC24 s
 
 ---
 
-### 1. 📌 Immediate Addressing
+### 1. Immediate Addressing
 
 Use a **literal constant** directly in the instruction.
 
@@ -127,7 +127,7 @@ MOV     #25, W0      ; Load the value 25 into W0
 
 ---
 
-### 2. 📦 Register Direct
+### 2. Register Direct
 
 Use the value stored in a working register.
 
@@ -139,7 +139,7 @@ MOV     W1, W2       ; Copy contents of W1 into W2
 
 ---
 
-### 3. 🧭 Register Indirect
+### 3. Register Indirect
 
 Treat the contents of a register as a **pointer** to a memory address.
 
@@ -151,7 +151,7 @@ MOV     [W5], W0     ; Move value from memory pointed to by W5 into W0
 
 ---
 
-### 4. ➕ Indirect with Post-Increment
+### 4. Indirect with Post-Increment
 
 Automatically increments the pointer **after** the access.
 
@@ -163,7 +163,7 @@ MOV     [W6++], W1   ; W1 = *W6, then W6 = W6 + 2
 
 ---
 
-### 5. ➖ Indirect with Pre-Decrement
+### 5. Indirect with Pre-Decrement
 
 Decrements the pointer **before** the access.
 
@@ -175,7 +175,7 @@ MOV     [--W6], W1   ; W6 = W6 - 2, then move from new address into W1
 
 ---
 
-### 6. 🧮 Literal Offset + Register (Indexed)
+### 6. Literal Offset + Register (Indexed)
 
 Adds a literal offset to a base register.
 
@@ -184,11 +184,11 @@ MOV     [W8 + 4], W0   ; Move from address (W8 + 4) into W0
 ```
 
 > Useful for arrays and structs.  
-> ⚠️ Offset must be word-aligned (multiple of 2).
+> Offset must be word-aligned (multiple of 2).
 
 ---
 
-> 📚 Understanding addressing modes is essential for writing flexible and efficient assembly code.
+> Understanding addressing modes is essential for writing flexible and efficient assembly code.
 
 ## Section 5: Writing Clean, Readable Assembly
 
@@ -198,7 +198,7 @@ Here are a few **best practices** for clean and maintainable PIC24 assembly:
 
 ---
 
-### 📛 Use Labels Effectively
+### Use Labels Effectively
 
 Labels are like **named bookmarks** in your code. They make loops and branches much easier to follow.
 
@@ -213,7 +213,7 @@ Loop:
 
 ---
 
-### 💬 Comment Generously
+### Comment Generously
 
 Every line of code should **communicate intent**, not just function.
 
@@ -226,7 +226,7 @@ MOV     #0,  W2      ; Clear sum accumulator
 
 ---
 
-### 🧱 Align Instructions
+### Align Instructions
 
 Neatly aligned code is **easier to scan** and debug.
 
@@ -240,7 +240,7 @@ CP      W0,  #5
 
 ---
 
-### ⏸️ Use `NOP` for Debugging
+### Use `NOP` for Debugging
 
 ```asm
 NOP                 ; No operation – useful for breakpoints
@@ -259,7 +259,7 @@ By now, you’ve seen how assembly gives you **precise, low-level control** over
 
 ---
 
-### 🔑 Key Takeaways
+### Key Takeaways
 
 - PIC24 instructions follow the format: `OPCODE OPERAND1, OPERAND2`
 - `W0–W15` are working registers used for calculations and memory access
@@ -268,7 +268,7 @@ By now, you’ve seen how assembly gives you **precise, low-level control** over
 
 ---
 
-### 🧾 Common PIC24 Assembly Instructions
+### Common PIC24 Assembly Instructions
 
 | Instruction | Description                             |
 |-------------|-----------------------------------------|
@@ -281,7 +281,7 @@ By now, you’ve seen how assembly gives you **precise, low-level control** over
 
 ---
 
-### 🧮 Working Register Reference
+### Working Register Reference
 
 | Register | Purpose                    |
 |----------|----------------------------|
@@ -289,9 +289,9 @@ By now, you’ve seen how assembly gives you **precise, low-level control** over
 | `W14`    | Frame pointer (optional)    |
 | `W15`    | Stack pointer (must not modify manually) |
 
-> 🔍 Understanding these fundamentals will help you as we begin writing actual control logic, loops, and subroutines in the next chapter.
+> Understanding these fundamentals will help you as we begin writing actual control logic, loops, and subroutines in the next chapter.
 
-### 🧠 Quiz: Assembly Fundamentals
+### Quiz: Assembly Fundamentals
 
 What does the following instruction do?
 
@@ -314,7 +314,7 @@ MOV     W2, W1
 
 ---
 
-### ✍️ Prompt Practice
+### Prompt Practice
 
 Write a short assembly routine that:
 - Loads the values 5 and 10 into two registers
