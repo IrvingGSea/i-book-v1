@@ -4,16 +4,17 @@ Below is a high-level overview of the chapters, tutorials, prompts, and simulati
 
 ---
 
-##  Chapters
+## Table of Contents
 
-1. [Introduction to Microcontrollers & PIC24FJ64GA002](chapters/chapter-1/)
-2. [PIC24 Assembly Basics & Syntax](chapters/chapter-2/)
-3. [Branching & Loops in Assembly](chapters/chapter-3/)
-4. [Stack and Subroutine Calls](chapters/chapter-4/)
-5. [Timers and Interrupts](chapters/chapter-5/)
-6. [External Interrupts & Input Capture](chapters/chapter-6/)
-7. [Output Compare and PWM](chapters/chapter-7/)
-8. [Communication & Peripherals](chapters/chapter-8/)
+- [Chapter 1: Introduction to Microcontrollers](chapters/chapter-1/index.md)
+- [Chapter 2: Assembly & Syntax](chapters/chapter-2/index.md)
+- [Chapter 3: Branching & Loops](chapters/chapter-3/index.md)
+- [Chapter 4: Stack & Subroutines](chapters/chapter-4/index.md)
+- [Chapter 5: Timers & Interrupts](chapters/chapter-5/index.md)
+- [Chapter 6: External Interrupts & Input Capture](chapters/chapter-6/index.md)
+- [Chapter 7: Output Compare & PWM](chapters/chapter-7/index.md)
+- [Chapter 8: Communication & Peripherals](chapters/chapter-8/index.md)
+
 
 
 ---
