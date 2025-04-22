@@ -1,1 +1,0 @@
-# test for generate logo

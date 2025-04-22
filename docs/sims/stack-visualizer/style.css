@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  background-color: #f0f8ff;
+  margin: 20px;
+}
+#controls {
+  margin-bottom: 10px;
+}
+#stack {
+  background-color: #e6f2ff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  min-height: 200px;
+  max-width: 300px;
+}
+.stack-item {
+  background-color: #cce0ff;
+  margin: 4px;
+  padding: 6px;
+  border: 1px solid #888;
+  text-align: center;
+}

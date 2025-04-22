@@ -1,1 +1,0 @@
-# test for index - prompts
