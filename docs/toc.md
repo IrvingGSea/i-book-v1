@@ -19,14 +19,6 @@ Below is a high-level overview of the chapters, tutorials, prompts, and simulati
 
 ---
 
-## Prompts
-
-- [Feature Mapping](prompts/feature-mapping.md)  
-- [Enumerate Concepts](prompts/enumerate-concepts.md)  
-- [Generate Logo](prompts/generate-logo.md)
-
----
-
 ## MicroSims
 
 - [Sine Wave](sims/sine-wave/index.md)  

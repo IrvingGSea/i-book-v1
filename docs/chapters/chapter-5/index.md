@@ -196,6 +196,26 @@ void __attribute__((__interrupt__, auto_psv)) _T1Interrupt(void) {
 
 > You don’t need to manually check the timer — the interrupt does the work!
 
+---
+
+## 🧪 MicroSim: Timer and ISR Visualization
+
+To see a timer and interrupt interaction in action, try this interactive simulation:
+
+👉 [Launch the Timer ISR Simulation](../../sims/timer-isr-sim/sim/index.html)
+
+**Features:**
+
+- Set a PR1 value (interrupt match threshold)
+- Watch the timer increment in real time
+- When TMR1 reaches PR1:
+  - An interrupt is triggered
+  - The indicator cycles through red → yellow → green with each match
+- Press **Start**, **Stop**, or **Reset** to control the behavior
+
+This simulation helps you visualize periodic interrupts and how the system responds each time an interrupt occurs.
+
+
 ### Timing Notes
 
 This example assumes:

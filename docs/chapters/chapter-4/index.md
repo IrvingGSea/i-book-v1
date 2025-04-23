@@ -174,6 +174,23 @@ Before `CALL DoubleValue`, the stack might look like this:
 
 After `RETURN`, the address is popped off and the stack returns to its previous state.
 
+---
+
+## Interactive MicroSim: Stack Tray Visualizer
+
+To help visualize how function calls and returns interact with the stack, try this MicroSim built on the cafeteria tray analogy.
+
+👉 [Try the Stack Tray MicroSim](../../sims/stack-tray-sim/sim/index.html)
+
+This simulation allows you to:
+
+- Press **CALL** to simulate a function call (tray pushed onto the stack)
+- Press **RETURN** to simulate a function return (tray popped from the stack)
+- Press **RESET** to clear the stack
+
+It illustrates how the stack grows and shrinks with each nested function call — following **LIFO (Last In, First Out)** behavior.
+
+
 ### Notes
 
 - The value is passed in `W0`, and the result is returned in `W0`. This is a **common calling convention** for small assembly routines.  

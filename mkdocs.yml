@@ -17,7 +17,8 @@ nav:
   - Sims: 
       - Gallery: sims/index.md
       - Sine Wave: sims/sine-wave/index.md
-      - Stack Visualizer: sims/stack-visualizer/index.md
+      - Stack Tray Sim: sims/stack-tray-sim/index.md
+      - Timer + ISR: sims/timer-isr-sim/index.md
   - Glossary: glossary.md
   - Table of Contents: toc.md
   - License: license.md
