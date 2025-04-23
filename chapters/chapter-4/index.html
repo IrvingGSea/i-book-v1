@@ -621,6 +621,21 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-microsim-stack-tray-visualizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive MicroSim: Stack Tray Visualizer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactive MicroSim: Stack Tray Visualizer">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
@@ -925,11 +940,33 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sims/stack-visualizer/" class="md-nav__link">
+      <a href="../../sims/stack-tray-sim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stack Visualizer
+    Stack Tray Sim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/timer-isr-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timer + ISR
     
   </span>
   
@@ -1298,6 +1335,21 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interactive-microsim-stack-tray-visualizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive MicroSim: Stack Tray Visualizer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactive MicroSim: Stack Tray Visualizer">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1612,6 +1664,17 @@ When <code>RETURN</code> executes:
 </tbody>
 </table>
 <p>After <code>RETURN</code>, the address is popped off and the stack returns to its previous state.</p>
+<hr />
+<h2 id="interactive-microsim-stack-tray-visualizer">Interactive MicroSim: Stack Tray Visualizer<a class="headerlink" href="#interactive-microsim-stack-tray-visualizer" title="Permanent link">&para;</a></h2>
+<p>To help visualize how function calls and returns interact with the stack, try this MicroSim built on the cafeteria tray analogy.</p>
+<p>👉 <a href="../../sims/stack-tray-sim/sim/">Try the Stack Tray MicroSim</a></p>
+<p>This simulation allows you to:</p>
+<ul>
+<li>Press <strong>CALL</strong> to simulate a function call (tray pushed onto the stack)</li>
+<li>Press <strong>RETURN</strong> to simulate a function return (tray popped from the stack)</li>
+<li>Press <strong>RESET</strong> to clear the stack</li>
+</ul>
+<p>It illustrates how the stack grows and shrinks with each nested function call — following <strong>LIFO (Last In, First Out)</strong> behavior.</p>
 <h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The value is passed in <code>W0</code>, and the result is returned in <code>W0</code>. This is a <strong>common calling convention</strong> for small assembly routines.  </li>
@@ -1740,7 +1803,7 @@ MOV     W0, W1           ; Store result in W1</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-17
+    2025-04-23
   </span>
 
     

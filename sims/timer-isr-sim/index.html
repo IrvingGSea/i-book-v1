@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../sine-wave/">
+        <link rel="prev" href="../stack-tray-sim/">
       
       
         <link rel="next" href="../../glossary/">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Stack Visualizer - Mkdocs for Intelligent Textbooks</title>
+        <title>Timer + ISR - Mkdocs for Intelligent Textbooks</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stack-visualizer-microsim" class="md-skip">
+        <a href="#timer-isr-simulation" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Stack Visualizer
+              Timer + ISR
             
           </span>
         </div>
@@ -590,6 +590,28 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../stack-tray-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stack Tray Sim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -606,7 +628,7 @@
         
   
   <span class="md-ellipsis">
-    Stack Visualizer
+    Timer + ISR
     
   </span>
   
@@ -809,14 +831,18 @@
   
 
 
-<h1 id="stack-visualizer-microsim">Stack Visualizer MicroSim<a class="headerlink" href="#stack-visualizer-microsim" title="Permanent link">&para;</a></h1>
-<p>This simulation shows the <strong>LIFO</strong> behavior of the call stack using a cafeteria tray analogy.</p>
+<h1 id="timer-isr-simulation">Timer ISR Simulation<a class="headerlink" href="#timer-isr-simulation" title="Permanent link">&para;</a></h1>
+<p>This enhanced simulation demonstrates how a timer (TMR1) triggers an interrupt when it reaches a match value (PR1).</p>
+<p>👉 <a href="sim/">Click here to launch the Timer ISR Simulation</a></p>
+<p><strong>New Feature:</strong>
+- A traffic-light style visual indicator flashes red → yellow → green when the interrupt fires.</p>
+<p><strong>Features:</strong></p>
 <ul>
-<li>Click <strong>CALL</strong> to push a function onto the stack  </li>
-<li>Click <strong>RETURN</strong> to pop it off  </li>
-<li>Click <strong>RESET</strong> to clear the stack  </li>
+<li>Adjustable PR1 (interrupt match value)</li>
+<li>Timer starts incrementing when you click "Start"</li>
+<li>When TMR1 matches PR1, an interrupt is triggered and the timer resets</li>
+<li>Press "Stop" or "Reset" at any time</li>
 </ul>
-<iframe src="index.html" width="100%" height="500px" style="border: 1px solid #ccc;"></iframe>
 
 
 
@@ -837,7 +863,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-22
+    2025-04-23
   </span>
 
     

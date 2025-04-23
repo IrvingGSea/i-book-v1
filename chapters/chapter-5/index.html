@@ -643,6 +643,21 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsim-timer-and-isr-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 MicroSim: Timer and ISR Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 MicroSim: Timer and ISR Visualization">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#timing-notes" class="md-nav__link">
     <span class="md-ellipsis">
@@ -877,11 +892,33 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sims/stack-visualizer/" class="md-nav__link">
+      <a href="../../sims/stack-tray-sim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stack Visualizer
+    Stack Tray Sim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/timer-isr-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Timer + ISR
     
   </span>
   
@@ -1250,6 +1287,21 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microsim-timer-and-isr-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 MicroSim: Timer and ISR Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 MicroSim: Timer and ISR Visualization">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#timing-notes" class="md-nav__link">
     <span class="md-ellipsis">
@@ -1562,6 +1614,20 @@ For example:</p>
 <blockquote>
 <p>You don’t need to manually check the timer — the interrupt does the work!</p>
 </blockquote>
+<hr />
+<h2 id="microsim-timer-and-isr-visualization">🧪 MicroSim: Timer and ISR Visualization<a class="headerlink" href="#microsim-timer-and-isr-visualization" title="Permanent link">&para;</a></h2>
+<p>To see a timer and interrupt interaction in action, try this interactive simulation:</p>
+<p>👉 <a href="../../sims/timer-isr-sim/sim/">Launch the Timer ISR Simulation</a></p>
+<p><strong>Features:</strong></p>
+<ul>
+<li>Set a PR1 value (interrupt match threshold)</li>
+<li>Watch the timer increment in real time</li>
+<li>When TMR1 reaches PR1:</li>
+<li>An interrupt is triggered</li>
+<li>The indicator cycles through red → yellow → green with each match</li>
+<li>Press <strong>Start</strong>, <strong>Stop</strong>, or <strong>Reset</strong> to control the behavior</li>
+</ul>
+<p>This simulation helps you visualize periodic interrupts and how the system responds each time an interrupt occurs.</p>
 <h3 id="timing-notes">Timing Notes<a class="headerlink" href="#timing-notes" title="Permanent link">&para;</a></h3>
 <p>This example assumes:
 - <strong>Fcy = 16 MHz</strong> (i.e., 8 MHz instruction cycle)
@@ -1657,7 +1723,7 @@ In the ISR, toggle an LED connected to <strong>PORTB bit 2</strong>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-17
+    2025-04-23
   </span>
 
     
