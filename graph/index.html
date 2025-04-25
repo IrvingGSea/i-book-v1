@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expanded Learning Graph</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; display: flex; }
+        #sidebar { width: 260px; background: #f4f4f4; padding: 12px; border-right: 1px solid #ccc; }
+        #mynetwork { flex-grow: 1; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h3>Legend</h3>
+        <ul>
+            <li style="color: crimson;">Architecture</li>
+            <li style="color: darkorange;">Assembly</li>
+            <li style="color: goldenrod;">Control Flow</li>
+            <li style="color: steelblue;">Stack</li>
+            <li style="color: teal;">Interrupts</li>
+            <li style="color: purple;">Peripherals</li>
+        </ul>
+        <p><small>Click a node to highlight its learning path.</small></p>
+    </div>
+    <div id="mynetwork"></div>
+    <script src="expanded-graph.js"></script>
+</body>
+</html>
