@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stack Tray MicroSim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sim-container">
+        <h2>Stack Visualizer MicroSim</h2>
+        <p>This interactive simulation shows how the <strong>stack</strong> works using a cafeteria tray model.</p>
+        <ul>
+            <li>Click <strong>CALL</strong> to simulate a function call (push onto stack)</li>
+            <li>Click <strong>RETURN</strong> to simulate a function return (pop from stack)</li>
+            <li>Click <strong>RESET</strong> to clear the stack</li>
+        </ul>
+        <div class="buttons">
+            <button onclick="callFunction()">CALL</button>
+            <button onclick="returnFunction()">RETURN</button>
+            <button onclick="resetStack()">RESET</button>
+        </div>
+        <canvas id="stackCanvas" width="400" height="500"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

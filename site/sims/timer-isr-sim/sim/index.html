@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer ISR Visual Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Timer and Interrupt Simulation</h2>
+    <p>This simulation shows how a timer (TMR1) triggers an interrupt when it reaches a match value (PR1).</p>
+    <div class="controls">
+        <label for="pr1">Set PR1 (Interrupt Match Value): </label>
+        <input type="number" id="pr1" value="10" min="1" max="100">
+        <button onclick="startTimer()">Start Timer</button>
+        <button onclick="stopTimer()">Stop Timer</button>
+        <button onclick="resetTimer()">Reset Timer</button>
+    </div>
+    <div class="display">
+        <p><strong>TMR1:</strong> <span id="tmr1">0</span></p>
+        <div id="visual-indicator" class="indicator"></div>
+        <p id="interruptMsg"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -19,6 +19,8 @@ nav:
       - Sine Wave: sims/sine-wave/index.md
       - Stack Tray Sim: sims/stack-tray-sim/index.md
       - Timer + ISR: sims/timer-isr-sim/index.md
+      - PWM Sim: sims/pwm-sim/index.md
+  - Learning Graph: graph/index.html
   - Glossary: glossary.md
   - Table of Contents: toc.md
   - License: license.md
