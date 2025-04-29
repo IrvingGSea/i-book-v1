@@ -19,14 +19,14 @@ Below is a high-level overview of the chapters, tutorials, prompts, glossary, an
 
 ## MicroSimulations
 
-- [Stack Visualizer](sims/stack-visualizer/index.md)
-- [Timer Interrupt Simulator](sims/timer-blink/index.md)
-- [PWM Waveform Generator](sims/pwm-waveform/index.md)
-- [Input Capture Simulator](sims/input-capture/index.md)
-- [ADC Visualizer](sims/adc-visualizer/index.md)
-- [GPIO Setup Simulator (TRIS/LAT/AD1PCFG)](sims/gpio-setup/index.md)
-- [Register Operation Simulator](sims/register-instruction-sim/index.md)
-- [Branch Loop Counter Simulator](sims/branch-loop-counter/index.md)
+- [Stack Visualizer](sims/stack-tray-sim/index.md)
+- [Timer Interrupt Simulator](sims/timer-isr-sim/index.md)
+- [PWM Waveform Generator](sims/pwm-sim/index.md)
+- [Input Capture Simulator](sims/ic_sim/index.md)
+- [ADC Visualizer](sims/adc-sim/index.md)
+- [GPIO Setup Simulator (TRIS/LAT/AD1PCFG)](sims/ch1-pin-config-sim/index.md)
+- [Register Operation Simulator](sims/ch2-register-sim/index.md)
+- [Branch Loop Counter Simulator](sims/ch3-branch-loop-sim/index.md)
 - [Serial Communication Overview (UART, SPI, I2C)](sims/ch8-serial-comm-overview/index.md)
 
 ---
