@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../acd-sim/">
+        <link rel="prev" href="../ch8-serial-comm-overview/">
       
       
-        <link rel="next" href="../ch2-register-sim/">
+        <link rel="next" href="../spi-communication/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Pin Configurations - Mkdocs for Intelligent Textbooks</title>
+        <title>UART Communication - Mkdocs for Intelligent Textbooks</title>
       
     
     
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-1-microsim-digital-output-pin-configuration" class="md-skip">
+        <a href="#uart-transmission-simulator" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pin Configurations
+              UART Communication
             
           </span>
         </div>
@@ -678,19 +678,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ch1-pin-config-sim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -700,7 +691,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -776,10 +766,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../uart-transmission/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -789,6 +788,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1029,15 +1029,15 @@
   
 
 
-<h1 id="chapter-1-microsim-digital-output-pin-configuration">Chapter 1 MicroSim: Digital Output Pin Configuration<a class="headerlink" href="#chapter-1-microsim-digital-output-pin-configuration" title="Permanent link">&para;</a></h1>
-<p>This simulation demonstrates how the following PIC24 configuration registers affect digital output behavior:</p>
+<h1 id="uart-transmission-simulator">UART Transmission Simulator<a class="headerlink" href="#uart-transmission-simulator" title="Permanent link">&para;</a></h1>
+<p>This simulation shows a UART packet transmission flow.</p>
 <ul>
-<li><strong>TRISx</strong>: Determines pin direction (input/output)</li>
-<li><strong>AD1PCFG</strong>: Configures the pin for digital or analog use</li>
-<li><strong>LATx</strong>: Controls the output level (high/low) when configured as output</li>
+<li>Start Bit (low)</li>
+<li>8 Data Bits (alternating high/low)</li>
+<li>Parity Bit</li>
+<li>Stop Bit</li>
 </ul>
-<p>👉 <a href="sim/">Launch the Pin Config Simulation</a></p>
-<p>Use the interface to toggle TRIS, AD1PCFG, and LAT settings, and observe the resulting pin state.</p>
+<p><a href="sim/">▶ Launch Simulation</a></p>
 
 
 
