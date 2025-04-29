@@ -120,6 +120,13 @@ while (1) {
 
 Up next: we’ll cover **SPI**, a faster protocol with full-duplex communication.
 
+### UART Simulation
+To visualize how UART communication transmits data bits with start/stop frames:
+
+👉 [Launch UART Communication Simulation](../../../sims/uart-transmission/sim/index.html)
+
+---
+
 ### Quiz: UART Communication
 
 Which of the following **must be true** for two devices to successfully communicate over UART?
@@ -166,6 +173,7 @@ Write code to configure **UART1** to transmit the string `"Hello"` continuously 
         __delay_ms(1000);                     // Delay 1s between messages
     }
     ```
+
 ## Section 3: SPI (Serial Peripheral Interface)
 
 **SPI** is a high-speed, full-duplex communication protocol designed for fast data exchange between a **master** and one or more **slaves**.
@@ -229,6 +237,13 @@ uint8_t received = SPI1BUF;    // Read incoming byte
 > SPI is great for **speed** and **low-latency**, but requires more pins and doesn’t support automatic addressing like I2C.
 
 Next up: we’ll cover **I2C**, ideal for connecting many devices with fewer wires.
+
+### 🔁 SPI Simulation
+See how the master-slave architecture of SPI works with SCLK, MOSI, and MISO lines:
+
+👉 [Launch SPI Communication Simulation](../../../sims/spi-communication/sim/index.html)
+
+---
 
 ### Quiz: SPI Basics
 
@@ -346,6 +361,11 @@ while (I2C1CONbits.PEN);
 ---
 
 Next, we’ll look at how to read **real-world analog signals** using the **ADC module**.
+
+### 🔄 I2C Simulation
+Understand I2C with clock-synchronized data transfers and start/stop conditions:
+
+👉 [Launch I2C Communication Simulation](../../../sims/i2c-communication/sim/index.html)
 
 ### Quiz: I2C Communication
 
