@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visual Branching Loop Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Visual Branching and Loop Flow</h2>
+    <div class="layout">
+        <div class="code-area">
+            <h3>Code</h3>
+            <pre id="codeDisplay">
+<span id="line0">MOV #5, W0</span>
+<span id="line1">LOOP:</span>
+<span id="line2">DEC W0</span>
+<span id="line3">CP W0, #0</span>
+<span id="line4">BNE LOOP</span>
+<span id="line5">; ... more code</span>
+            </pre>
+            <button onclick="runStep()">Run One Step</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+        <div class="state-area">
+            <h3>Registers</h3>
+            <p><b>W0:</b> <span id="w0">5</span></p>
+            <p><b>Loop Count:</b> <span id="loopCount">0</span></p>
+            <div id="statusBox">Ready</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

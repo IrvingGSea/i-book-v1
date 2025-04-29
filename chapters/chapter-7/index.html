@@ -588,6 +588,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pwm-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      PWM Visualization
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -831,28 +840,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sims/sine-wave/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sine Wave
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../sims/stack-tray-sim/" class="md-nav__link">
         
   
@@ -901,7 +888,139 @@
         
   
   <span class="md-ellipsis">
-    PWM Sim
+    PWM Visualizer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ic_sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input Capture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/acd-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analog-to-Digital
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch1-pin-config-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pin Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch2-register-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Register Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch3-branch-loop-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branch Loop Sim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch8-serial-comm-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Serial Communication Overview
     
   </span>
   
@@ -973,27 +1092,6 @@
   
   <span class="md-ellipsis">
     Table of Contents
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../license/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    License
     
   </span>
   
@@ -1187,6 +1285,15 @@
   <a href="#example-duty-cycles" class="md-nav__link">
     <span class="md-ellipsis">
       Example Duty Cycles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pwm-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      PWM Visualization
     </span>
   </a>
   
@@ -1419,11 +1526,13 @@ Timers like TMR1 are typically reserved for timekeeping or general interrupts, w
 </ul>
 <hr />
 <h3 id="why-its-useful">Why It's Useful<a class="headerlink" href="#why-its-useful" title="Permanent link">&para;</a></h3>
-<p>PWM allows you to:
-- <strong>Dim an LED</strong> by adjusting brightness
-- <strong>Control motor speed</strong> or servo position
-- <strong>Modulate audio signals</strong>
-- Generate analog-like control signals without needing a dedicated Digital-to-Analog Converter (DAC) — the PWM duty cycle controls the average voltage instead.</p>
+<p>PWM allows you to:</p>
+<ul>
+<li><strong>Dim an LED</strong> by adjusting brightness</li>
+<li><strong>Control motor speed</strong> or servo position</li>
+<li><strong>Modulate audio signals</strong></li>
+<li>Generate analog-like control signals without needing a dedicated Digital-to-Analog Converter (DAC) — the PWM duty cycle controls the average voltage instead.</li>
+</ul>
 <p>All of this is done with <strong>just one digital output pin</strong>.</p>
 <hr />
 <h3 id="example-duty-cycles">Example Duty Cycles<a class="headerlink" href="#example-duty-cycles" title="Permanent link">&para;</a></h3>
@@ -1460,6 +1569,14 @@ Timers like TMR1 are typically reserved for timekeeping or general interrupts, w
 <blockquote>
 <p>Adjusting duty cycle lets you control how much "power" a device receives over time.</p>
 </blockquote>
+<hr />
+<h3 id="pwm-visualization">PWM Visualization<a class="headerlink" href="#pwm-visualization" title="Permanent link">&para;</a></h3>
+<p>To better visualize how <strong>Pulse Width Modulation (PWM)</strong> controls signal timing and brightness, use the interactive simulation below:</p>
+<p>👉 <a href="../../sims/pwm-sim/sim/pwm-sim.html">Launch the PWM Visualization Simulation</a></p>
+<p>Adjust the duty cycle and see how waveform shape and LED intensity respond in real time!</p>
+<p>Use the slider to adjust the <strong>duty cycle</strong> and see:
+- How the waveform changes
+- How an LED's brightness is influenced by PWM on-time</p>
 <hr />
 <p>In the next section, we’ll connect this concept to <strong>Output Compare</strong> and show how to generate PWM signals in hardware using the <code>OCx</code> module.</p>
 <h2 id="section-3-generating-pwm-with-output-compare">Section 3: Generating PWM with Output Compare<a class="headerlink" href="#section-3-generating-pwm-with-output-compare" title="Permanent link">&para;</a></h2>
@@ -1702,7 +1819,7 @@ Assume a system clock of <strong>16 MHz</strong>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-17
+    2025-04-29
   </span>
 
     

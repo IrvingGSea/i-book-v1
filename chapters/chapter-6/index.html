@@ -659,6 +659,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#interactive-input-capture-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Interactive Input Capture Simulation
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -864,28 +873,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sims/sine-wave/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sine Wave
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../sims/stack-tray-sim/" class="md-nav__link">
         
   
@@ -934,7 +921,139 @@
         
   
   <span class="md-ellipsis">
-    PWM Sim
+    PWM Visualizer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ic_sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input Capture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/acd-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analog-to-Digital
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch1-pin-config-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pin Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch2-register-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Register Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch3-branch-loop-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branch Loop Sim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch8-serial-comm-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Serial Communication Overview
     
   </span>
   
@@ -1006,27 +1125,6 @@
   
   <span class="md-ellipsis">
     Table of Contents
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../license/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    License
     
   </span>
   
@@ -1313,6 +1411,15 @@
   <a href="#edge-detection-options" class="md-nav__link">
     <span class="md-ellipsis">
       Edge Detection Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-input-capture-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Interactive Input Capture Simulation
     </span>
   </a>
   
@@ -1645,6 +1752,16 @@
 <p>You can change the capture mode on the fly if you want to capture both rising and falling edges in sequence.</p>
 </blockquote>
 <hr />
+<h3 id="interactive-input-capture-simulation">🎯 Interactive Input Capture Simulation<a class="headerlink" href="#interactive-input-capture-simulation" title="Permanent link">&para;</a></h3>
+<p>To deepen your understanding of how <strong>Input Capture</strong> modules operate, interact with the simulation below.<br />
+Experiment with different pulse durations and observe how timer values are recorded at the rising edge of a signal.</p>
+<ul>
+<li>Press <strong>Start Pulse</strong> to simulate a rising edge event.</li>
+<li>Adjust the <strong>Pulse Duration</strong> using the slider before starting the pulse.</li>
+<li>Watch how the <strong>captured timer value</strong> changes based on pulse width!</li>
+</ul>
+<p>👉 <a href="../../sims/ic_sim/sim/ic-sim.html">Launch the Input Capture Simulation</a></p>
+<hr />
 <p>In the next section, we’ll summarize the difference between external interrupts and input capture, and wrap up with tips and use cases.</p>
 <h2 id="section-5-summary-and-best-practices">Section 5: Summary and Best Practices<a class="headerlink" href="#section-5-summary-and-best-practices" title="Permanent link">&para;</a></h2>
 <p>External interrupts and input capture give your microcontroller the ability to <strong>react to real-world events</strong> and <strong>measure their timing precisely</strong> — both essential tools in embedded systems.</p>
@@ -1757,7 +1874,7 @@ Assume you’ve already configured <code>TMR2</code> with an appropriate prescal
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-17
+    2025-04-29
   </span>
 
     

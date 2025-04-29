@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Instruction Simulator (v2)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Register Instruction Simulator (v2)</h2>
+    <div class="sim-container">
+        <div class="registers">
+            <h3>Working Registers</h3>
+            <div id="registers"></div>
+            <div class="console">
+                <h4>Console Output:</h4>
+                <pre id="console"></pre>
+            </div>
+        </div>
+        <div class="controls">
+            <h3>Enter Instruction</h3>
+            <input type="text" id="instructionInput" placeholder="e.g., ADD W0, W1, W2">
+            <button onclick="executeInstruction()">Execute</button>
+
+            <h4>Instruction Cheat Sheet</h4>
+            <ul>
+                <li><code>MOV #5, W0</code>: Load literal into W0</li>
+                <li><code>MOV W0, W1</code>: Copy W0 into W1</li>
+                <li><code>ADD W0, W1</code>: W1 = W1 + W0</li>
+                <li><code>ADD #5, W2</code>: W2 = W2 + 5</li>
+                <li><code>ADD W0, W1, W2</code>: W2 = W0 + W1</li>
+                <li><code>SUB W1, W0</code>: W0 = W0 - W1</li>
+                <li><code>SUB W1, W0, W3</code>: W3 = W0 - W1</li>
+                <li><code>CLR W2</code>: Clear W2</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
