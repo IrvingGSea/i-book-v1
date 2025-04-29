@@ -215,6 +215,19 @@ Set using: `ICxCONbits.ICM = value;`
 
 ---
 
+### 🎯 Interactive Input Capture Simulation
+
+To deepen your understanding of how **Input Capture** modules operate, interact with the simulation below.  
+Experiment with different pulse durations and observe how timer values are recorded at the rising edge of a signal.
+
+- Press **Start Pulse** to simulate a rising edge event.
+- Adjust the **Pulse Duration** using the slider before starting the pulse.
+- Watch how the **captured timer value** changes based on pulse width!
+
+👉 [Launch the Input Capture Simulation](../../sims/ic_sim/sim/ic-sim.html)
+
+
+---
 In the next section, we’ll summarize the difference between external interrupts and input capture, and wrap up with tips and use cases.
 
 ## Section 5: Summary and Best Practices

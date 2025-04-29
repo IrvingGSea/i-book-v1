@@ -65,6 +65,7 @@ Instead of sending a constant voltage, PWM sends **pulses** — and by controlli
 ### Why It's Useful
 
 PWM allows you to:
+
 - **Dim an LED** by adjusting brightness
 - **Control motor speed** or servo position
 - **Modulate audio signals**
@@ -87,6 +88,20 @@ All of this is done with **just one digital output pin**.
 | 100%       | Always ON               |
 
 > Adjusting duty cycle lets you control how much "power" a device receives over time.
+
+---
+
+### PWM Visualization
+
+To better visualize how **Pulse Width Modulation (PWM)** controls signal timing and brightness, use the interactive simulation below:
+
+👉 [Launch the PWM Visualization Simulation](../../sims/pwm-sim/sim/pwm-sim.html)
+
+Adjust the duty cycle and see how waveform shape and LED intensity respond in real time!
+
+Use the slider to adjust the **duty cycle** and see:
+- How the waveform changes
+- How an LED's brightness is influenced by PWM on-time
 
 ---
 

@@ -16,14 +16,18 @@ nav:
     - Chapter 8: chapters/chapter-8/index.md
   - Sims: 
       - Gallery: sims/index.md
-      - Sine Wave: sims/sine-wave/index.md
       - Stack Tray Sim: sims/stack-tray-sim/index.md
       - Timer + ISR: sims/timer-isr-sim/index.md
-      - PWM Sim: sims/pwm-sim/index.md
+      - PWM Visualizer: sims/pwm-sim/index.md   
+      - Input Capture: sims/ic_sim/index.md
+      - Analog-to-Digital: sims/acd-sim/index.md
+      - Pin Configurations: sims/ch1-pin-config-sim/index.md
+      - Register Configurations: sims/ch2-register-sim/index.md
+      - Branch Loop Sim: sims/ch3-branch-loop-sim/index.md
+      - Serial Communication Overview: sims/ch8-serial-comm-overview/index.md
   - Learning Graph: graph/index.html
   - Glossary: glossary.md
   - Table of Contents: toc.md
-  - License: license.md
   - Course Description: course-description.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md

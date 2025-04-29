@@ -157,7 +157,35 @@ While general-purpose computers focus on speed, user interaction, and multitaski
 
 Throughout this textbook, we’ll write tight, predictable C and assembly code that gives us **precise control over the hardware**.
 
-## Section 5: Summary and Use Cases
+## Section 5: Configuring Digital I/O Pins on the PIC24
+
+Before using a microcontroller pin as a **digital output**, it must be correctly configured.  
+On the PIC24, three important registers control this:
+
+| Register  | Purpose |
+|:----------|:--------|
+| **TRISx** | Sets the pin direction: **1 = Input**, **0 = Output** |
+| **LATx**  | Holds the output value for the pin: **1 = High**, **0 = Low** |
+| **AD1PCFG** | Selects digital or analog mode: **1 = Digital**, **0 = Analog** |
+
+### 🔹 Typical Setup for Digital Output:
+1. **Configure TRISx bit to 0** → set pin as output
+2. **Set AD1PCFG bit to 1** → disable analog input (ensure digital function)
+3. **Control LATx bit** → drive output high or low
+
+If any step is missed, the pin might behave unexpectedly (e.g., float, stay analog, or refuse to drive an output).
+
+---
+
+###  Interactive MicroSim: Digital Output Pin Configurator
+
+To better understand how PIC24 pins are configured for digital output, interact with the MicroSim below.  
+
+👉 [Launch the Pin Configuration Simulation](../../sims/ch1-pin-config-sim/sim/index.html)
+
+Experiment with the `TRIS`, `AD1PCFG`, and `LAT` settings to see how they affect the final pin state.
+
+## Section 6: Summary and Use Cases
 
 Let’s review the key points from this chapter:
 
@@ -185,6 +213,7 @@ Let’s review the key points from this chapter:
 ---
 
 > As you go through this book, you’ll develop the **low-level control skills** that make these devices possible — starting from the very first line of assembly code.
+
 
 ### Quiz: Microcontroller Fundamentals
 

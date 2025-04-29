@@ -465,6 +465,15 @@ uint16_t result = ADC1BUF0;     // Read the result
 
 ---
 
+To better understand how an **Analog-to-Digital Converter (ADC)** samples continuous signals, use the interactive simulation below.  
+
+👉 [Launch the Analog to Digital Simulation](../../sims/acd-sim/sim/adc-sim.html)
+
+Adjust the sampling rate and resolution to see how these parameters affect the digital representation of a smooth analog waveform.
+
+
+---
+
 Next up: a quick summary of all communication modules and where they’re most useful!
 
 ## Section 6: Summary and Use Cases

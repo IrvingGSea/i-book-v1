@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8ff;
+    padding: 20px;
+}
+
+.layout {
+    display: flex;
+    gap: 40px;
+}
+
+.code-area, .state-area {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+pre {
+    font-family: monospace;
+    background: #f0f0f0;
+    padding: 10px;
+    line-height: 1.8;
+}
+
+.highlight {
+    background-color: #d1ecf1;
+    font-weight: bold;
+}
+
+#statusBox {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.status-branch {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-done {
+    background: #f8d7da;
+    color: #721c24;
+}

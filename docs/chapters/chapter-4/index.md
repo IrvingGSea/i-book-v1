@@ -176,7 +176,7 @@ After `RETURN`, the address is popped off and the stack returns to its previous 
 
 ---
 
-## Interactive MicroSim: Stack Tray Visualizer
+### Interactive MicroSim: Stack Tray Visualizer
 
 To help visualize how function calls and returns interact with the stack, try this MicroSim built on the cafeteria tray analogy.
 

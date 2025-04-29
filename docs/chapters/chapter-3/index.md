@@ -250,6 +250,17 @@ NOP     ; Do nothing - can be a good place to break in debugger
 
 Assembly doesn’t give you much abstraction — so clarity is your responsibility. Clean labels, indentation, and comments go a long way in making your code understandable — especially when debugging or returning to it later.
 
+---
+
+### Interactive Simulation
+
+Want to see how loop control flows behave step by step?
+
+👉 [Try the Loop Flow Visualizer MicroSim](../../sims/ch3-branch-loop-sim/sim/index.html)
+
+This simulation lets you follow `DEC`, `CP`, and `BNE` instructions visually — with live register tracking, branching highlights, and total loop iteration count!
+
+
 ## Test Your Understanding
 
 Let’s check your grasp of conditional branching and loops with a quick question.

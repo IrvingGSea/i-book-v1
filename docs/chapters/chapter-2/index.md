@@ -190,6 +190,25 @@ MOV     [W8 + 4], W0   ; Move from address (W8 + 4) into W0
 
 > Understanding addressing modes is essential for writing flexible and efficient assembly code.
 
+### Interactive MicroSim: Register Instruction Simulator
+
+Practice manipulating working registers (`W0`–`W5`) using simple PIC24 assembly-style instructions.
+
+👉 [Launch the Register Instruction Simulator](../../sims/ch2-register-sim/sim/index.html)
+
+---
+
+### Example Instructions:
+
+```asm
+MOV     #10, W0     ; Load literal 10 into W0
+MOV     W0, W1      ; Copy W0 into W1
+ADD     W1, W0      ; W0 = W0 + W1
+ADD     #5, W2      ; W2 = W2 + 5
+SUB     W1, W0      ; W0 = W0 - W1
+CLR     W2          ; Clear W2 (set to 0)
+
+
 ## Section 5: Writing Clean, Readable Assembly
 
 Writing assembly that works is good. Writing assembly that others (and future you) can understand? Even better.

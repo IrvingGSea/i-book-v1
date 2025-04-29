@@ -1,10 +1,8 @@
-
 # PWM Visualizer
 
-This MicroSim shows how **Pulse Width Modulation (PWM)** works and how it affects brightness of a virtual LED.
+This MicroSim demonstrates how **Pulse Width Modulation (PWM)** controls LED brightness.
 
-- Adjust the **duty cycle** with the slider
-- Watch how the waveform changes
-- See how LED brightness responds to the amount of "on-time"
+- Use the slider to change the **duty cycle**
+- Observe how the waveform and LED brightness respond
 
-<iframe src="./pwm-sim.html" width="100%" height="500px" style="border: 1px solid #ccc;"></iframe>
+👉 [Launch the PWM Simulation](./sim/pwm-sim.html)
