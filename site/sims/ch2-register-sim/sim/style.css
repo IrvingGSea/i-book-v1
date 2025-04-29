@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.sim-container {
+    display: flex;
+    gap: 40px;
+}
+
+.registers {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.console {
+    margin-top: 20px;
+}
+
+.controls {
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-grow: 1;
+}

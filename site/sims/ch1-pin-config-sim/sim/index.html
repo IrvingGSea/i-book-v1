@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chapter 1 - Digital Pin Configurator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Digital Output Pin Configurator</h2>
+    <p>This MicroSim shows how <code>TRISx</code>, <code>AD1PCFG</code>, and <code>LATx</code> interact to control digital output.</p>
+
+    <div class="controls">
+        <label><input type="checkbox" id="tris"> TRISB (0 = Output, 1 = Input)</label><br>
+        <label><input type="checkbox" id="ad1pcfg"> AD1PCFG (1 = Digital, 0 = Analog)</label><br>
+        <label><input type="checkbox" id="lat"> LATB (0 = Low, 1 = High)</label>
+    </div>
+
+    <div class="output">
+        <div id="pinStatus" class="pin">?</div>
+        <p id="pinDesc">Pin state will appear here.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

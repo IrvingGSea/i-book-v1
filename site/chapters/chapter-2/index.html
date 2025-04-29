@@ -562,25 +562,19 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-5-writing-clean-readable-assembly" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#interactive-microsim-register-instruction-simulator" class="md-nav__link">
     <span class="md-ellipsis">
-      Section 5: Writing Clean, Readable Assembly
+      Interactive MicroSim: Register Instruction Simulator
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Section 5: Writing Clean, Readable Assembly">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#use-labels-effectively" class="md-nav__link">
+  <a href="#example-instructions" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Labels Effectively
+      Example Instructions:
     </span>
   </a>
   
@@ -891,28 +885,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sims/sine-wave/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sine Wave
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../sims/stack-tray-sim/" class="md-nav__link">
         
   
@@ -961,7 +933,139 @@
         
   
   <span class="md-ellipsis">
-    PWM Sim
+    PWM Visualizer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ic_sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Input Capture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/acd-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analog-to-Digital
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch1-pin-config-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pin Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch2-register-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Register Configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch3-branch-loop-sim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Branch Loop Sim
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/ch8-serial-comm-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Serial Communication Overview
     
   </span>
   
@@ -1033,27 +1137,6 @@
   
   <span class="md-ellipsis">
     Table of Contents
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../license/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    License
     
   </span>
   
@@ -1336,25 +1419,19 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-5-writing-clean-readable-assembly" class="md-nav__link">
+          <li class="md-nav__item">
+  <a href="#interactive-microsim-register-instruction-simulator" class="md-nav__link">
     <span class="md-ellipsis">
-      Section 5: Writing Clean, Readable Assembly
+      Interactive MicroSim: Register Instruction Simulator
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Section 5: Writing Clean, Readable Assembly">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#use-labels-effectively" class="md-nav__link">
+  <a href="#example-instructions" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Labels Effectively
+      Example Instructions:
     </span>
   </a>
   
@@ -1624,13 +1701,33 @@ Offset must be word-aligned (multiple of 2).</p>
 <blockquote>
 <p>Understanding addressing modes is essential for writing flexible and efficient assembly code.</p>
 </blockquote>
-<h2 id="section-5-writing-clean-readable-assembly">Section 5: Writing Clean, Readable Assembly<a class="headerlink" href="#section-5-writing-clean-readable-assembly" title="Permanent link">&para;</a></h2>
-<p>Writing assembly that works is good. Writing assembly that others (and future you) can understand? Even better.</p>
-<p>Here are a few <strong>best practices</strong> for clean and maintainable PIC24 assembly:</p>
+<h3 id="interactive-microsim-register-instruction-simulator">Interactive MicroSim: Register Instruction Simulator<a class="headerlink" href="#interactive-microsim-register-instruction-simulator" title="Permanent link">&para;</a></h3>
+<p>Practice manipulating working registers (<code>W0</code>–<code>W5</code>) using simple PIC24 assembly-style instructions.</p>
+<p>👉 <a href="../../sims/ch2-register-sim/sim/">Launch the Register Instruction Simulator</a></p>
 <hr />
-<h3 id="use-labels-effectively">Use Labels Effectively<a class="headerlink" href="#use-labels-effectively" title="Permanent link">&para;</a></h3>
-<p>Labels are like <strong>named bookmarks</strong> in your code. They make loops and branches much easier to follow.</p>
-<div class="highlight"><pre><span></span><code><span class="nl">Loop:</span>
+<h3 id="example-instructions">Example Instructions:<a class="headerlink" href="#example-instructions" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nf">MOV</span><span class="w">     </span><span class="mi">#10</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">     </span><span class="c1">; Load literal 10 into W0</span>
+<span class="nf">MOV</span><span class="w">     </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="no">W1</span><span class="w">      </span><span class="c1">; Copy W0 into W1</span>
+<span class="nf">ADD</span><span class="w">     </span><span class="no">W1</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">      </span><span class="c1">; W0 = W0 + W1</span>
+<span class="nf">ADD</span><span class="w">     </span><span class="mi">#5</span><span class="p">,</span><span class="w"> </span><span class="no">W2</span><span class="w">      </span><span class="c1">; W2 = W2 + 5</span>
+<span class="nf">SUB</span><span class="w">     </span><span class="no">W1</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span><span class="w">      </span><span class="c1">; W0 = W0 - W1</span>
+<span class="nf">CLR</span><span class="w">     </span><span class="no">W2</span><span class="w">          </span><span class="c1">; Clear W2 (set to 0)</span>
+
+
+<span class="c1">## Section 5: Writing Clean, Readable Assembly</span>
+
+<span class="nf">Writing</span><span class="w"> </span><span class="no">assembly</span><span class="w"> </span><span class="no">that</span><span class="w"> </span><span class="no">works</span><span class="w"> </span><span class="no">is</span><span class="w"> </span><span class="no">good.</span><span class="w"> </span><span class="no">Writing</span><span class="w"> </span><span class="no">assembly</span><span class="w"> </span><span class="no">that</span><span class="w"> </span><span class="no">others</span><span class="w"> </span><span class="p">(</span><span class="no">and</span><span class="w"> </span><span class="no">future</span><span class="w"> </span><span class="no">you</span><span class="p">)</span><span class="w"> </span><span class="no">can</span><span class="w"> </span><span class="no">understand</span><span class="err">?</span><span class="w"> </span><span class="no">Even</span><span class="w"> </span><span class="no">better.</span>
+
+<span class="nf">Here</span><span class="w"> </span><span class="no">are</span><span class="w"> </span><span class="no">a</span><span class="w"> </span><span class="no">few</span><span class="w"> </span><span class="p">**</span><span class="no">best</span><span class="w"> </span><span class="no">practices</span><span class="p">**</span><span class="w"> </span><span class="no">for</span><span class="w"> </span><span class="no">clean</span><span class="w"> </span><span class="no">and</span><span class="w"> </span><span class="no">maintainable</span><span class="w"> </span><span class="no">PIC24</span><span class="w"> </span><span class="no">assembly</span><span class="p">:</span>
+
+<span class="err">---</span>
+
+<span class="c1">### Use Labels Effectively</span>
+
+<span class="nf">Labels</span><span class="w"> </span><span class="no">are</span><span class="w"> </span><span class="no">like</span><span class="w"> </span><span class="p">**</span><span class="no">named</span><span class="w"> </span><span class="no">bookmarks</span><span class="p">**</span><span class="w"> </span><span class="no">in</span><span class="w"> </span><span class="no">your</span><span class="w"> </span><span class="no">code.</span><span class="w"> </span><span class="no">They</span><span class="w"> </span><span class="no">make</span><span class="w"> </span><span class="no">loops</span><span class="w"> </span><span class="no">and</span><span class="w"> </span><span class="no">branches</span><span class="w"> </span><span class="no">much</span><span class="w"> </span><span class="no">easier</span><span class="w"> </span><span class="no">to</span><span class="w"> </span><span class="no">follow.</span>
+
+<span class="err">```</span><span class="nf">asm</span>
+<span class="nl">Loop:</span>
 <span class="w">    </span><span class="nf">DEC</span><span class="w">     </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="no">W0</span>
 <span class="w">    </span><span class="nf">CP</span><span class="w">      </span><span class="no">W0</span><span class="p">,</span><span class="w"> </span><span class="mi">#0</span>
 <span class="w">    </span><span class="nf">BNE</span><span class="w">     </span><span class="no">Loop</span><span class="w">     </span><span class="c1">; Branch if W0 ≠ 0</span>
@@ -1792,7 +1889,7 @@ The original value in <code>W1</code> is overwritten.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2025-04-17
+    2025-04-29
   </span>
 
     
