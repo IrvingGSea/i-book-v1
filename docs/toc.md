@@ -27,7 +27,6 @@ Below is a high-level overview of the chapters, tutorials, prompts, glossary, an
 - [GPIO Setup Simulator (TRIS/LAT/AD1PCFG)](sims/ch1-pin-config-sim/index.md)
 - [Register Operation Simulator](sims/ch2-register-sim/index.md)
 - [Branch Loop Counter Simulator](sims/ch3-branch-loop-sim/index.md)
-- [Serial Communication Overview (UART, SPI, I2C)](sims/ch8-serial-comm-overview/index.md)
 - [UART Transmission](sims/uart-transmission/index.md)
 - [SPI Communication](sims/spi-communication/index.md)
 - [I2C Communication](sims/i2c-communication/index.md)

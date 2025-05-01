@@ -123,7 +123,7 @@ Up next: we’ll cover **SPI**, a faster protocol with full-duplex communication
 ### UART Simulation
 To visualize how UART communication transmits data bits with start/stop frames:
 
-👉 [Launch UART Communication Simulation](../../../sims/uart-transmission/sim/index.html)
+👉 [Launch UART Communication Simulation](../../sims/uart-transmission/sim/index.html)
 
 ---
 
@@ -241,7 +241,7 @@ Next up: we’ll cover **I2C**, ideal for connecting many devices with fewer wir
 ### 🔁 SPI Simulation
 See how the master-slave architecture of SPI works with SCLK, MOSI, and MISO lines:
 
-👉 [Launch SPI Communication Simulation](../../../sims/spi-communication/sim/index.html)
+👉 [Launch SPI Communication Simulation](../../sims/spi-communication/sim/index.html)
 
 ---
 
@@ -365,7 +365,7 @@ Next, we’ll look at how to read **real-world analog signals** using the **ADC 
 ### 🔄 I2C Simulation
 Understand I2C with clock-synchronized data transfers and start/stop conditions:
 
-👉 [Launch I2C Communication Simulation](../../../sims/i2c-communication/sim/index.html)
+👉 [Launch I2C Communication Simulation](../../sims/i2c-communication/sim/index.html)
 
 ### Quiz: I2C Communication
 

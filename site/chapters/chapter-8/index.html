@@ -611,6 +611,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#uart-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      UART Simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#quiz-uart-communication" class="md-nav__link">
     <span class="md-ellipsis">
       Quiz: UART Communication
@@ -680,6 +689,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#spi-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 SPI Simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#quiz-spi-basics" class="md-nav__link">
     <span class="md-ellipsis">
       Quiz: SPI Basics
@@ -743,6 +761,15 @@
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 I2C Simulation
     </span>
   </a>
   
@@ -1118,6 +1145,72 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/uart-transmission/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UART Communication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/spi-communication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SPI Communication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sims/i2c-communication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    I2C Communication
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1378,6 +1471,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#uart-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      UART Simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#quiz-uart-communication" class="md-nav__link">
     <span class="md-ellipsis">
       Quiz: UART Communication
@@ -1447,6 +1549,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#spi-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 SPI Simulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#quiz-spi-basics" class="md-nav__link">
     <span class="md-ellipsis">
       Quiz: SPI Basics
@@ -1510,6 +1621,15 @@
   <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
       Notes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 I2C Simulation
     </span>
   </a>
   
@@ -1786,6 +1906,10 @@
 </blockquote>
 <hr />
 <p>Up next: we’ll cover <strong>SPI</strong>, a faster protocol with full-duplex communication.</p>
+<h3 id="uart-simulation">UART Simulation<a class="headerlink" href="#uart-simulation" title="Permanent link">&para;</a></h3>
+<p>To visualize how UART communication transmits data bits with start/stop frames:</p>
+<p>👉 <a href="../../../sims/uart-transmission/sim/index.html">Launch UART Communication Simulation</a></p>
+<hr />
 <h3 id="quiz-uart-communication">Quiz: UART Communication<a class="headerlink" href="#quiz-uart-communication" title="Permanent link">&para;</a></h3>
 <p>Which of the following <strong>must be true</strong> for two devices to successfully communicate over UART?</p>
 <div class="upper-alpha">
@@ -1906,6 +2030,10 @@ However, both devices must be configured to use the <strong>same baud rate</stro
 <p>SPI is great for <strong>speed</strong> and <strong>low-latency</strong>, but requires more pins and doesn’t support automatic addressing like I2C.</p>
 </blockquote>
 <p>Next up: we’ll cover <strong>I2C</strong>, ideal for connecting many devices with fewer wires.</p>
+<h3 id="spi-simulation">🔁 SPI Simulation<a class="headerlink" href="#spi-simulation" title="Permanent link">&para;</a></h3>
+<p>See how the master-slave architecture of SPI works with SCLK, MOSI, and MISO lines:</p>
+<p>👉 <a href="../../../sims/spi-communication/sim/index.html">Launch SPI Communication Simulation</a></p>
+<hr />
 <h3 id="quiz-spi-basics">Quiz: SPI Basics<a class="headerlink" href="#quiz-spi-basics" title="Permanent link">&para;</a></h3>
 <p>Which of the following is <strong>NOT true</strong> about the SPI protocol?</p>
 <div class="upper-alpha">
@@ -2009,6 +2137,9 @@ While it's fast and full-duplex, it’s <strong>not a single-wire protocol</stro
 </ul>
 <hr />
 <p>Next, we’ll look at how to read <strong>real-world analog signals</strong> using the <strong>ADC module</strong>.</p>
+<h3 id="i2c-simulation">🔄 I2C Simulation<a class="headerlink" href="#i2c-simulation" title="Permanent link">&para;</a></h3>
+<p>Understand I2C with clock-synchronized data transfers and start/stop conditions:</p>
+<p>👉 <a href="../../../sims/i2c-communication/sim/index.html">Launch I2C Communication Simulation</a></p>
 <h3 id="quiz-i2c-communication">Quiz: I2C Communication<a class="headerlink" href="#quiz-i2c-communication" title="Permanent link">&para;</a></h3>
 <p>Why does I2C require pull-up resistors on the SDA and SCL lines?</p>
 <div class="upper-alpha">

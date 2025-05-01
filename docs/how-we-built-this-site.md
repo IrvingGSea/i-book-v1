@@ -13,4 +13,8 @@ This intelligent textbook was built using the following tools and technologies:
 
 The project was inspired by modern open educational resources and intelligent textbooks that combine traditional material with interactive simulations and quizzes.
 
+A large portion of this is inspired by the work of Dan McCreary. His guide in building this was instrumental. 
+
+[Intelligent Textbook Guide](https://dmccreary.github.io/intelligent-textbooks/)
+
 ---

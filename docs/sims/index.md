@@ -10,7 +10,6 @@ Explore the interactive MicroSimulations designed to reinforce key concepts:
 - [Basic Digital I/O (TRIS, LAT, AD1PCFG)](./ch1-pin-config-sim/sim/index.html)
 - [Register Operation Simulator (MOV, ADD, SUB)](./ch2-register-sim/sim/index.html)
 - [Branch Loop Simulator](./ch3-branch-loop-sim/sim/index.html)
-- [Serial Communication Overview (UART, SPI, I2C)](./ch8-serial-comm-overview/index.html)
 - [UART Transmission](./uart-transmission/sim/index.html)
 - [SPI Communication](./spi-communication/sim/index.html)
 - [I2C Communication](./i2c-communication/sim/index.html)

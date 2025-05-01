@@ -1,4 +1,4 @@
-# Introduction to Embedded Systems with the PIC24
+# Introduction to Microcontrollers with the PIC24
 
 ![](./assets/images/mcu-block-diagram.png)
 

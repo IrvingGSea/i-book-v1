@@ -1,0 +1,28 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4faff;
+    padding: 20px;
+}
+
+button {
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+
+.spi-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: #fff;
+    max-width: 500px;
+}
+
+.device-label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.line {
+    margin: 5px 0;
+    font-family: monospace;
+}

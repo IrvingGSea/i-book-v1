@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPI Communication Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>SPI Communication Simulator</h2>
+    <p>This simulation demonstrates SPI data exchange between a master and a slave using SCLK, MOSI, and MISO lines.</p>
+
+    <button onclick="startTransmission()">Start Transmission</button>
+
+    <div class="spi-container">
+        <div class="device-label">Master</div>
+        <div class="line" id="mosi-line">MOSI: <span id="mosi-data"></span></div>
+        <div class="line" id="miso-line">MISO: <span id="miso-data"></span></div>
+        <div class="line" id="sclk-line">SCLK: <span id="sclk-state"></span></div>
+        <div class="device-label">Slave</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

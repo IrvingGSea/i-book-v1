@@ -24,7 +24,6 @@ nav:
       - Pin Configurations: sims/ch1-pin-config-sim/index.md
       - Register Configurations: sims/ch2-register-sim/index.md
       - Branch Loop Sim: sims/ch3-branch-loop-sim/index.md
-      - Serial Communication Overview: sims/ch8-serial-comm-overview/index.md
       - UART Communication: sims/uart-transmission/index.md
       - SPI Communication: sims/spi-communication/index.md
       - I2C Communication: sims/i2c-communication/index.md
