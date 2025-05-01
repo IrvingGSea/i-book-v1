@@ -1,4 +1,4 @@
-site_name: Mkdocs for Intelligent Textbooks
+site_name: Introduction to Microcontrollers
 repo_url: https://github.com/IrvingGSea/i-book-v1.git
 
 nav:
@@ -37,6 +37,7 @@ nav:
 
 theme:
   name: material 
+  logo: assets/images/pic24logo.png
   analytics: # analytics should be moved if theme is custom or not material
     provider: google
     property: G-8GFPXHN0M6
